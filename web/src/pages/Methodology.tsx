@@ -160,6 +160,7 @@ export default function Methodology() {
                   ['Konsumsi per kapita', 'Setara besaran Susenas', 'Dibulatkan', 'indikatif'],
                   ['Curah hujan harian 34 provinsi', 'Open-Meteo (reanalisis ERA5), satu titik per provinsi', 'Jan 2018 – kini (tertinggal ±1 minggu)', 'asli'],
                   ['Indeks El Niño/La Niña (RONI)', 'NOAA Climate Prediction Center', 'Bulanan sejak 1950', 'asli'],
+                  ['Kalender libur nasional & cuti bersama', 'Pustaka Python holidays, dicocokkan dengan SKB 3 Menteri', '2018–2028; hari besar Islam yang belum ditetapkan ditandai perkiraan', 'asli'],
                 ]}
                 rowKey={(r) => r[0]}
                 columns={[
@@ -191,7 +192,8 @@ export default function Methodology() {
             <p>
               <strong>Model v2</strong> menyempurnakan FHS. Tiga model LightGBM (P10, P50, P90) per tingkat — provinsi dari PIHPS 2020–2026 dan
               kabupaten/kota dari SP2KP 2024–2026 — memprakirakan z dari: volatilitas 30/90 hari, perubahan harga 1–90 hari, jarak ke median 90 hari,
-              ke HET/HAP, ke daerah tetangga, dan ke median cakupan; musim dan jarak ke Lebaran; curah hujan 30/90 hari vs normal dan RONI; serta momentum harga
+              ke HET/HAP, ke daerah tetangga, dan ke median cakupan; musim; jarak ke Idulfitri dan Iduladha serta jumlah hari libur dan cuti bersama dalam
+              14 hari ke depan; curah hujan 30/90 hari vs normal dan RONI; serta momentum harga
               provinsi. Distribusi z historis FHS lalu dipetakan agar kuantil 10/50/90-nya sama dengan prakiraan v2, sehingga peluang lampaui acuan tetap
               dihitung dari seluruh distribusi. v2 hanya dipakai untuk komoditas yang terbukti lebih akurat daripada FHS di data uji; selebihnya tetap FHS.
             </p>

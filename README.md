@@ -39,6 +39,9 @@ Setiap filter tersimpan di URL sehingga tampilan apa pun dapat dibagikan. Data d
 | Harga harian 34 provinsi × 13 komoditas (Sep 2024 – Okt 2026) | PIHPS Bank Indonesia, pasar tradisional ([`model/fetch_pihps.py`](model/fetch_pihps.py) → [`data/pihps/`](data/pihps)) | Asli |
 | Harga harian 514 kab/kota × 18 komoditas (Feb 2024 – kini) | SP2KP Kemendag ([`model/fetch_sp2kp.py`](model/fetch_sp2kp.py) → [`model/build_app_data.py`](model/build_app_data.py) → [`data/sp2kp/`](data/sp2kp)) | Asli |
 | Seri kab/kota yang tidak dipantau SP2KP | Dibangkitkan Pantara, mengikuti pola PIHPS provinsinya ([`internal/regional/synthetic.go`](internal/regional/synthetic.go)) | **Simulasi** (ditandai) |
+| Curah hujan harian 34 provinsi (2018 – kini) | Open-Meteo, reanalisis ERA5 ([`model/fetch_openmeteo.py`](model/fetch_openmeteo.py) → [`data/climate/province_rain.csv.gz`](data/climate/province_rain.csv.gz)) | Asli |
+| Indeks El Niño/La Niña bulanan (RONI) | NOAA Climate Prediction Center ([`model/fetch_roni.py`](model/fetch_roni.py) → [`data/climate/roni.csv`](data/climate/roni.csv)) | Asli |
+| Kalender libur nasional & cuti bersama 2018–2028 | Pustaka Python `holidays` ([`model/fetch_holidays.py`](model/fetch_holidays.py) → [`data/calendar/holidays.csv`](data/calendar/holidays.csv)) | Asli; hari besar Islam yang belum ditetapkan pemerintah ditandai **perkiraan** |
 | Daftar & tetangga kab/kota di luar Jawa Barat, penduduk kab/kota (perkiraan kasar menurut luas) | Diturunkan dari batas BPS ([`model/build_regency_maps.py`](model/build_regency_maps.py) → [`data/regions/regencies.json`](data/regions/regencies.json)) | Batas asli; penduduk **simulasi** |
 | Batas wilayah provinsi (34, sesuai cakupan PIHPS) | geoBoundaries ADM1, © kontributor OpenStreetMap (ODbL 1.0) | Asli |
 | Batas wilayah kab/kota | BPS via geoBoundaries (CC BY 3.0 IGO) | Asli |
@@ -52,7 +55,8 @@ Wilayah tersusun bertingkat ([`internal/regional/scope.go`](internal/regional/sc
 Ringkasan — rinciannya ada di halaman **Metodologi** aplikasi.
 
 - **Prakiraan harga — Filtered Historical Simulation (FHS).** Return historis distandarkan dengan volatilitas 30 harinya, lalu diskalakan ke volatilitas hari ini → P10/P50/P90 untuk 1–14 hari dan peluang melampaui acuan.
-- **Prakiraan v2 — LightGBM kuantil + FHS.** Tiga model (P10/P50/P90) per tingkat — provinsi (PIHPS 2020–2026) dan kab/kota (SP2KP 2024–2026) — memprakirakan return terstandar dari volatilitas, momentum, jarak ke median/HET-HAP/tetangga, musim & Lebaran, curah hujan vs normal, RONI, dan momentum provinsi ([`model/train_forecast.py`](model/train_forecast.py), fitur di [`forecast_features.py`](model/forecast_features.py) yang dicerminkan persis oleh [`features.go`](internal/regional/features.go); paritas diuji). Distribusi FHS dipetakan agar kuantilnya mengikuti v2. Dipakai hanya untuk komoditas yang lebih akurat dari FHS pada uji di luar sampel Okt 2025 – Okt 2026 ([`data/models/`](data/models), `GET /api/v1/public/model-metrics/v2`).
+- **Prakiraan v2 — LightGBM kuantil + FHS.** Tiga model (P10/P50/P90) per tingkat — provinsi (PIHPS 2020–2026) dan kab/kota (SP2KP 2024–2026) — memprakirakan return terstandar dari volatilitas, momentum, jarak ke median/HET-HAP/tetangga, musim, kalender hari besar (jarak ke Idulfitri dan Iduladha, jumlah hari libur & cuti bersama 14 hari ke depan, dari [`data/calendar/holidays.csv`](data/calendar/holidays.csv)), curah hujan vs normal, RONI, dan momentum provinsi ([`model/train_forecast.py`](model/train_forecast.py), fitur di [`forecast_features.py`](model/forecast_features.py) yang dicerminkan persis oleh [`features.go`](internal/regional/features.go) dan [`calendar.go`](internal/regional/calendar.go); paritas diuji). Distribusi FHS dipetakan agar kuantilnya mengikuti v2. Dipakai hanya untuk komoditas yang lebih akurat dari FHS pada uji di luar sampel Okt 2025 – Okt 2026. Isi [`data/models/`](data/models): `forecast_<provinsi|kab/kota>_q<10|50|90>.json` (pohon keputusan untuk evaluator Go), `selection.json` (v2 atau FHS per komoditas), `metrics.json` (hasil uji, juga di `GET /api/v1/public/model-metrics/v2`), `parity.json` (baris uji kesamaan Python–Go).
+- **Kalender hari besar** ([`data/calendar/holidays.csv`](data/calendar/holidays.csv)) juga menentukan kenaikan harga menjelang Lebaran pada seri kab/kota simulasi.
 - **Akurasi** diuji ulang setiap server berjalan dengan backtest *walk-forward* per cakupan (`GET /api/v1/public/model-metrics`). Pada data asli PIHPS (provinsi): cakupan rentang P10–P90 rata-rata **≈ 79%** (target 80%), MASE ≈ 1,0; pada kab/kota Jawa Barat (sebagian besar SP2KP) cakupan ≈ 83% — rentang dan peluang terkalibrasi, titik tengahnya setara tebakan naif, sehingga keputusan memakai rentang, bukan satu angka.
 - **Rapor Daerah — dua ukuran terpisah.** *Stabilitas*: skor 0–100 = 100 − penalti (hari di atas batas wajar = median 90 hari + 10%, durasi lonjakan, waktu pemulihan, selisih vs tetangga), rata-rata setara antarkomoditas; predikat A ≥ 85 · B ≥ 70 · C ≥ 55 · D ≥ 40 · E. *Kepatuhan HET/HAP*: porsi hari-komoditas dengan harga ≤ HET/HAP, dibobot IHK, dinilai apa adanya. Dipisah agar pelanggaran nasional (mis. beras di atas HET di hampir semua provinsi) tetap terlihat tanpa meratakan semua predikat.
 - **Risiko iklim (per provinsi).** Curah hujan 90 hari vs normal 2018–2025 (kelas BMKG) dan fase El Niño/La Niña (RONI). *Tinggi* = hujan bawah normal saat El Niño atau < 50% normal; *Waspada* = salah satunya. Daftar komoditas terdampak dan besar dampaknya diambil dari analisis data PIHPS 2020–2026 ([`model/analyze_climate.py`](model/analyze_climate.py) → [`data/climate/effects.csv`](data/climate/effects.csv)): hujan bawah normal diikuti cabai merah +6–8%, bawang merah +4–5%, gula +2–3% dua bulan kemudian; hujan atas normal dan La Niña justru diikuti penurunan. Bukti El Niño (1–2 episode) lebih lemah.
@@ -125,6 +129,8 @@ python refresh.py --climate  # sesekali (bulanan): perbarui tabel bukti iklim
 
 Jadwalkan `python refresh.py --build` sekali sehari (mis. pukul 18.00 WIB, setelah PIHPS dan SP2KP terbit) lewat cron, Windows Task Scheduler, atau CI, lalu restart layanan. Setiap pengambil memakai cache, jadi menjalankan ulang setelah gagal tidak mengunduh ulang dari nol.
 
+Kalender hari besar tidak ikut `refresh.py`. Perbarui setahun sekali setelah SKB 3 Menteri tentang libur nasional & cuti bersama terbit: `python fetch_holidays.py`, cocokkan tanggal yang ditandai perkiraan, lalu latih ulang model (`refresh.py --retrain`) bila tanggal Idulfitri berubah (tanggal yang dipakai saat pelatihan disimpan di `EID_TRAINED` dalam skrip itu).
+
 ### Docker
 ```bash
 docker build -t pantara .
@@ -133,7 +139,7 @@ docker run -p 8080:8080 --env-file .env pantara
 
 ### Data untuk model (`model/`)
 
-Pengambil data hanya memakai pustaka standar Python (ditambah `certifi` bila ada, untuk sertifikat HTTPS). Hasilnya ditulis ke `model/data/` (tidak ikut dibundel ke server) dengan cache per permintaan di `model/.cache/`, sehingga bisa dilanjutkan bila terputus.
+Pasang dependensi Python sekali: `pip install -r model/requirements.txt` (antara lain `pandas`, `lightgbm` untuk pelatihan model, dan `holidays` untuk kalender). Pengambil data harga dan cuaca sendiri hanya memakai pustaka standar Python (ditambah `certifi` bila ada, untuk sertifikat HTTPS). Hasilnya ditulis ke `model/data/` (tidak ikut dibundel ke server) dengan cache per permintaan di `model/.cache/`, sehingga bisa dilanjutkan bila terputus.
 
 | Skrip | Sumber | Hasil |
 |---|---|---|
@@ -143,6 +149,7 @@ Pengambil data hanya memakai pustaka standar Python (ditambah `certifi` bila ada
 | `build_app_data.py` | — | Membersihkan SP2KP kab/kota dan menulis `data/sp2kp/regency_prices.csv.gz` untuk server |
 | `fetch_openmeteo.py --adm1 <ADM1.geojson>` | Open-Meteo (ERA5), kuota gratis dijaga otomatis | Cuaca harian 34 titik provinsi sejak 2018 |
 | `fetch_roni.py` | NOAA CPC (RONI) | Indeks El Niño/La Niña bulanan sejak 1950 |
+| `fetch_holidays.py` | Pustaka Python `holidays` (luring, tanpa API key) | Libur nasional & cuti bersama 2018–2028 → `data/calendar/holidays.csv` |
 | `fetch_bmkg.py <kode adm4 ...>` | API prakiraan cuaca BMKG | Prakiraan 3 hari per desa |
 | `coverage_report.py` | — | Ringkasan cakupan di `model/data/COVERAGE.md` |
 | `analyze_climate.py --lead 2` | — | Bukti dampak hujan/ENSO terhadap harga → `data/climate/effects.csv` |
@@ -159,7 +166,7 @@ internal/regional  hierarki wilayah, data PIHPS/SP2KP/iklim, prakiraan FHS + v2,
 internal/api       handler HTTP (publik, auth, pemerintah, UMKM, ekspor CSV)
 internal/decision  mesin rekomendasi belanja UMKM
 internal/substitution  sinyal substitusi varian
-data/              data server: harga, iklim, wilayah, model v2, harga acuan (di-embed ke binary)
+data/              data server: harga, iklim, kalender hari besar, wilayah, model v2, harga acuan (di-embed ke binary)
 model/             pengambil data, analisis iklim, training model v2, pembuat peta, pembaruan harian
 web/src            frontend (pages/, components/, lib/, data/)
 ```
