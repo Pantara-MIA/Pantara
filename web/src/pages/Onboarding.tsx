@@ -216,7 +216,6 @@ export default function Onboarding() {
             </dl>
           )}
         </div>
-        <p className="relative text-xs text-[#8FBF8F]">Versi demonstrasi · data harga kab/kota adalah simulasi.</p>
       </aside>
 
       <main className="flex min-h-screen flex-col px-4 py-8 sm:px-8">

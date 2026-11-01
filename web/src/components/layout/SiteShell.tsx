@@ -1,26 +1,12 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { ArrowUp, FlaskConical, LogOut, Menu, X } from 'lucide-react';
+import { ArrowUp, LogOut, Menu, X } from 'lucide-react';
 import { BrandWordmark } from './BrandMark';
 import { auth } from '../../lib/auth';
 import { PUBLIC_NAV, workspaceNav } from './nav';
 import type { NavItem } from './nav';
 import { useScrollProgress, useSlidingIndicator } from '../motion/hooks';
-
-function SyntheticDataBanner() {
-  return (
-    <div className="border-b border-gold/50 bg-gold-soft">
-      <p className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-1.5 text-xs text-gold-ink sm:px-6">
-        <FlaskConical className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-        <span>
-          Versi demonstrasi: harga provinsi dari PIHPS dan kab/kota dari SP2KP; komoditas yang belum dipantau di suatu kab/kota masih{' '}
-          <strong>data simulasi</strong> dan diberi tanda.
-        </span>
-      </p>
-    </div>
-  );
-}
 
 /** "Masuk" for visitors. */
 function SignInLink() {
@@ -214,7 +200,6 @@ export function SiteShell({
       <a href="#konten" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2">
         Lewati ke konten
       </a>
-      <SyntheticDataBanner />
       <SiteHeaderCivic nav={items} actions={headerActions} signedIn={signedIn} />
       <main id="konten" className={`page-enter ${fullBleed ? 'w-full flex-1' : 'mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 sm:py-8'}`}>
         {children}
