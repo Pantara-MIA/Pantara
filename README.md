@@ -86,7 +86,7 @@ cp .env.example .env
 Isi `.env`:
 - `DATABASE_URL` — URI **Session pooler** Supabase (Dashboard → Connect → Session pooler). Host *direct connection* `db.<project>.supabase.co` hanya IPv6 dan sering tidak terjangkau.
 - `JWT_SECRET` — **wajib**, string acak minimal 32 karakter, misalnya `openssl rand -hex 32`. Server menolak berjalan tanpa ini.
-- `GEMINI_API_KEY`, `GEMINI_MODEL` — opsional, untuk saran olahan bahan berlebih di Simulasi Susut.
+- `GEMINI_API_KEY`, `GEMINI_MODEL` — opsional, untuk solusi AI di Simulasi Susut.
 
 Tanpa basis data, halaman publik (Rapor Daerah, Ensiklopedia, Simulator, Metodologi) tetap berjalan; login, dashboard, dan intervensi membutuhkannya.
 
@@ -187,9 +187,3 @@ web/src            frontend (pages/, components/, lib/, data/)
 go test ./...                 # metrik rapor, FHS, evaluasi, knapsack vs brute force, backtest
 cd web && npx tsc -b && npx oxlint src
 ```
-
-## Batasan & langkah berikutnya
-- Lengkapi seri kab/kota yang belum dipantau SP2KP (masih simulasi); verifikasi HET/HAP (termasuk HAP wilayah timur), penduduk, dan konsumsi per kapita.
-- Cuaca masih per provinsi; data cuaca kab/kota dan prakiraan BMKG (butuh daftar kode desa) belum dipakai.
-- Rentang P10–P90 v2 untuk cabai kab/kota masih terlalu sempit sehingga cabai kab/kota tetap memakai FHS; kalibrasi rentang (mis. *conformal*) dapat membuka v2 untuk komoditas itu.
-- Kalibrasi asumsi efektivitas operasi pasar dari evaluasi intervensi nyata.
