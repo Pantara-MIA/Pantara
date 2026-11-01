@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { BookOpen, FlaskConical, LogOut, Radar, RefreshCw, ShoppingBasket, Shuffle, Store } from 'lucide-react';
+import { BookOpen, FlaskConical, Radar, RefreshCw, ShoppingBasket, Shuffle, Store } from 'lucide-react';
 import { SiteShell, PageHeader } from '../../components/layout/SiteShell';
 import { Tabs } from '../../components/ui/Tabs';
 import { NativeSelect } from '../../components/ui/NativeSelect';
@@ -27,13 +27,6 @@ const TABS = [
   { value: 'substitusi' as Tab, label: 'Sinyal substitusi', icon: Shuffle },
   { value: 'susut' as Tab, label: 'Simulasi susut', icon: FlaskConical },
   { value: 'profil' as Tab, label: 'Profil usaha', icon: Store },
-];
-
-const MSME_NAV = [
-  { to: '/dashboard', label: 'Dashboard' },
-  { to: '/ensiklopedia', label: 'Ensiklopedia' },
-  { to: '/rapor-daerah', label: 'Rapor Daerah' },
-  { to: '/metodologi', label: 'Metodologi' },
 ];
 
 /** MSME workspace: one decision per tab, computed from the business profile. */
@@ -111,11 +104,6 @@ export default function MsmeDashboard() {
     return () => ctrl.abort();
   }, [load]);
 
-  const logout = () => {
-    auth.clearToken();
-    navigate('/');
-  };
-
   const setTab = (t: Tab) =>
     setParams(
       (p) => {
@@ -128,7 +116,7 @@ export default function MsmeDashboard() {
 
   if (!profile) {
     return (
-      <SiteShell nav={MSME_NAV}>
+      <SiteShell>
         <Placeholder className="h-[600px]" />
       </SiteShell>
     );
@@ -138,14 +126,7 @@ export default function MsmeDashboard() {
   const tabProps = { profile, data, loading, commodity: activeCommodity, asOf: effectiveAsOf };
 
   return (
-    <SiteShell
-      nav={MSME_NAV}
-      headerActions={
-        <button type="button" onClick={logout} className="hidden items-center gap-1.5 rounded-full border border-mint px-3 py-1.5 text-sm font-semibold text-accent hover:bg-accent-soft sm:inline-flex">
-          <LogOut className="h-4 w-4" aria-hidden="true" /> Keluar
-        </button>
-      }
-    >
+    <SiteShell>
       <PageHeader
         eyebrow={`Ruang kerja UMKM · ${profile.fnb_category}`}
         title={profile.business_name}

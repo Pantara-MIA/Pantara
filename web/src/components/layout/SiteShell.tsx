@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { ArrowUp, FlaskConical, Menu, X } from 'lucide-react';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { ArrowUp, FlaskConical, LogOut, Menu, X } from 'lucide-react';
 import { BrandWordmark } from './BrandMark';
 import { auth } from '../../lib/auth';
-import { PUBLIC_NAV } from './nav';
+import { PUBLIC_NAV, workspaceNav } from './nav';
 import type { NavItem } from './nav';
 import { useScrollProgress, useSlidingIndicator } from '../motion/hooks';
 
@@ -22,20 +22,36 @@ function SyntheticDataBanner() {
   );
 }
 
-/** "Masuk" for visitors, or a shortcut to the signed-in user's dashboard. */
-function SessionLink() {
-  const signedIn = auth.isAuthenticated();
+/** "Masuk" for visitors. */
+function SignInLink() {
   return (
     <Link
-      to={signedIn ? auth.homeFor(auth.getRole()) : '/login'}
+      to="/login"
       className="btn btn-shine hidden rounded-full bg-gold px-4 py-2 text-sm font-bold text-[#3A3113] shadow-[0_12px_28px_-14px_rgba(211,190,109,0.95)] hover:shadow-[0_18px_34px_-14px_rgba(211,190,109,1)] hover:brightness-95 sm:inline-flex"
     >
-      {signedIn ? 'Dashboard' : 'Masuk'}
+      Masuk
     </Link>
   );
 }
 
-function SiteHeaderCivic({ nav, actions }: { nav: NavItem[]; actions?: ReactNode }) {
+/** "Keluar" for signed-in users: clears the session and returns to the public home page. */
+function SignOutButton() {
+  const navigate = useNavigate();
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        auth.clearToken();
+        navigate('/');
+      }}
+      className="hidden items-center gap-1.5 rounded-full border border-mint px-3 py-1.5 text-sm font-semibold text-accent hover:bg-accent-soft sm:inline-flex"
+    >
+      <LogOut className="h-4 w-4" aria-hidden="true" /> Keluar
+    </button>
+  );
+}
+
+function SiteHeaderCivic({ nav, actions, signedIn }: { nav: NavItem[]; actions?: ReactNode; signedIn: boolean }) {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const [navRef, pillStyle] = useSlidingIndicator<HTMLElement>('[aria-current="page"]', pathname);
@@ -50,7 +66,11 @@ function SiteHeaderCivic({ nav, actions }: { nav: NavItem[]; actions?: ReactNode
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" aria-label="Pantara — beranda" className="group transition-transform duration-300 hover:scale-[1.02]">
+        <Link
+          to={signedIn ? auth.homeFor(auth.getRole()) : '/'}
+          aria-label={signedIn ? 'Pantara — dashboard' : 'Pantara — beranda'}
+          className="group transition-transform duration-300 hover:scale-[1.02]"
+        >
           <BrandWordmark />
         </Link>
         <nav ref={navRef} aria-label="Navigasi utama" className="relative hidden items-center gap-1 md:flex">
@@ -69,7 +89,7 @@ function SiteHeaderCivic({ nav, actions }: { nav: NavItem[]; actions?: ReactNode
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          {actions ?? <SessionLink />}
+          {actions ?? (signedIn ? <SignOutButton /> : <SignInLink />)}
           <button
             type="button"
             className="btn grid h-10 w-10 place-items-center rounded-2xl border border-mint bg-white/80 text-accent md:hidden"
@@ -170,10 +190,14 @@ function SiteFooterCivic() {
   );
 }
 
-/** Page frame of the civic design system: banner, header, content, footer. */
+/**
+ * Page frame of the civic design system: banner, header, content, footer.
+ * Signed-in users keep their workspace navigation on every page, public ones
+ * included; visitors get the public navigation.
+ */
 export function SiteShell({
   children,
-  nav = PUBLIC_NAV,
+  nav,
   headerActions,
   fullBleed = false,
 }: {
@@ -183,13 +207,15 @@ export function SiteShell({
   /** Render children edge to edge (pages that manage their own sections). */
   fullBleed?: boolean;
 }) {
+  const signedIn = auth.isAuthenticated();
+  const items = nav ?? (signedIn ? workspaceNav(auth.getRole()) : PUBLIC_NAV);
   return (
     <div className="civic flex min-h-screen flex-col">
       <a href="#konten" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2">
         Lewati ke konten
       </a>
       <SyntheticDataBanner />
-      <SiteHeaderCivic nav={nav} actions={headerActions} />
+      <SiteHeaderCivic nav={items} actions={headerActions} signedIn={signedIn} />
       <main id="konten" className={`page-enter ${fullBleed ? 'w-full flex-1' : 'mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 sm:py-8'}`}>
         {children}
       </main>

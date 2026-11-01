@@ -32,12 +32,6 @@ import { useApi } from '../../lib/useApi';
 
 type Tab = 'tindakan' | 'prakiraan' | 'perencanaan' | 'intervensi';
 
-const GOV_NAV = [
-  { to: '/pemerintah', label: 'Dashboard' },
-  { to: '/rapor-daerah', label: 'Rapor Daerah' },
-  { to: '/intervensi', label: 'Intervensi Publik' },
-];
-
 /** Government workspace: watchlist, forecasts & exports, and the intervention log. */
 export default function GovernmentDashboard() {
   const navigate = useNavigate();
@@ -60,26 +54,14 @@ export default function GovernmentDashboard() {
       .catch((e: Error) => setAuthError(e.message));
   }, [navigate]);
 
+  // Same destination as the header's "Keluar" (SiteShell); this one is the phone-size button.
   const logout = () => {
     auth.clearToken();
-    navigate('/login');
+    navigate('/');
   };
 
   return (
-    <SiteShell
-      nav={GOV_NAV}
-      headerActions={
-        profile && (
-          <button
-            type="button"
-            onClick={logout}
-            className="hidden items-center gap-1.5 rounded-full border border-mint px-3 py-1.5 text-sm font-semibold text-accent hover:bg-accent-soft sm:inline-flex"
-          >
-            <LogOut className="h-4 w-4" aria-hidden="true" /> Keluar
-          </button>
-        )
-      }
-    >
+    <SiteShell>
       {authError ? (
         <ErrorState message={authError} onRetry={() => window.location.reload()} />
       ) : meta.error ? (
