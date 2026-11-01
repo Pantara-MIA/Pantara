@@ -1,0 +1,515 @@
+regency_code,sp2kp_name,region_id,method
+1101,Kab. Aceh Selatan,kab-aceh-selatan,exact
+1102,Kab. Aceh Tenggara,kab-aceh-tenggara,exact
+1103,Kab. Aceh Timur,kab-aceh-timur,exact
+1104,Kab. Aceh Tengah,kab-aceh-tengah,exact
+1105,Kab. Aceh Barat,kab-aceh-barat,exact
+1106,Kab. Aceh Besar,kab-aceh-besar,exact
+1107,Kab. Pidie,kab-pidie,exact
+1108,Kab. Aceh Utara,kab-aceh-utara,exact
+1109,Kab. Simeulue,kab-simeulue,exact
+1110,Kab. Aceh Singkil,kab-aceh-singkil,exact
+1111,Kab. Bireuen,kab-bireuen,exact
+1112,Kab. Aceh Barat Daya,kab-aceh-barat-daya,exact
+1113,Kab. Gayo Lues,kab-gayo-lues,exact
+1114,Kab. Aceh Jaya,kab-aceh-jaya,exact
+1115,Kab. Nagan Raya,kab-nagan-raya,exact
+1116,Kab. Aceh Tamiang,kab-aceh-tamiang,exact
+1117,Kab. Bener Meriah,kab-bener-meriah,exact
+1118,Kab. Pidie Jaya,kab-pidie-jaya,exact
+1171,Kota Banda Aceh,kota-banda-aceh,exact
+1172,Kota Sabang,kota-sabang,exact
+1173,Kota Lhokseumawe,kota-lhokseumawe,exact
+1174,Kota Langsa,kota-langsa,exact
+1175,Kota Subulussalam,kota-subulussalam,exact
+1201,Kab. Tapanuli Tengah,kab-tapanuli-tengah,exact
+1202,Kab. Tapanuli Utara,kab-tapanuli-utara,exact
+1203,Kab. Tapanuli Selatan,kab-tapanuli-selatan,exact
+1204,Kab. Nias,kab-nias,exact
+1205,Kab. Langkat,kab-langkat,exact
+1206,Kab. Karo,kab-karo,exact
+1207,Kab. Deli Serdang,kab-deli-serdang,exact
+1208,Kab. Simalungun,kab-simalungun,exact
+1209,Kab. Asahan,kab-asahan,exact
+1210,Kab. Labuhanbatu,kab-labuhan-batu,exact
+1211,Kab. Dairi,kab-dairi,exact
+1212,Kab. Toba,kab-toba-samosir,override
+1213,Kab. Mandailing Natal,kab-mandailing-natal,exact
+1214,Kab. Nias Selatan,kab-nias-selatan,exact
+1215,Kab. Pakpak Bharat,kab-pakpak-bharat,exact
+1216,Kab. Humbang Hasundutan,kab-humbang-hasundutan,exact
+1217,Kab. Samosir,kab-samosir,exact
+1218,Kab. Serdang Bedagai,kab-serdang-bedagai,exact
+1219,Kab. Batu Bara,kab-batu-bara,exact
+1220,Kab. Padang Lawas Utara,kab-padang-lawas-utara,exact
+1221,Kab. Padang Lawas,kab-padang-lawas,exact
+1222,Kab. Labuhanbatu Selatan,kab-labuhan-batu-selatan,exact
+1223,Kab. Labuhanbatu Utara,kab-labuhan-batu-utara,exact
+1224,Kab. Nias Utara,kab-nias-utara,exact
+1225,Kab. Nias Barat,kab-nias-barat,exact
+1271,Kota Medan,kota-medan,exact
+1272,Kota Pematangsiantar,kota-pematang-siantar,exact
+1273,Kota Sibolga,kota-sibolga,exact
+1274,Kota Tanjung Balai,kota-tanjung-balai,exact
+1275,Kota Binjai,kota-binjai,exact
+1276,Kota Tebing Tinggi,kota-tebing-tinggi,exact
+1277,Kota Padang Sidempuan,kota-padangsidimpuan,fuzzy 0.93
+1278,Kota Gunungsitoli,kota-gunungsitoli,exact
+1301,Kab. Pesisir Selatan,kab-pesisir-selatan,exact
+1302,Kab. Solok,kab-solok,exact
+1303,Kab. Sijunjung,kab-sijunjung,exact
+1304,Kab. Tanah Datar,kab-tanah-datar,exact
+1305,Kab. Padang Pariaman,kab-padang-pariaman,exact
+1306,Kab. Agam,kab-agam,exact
+1307,Kab. Lima Puluh Kota,kab-lima-puluh-kota,exact
+1308,Kab. Pasaman,kab-pasaman,exact
+1309,Kab. Kepulauan Mentawai,kab-kepulauan-mentawai,exact
+1310,Kab. Dharmasraya,kab-dharmasraya,exact
+1311,Kab. Solok Selatan,kab-solok-selatan,exact
+1312,Kab. Pasaman Barat,kab-pasaman-barat,exact
+1371,Kota Padang,kota-padang,exact
+1372,Kota Solok,kota-solok,exact
+1373,Kota Sawahlunto,kota-sawah-lunto,exact
+1374,Kota Padang Panjang,kota-padang-panjang,exact
+1375,Kota Bukittinggi,kota-bukittinggi,exact
+1376,Kota Payakumbuh,kota-payakumbuh,exact
+1377,Kota Pariaman,kota-pariaman,exact
+1401,Kab. Kampar,kab-kampar,exact
+1402,Kab. Indragiri Hulu,kab-indragiri-hulu,exact
+1403,Kab. Bengkalis,kab-bengkalis,exact
+1404,Kab. Indragiri Hilir,kab-indragiri-hilir,exact
+1405,Kab. Pelalawan,kab-pelalawan,exact
+1406,Kab. Rokan Hulu,kab-rokan-hulu,exact
+1407,Kab. Rokan Hilir,kab-rokan-hilir,exact
+1408,Kab. Siak,kab-siak,exact
+1409,Kab. Kuantan Singingi,kab-kuantan-singingi,exact
+1410,Kab. Kepulauan Meranti,kab-kepulauan-meranti,exact
+1471,Kota Pekanbaru,kota-pekanbaru,exact
+1472,Kota Dumai,kota-dumai,exact
+1501,Kab. Kerinci,kab-kerinci,exact
+1502,Kab. Merangin,kab-merangin,exact
+1503,Kab. Sarolangun,kab-sarolangun,exact
+1504,Kab. Batanghari,kab-batang-hari,exact
+1505,Kab. Muaro Jambi,kab-muaro-jambi,exact
+1506,Kab. Tanjung Jabung Barat,kab-tanjung-jabung-barat,exact
+1507,Kab. Tanjung Jabung Timur,kab-tanjung-jabung-timur,exact
+1508,Kab. Bungo,kab-bungo,exact
+1509,Kab. Tebo,kab-tebo,exact
+1571,Kota Jambi,kota-jambi,exact
+1572,Kota Sungai Penuh,kota-sungai-penuh,exact
+1601,Kab. Ogan Komering Ulu,kab-ogan-komering-ulu,exact
+1602,Kab. Ogan Komering Ilir,kab-ogan-komering-ilir,exact
+1603,Kab. Muara Enim,kab-muara-enim,exact
+1604,Kab. Lahat,kab-lahat,exact
+1605,Kab. Musi Rawas,kab-musi-rawas,exact
+1606,Kab. Musi Banyuasin,kab-musi-banyuasin,exact
+1607,Kab. Banyuasin,kab-banyu-asin,exact
+1608,Kab. Ogan Komering Ulu Timur,kab-ogan-komering-ulu-timur,exact
+1609,Kab. Ogan Komering Ulu Selatan,kab-ogan-komering-ulu-selatan,exact
+1610,Kab. Ogan Ilir,kab-ogan-ilir,exact
+1611,Kab. Empat Lawang,kab-empat-lawang,exact
+1612,Kab. Penukal Abab Lematang Ilir,kab-penukal-abab-lematang-ilir,exact
+1613,Kab. Musi Rawas Utara,kab-musi-rawas-utara,exact
+1671,Kota Palembang,kota-palembang,exact
+1672,Kota Pagar Alam,kota-pagar-alam,exact
+1673,Kota Lubuk Linggau,kota-lubuklinggau,exact
+1674,Kota Prabumulih,kota-prabumulih,exact
+1701,Kab. Bengkulu Selatan,kab-bengkulu-selatan,exact
+1702,Kab. Rejang Lebong,kab-rejang-lebong,exact
+1703,Kab. Bengkulu Utara,kab-bengkulu-utara,exact
+1704,Kab. Kaur,kab-kaur,exact
+1705,Kab. Seluma,kab-seluma,exact
+1706,Kab. Muko Muko,kab-mukomuko,exact
+1707,Kab. Lebong,kab-lebong,exact
+1708,Kab. Kepahiang,kab-kepahiang,exact
+1709,Kab. Bengkulu Tengah,kab-bengkulu-tengah,exact
+1771,Kota Bengkulu,kota-bengkulu,exact
+1801,Kab. Lampung Selatan,kab-lampung-selatan,exact
+1802,Kab. Lampung Tengah,kab-lampung-tengah,exact
+1803,Kab. Lampung Utara,kab-lampung-utara,exact
+1804,Kab. Lampung Barat,kab-lampung-barat,exact
+1805,Kab. Tulang Bawang,kab-tulangbawang,exact
+1806,Kab. Tanggamus,kab-tanggamus,exact
+1807,Kab. Lampung Timur,kab-lampung-timur,exact
+1808,Kab. Way Kanan,kab-way-kanan,exact
+1809,Kab. Pesawaran,kab-pesawaran,exact
+1810,Kab. Pringsewu,kab-pringsewu,exact
+1811,Kab. Mesuji,kab-mesuji,exact
+1812,Kab. Tulang Bawang Barat,kab-tulang-bawang-barat,exact
+1813,Kab. Pesisir Barat,kab-pesisir-barat,exact
+1871,Kota Bandar Lampung,kota-bandar-lampung,exact
+1872,Kota Metro,kota-metro,exact
+1901,Kab. Bangka,kab-bangka,exact
+1902,Kab. Belitung,kab-belitung,exact
+1903,Kab. Bangka Selatan,kab-bangka-selatan,exact
+1904,Kab. Bangka Tengah,kab-bangka-tengah,exact
+1905,Kab. Bangka Barat,kab-bangka-barat,exact
+1906,Kab. Belitung Timur,kab-belitung-timur,exact
+1971,Kota Pangkal Pinang,kota-pangkal-pinang,exact
+2101,Kab. Bintan,kab-bintan,exact
+2102,Kab. Karimun,kab-karimun,exact
+2103,Kab. Natuna,kab-natuna,exact
+2104,Kab. Lingga,kab-lingga,exact
+2105,Kab. Kepulauan Anambas,kab-kepulauan-anambas,exact
+2171,Kota Batam,kota-batam,exact
+2172,Kota Tanjung Pinang,kota-tanjung-pinang,exact
+3101,Kab. Adm. Kep. Seribu,kab-kepulauan-seribu,exact
+3171,Kota Adm. Jakarta Pusat,kota-jakarta-pusat,exact
+3172,Kota Adm. Jakarta Utara,kota-jakarta-utara,exact
+3173,Kota Adm. Jakarta Barat,kota-jakarta-barat,exact
+3174,Kota Adm. Jakarta Selatan,kota-jakarta-selatan,exact
+3175,Kota Adm. Jakarta Timur,kota-jakarta-timur,exact
+3201,Kab. Bogor,kab-bogor,exact
+3202,Kab. Sukabumi,kab-sukabumi,exact
+3203,Kab. Cianjur,kab-cianjur,exact
+3204,Kab. Bandung,kab-bandung,exact
+3205,Kab. Garut,kab-garut,exact
+3206,Kab. Tasikmalaya,kab-tasikmalaya,exact
+3207,Kab. Ciamis,kab-ciamis,exact
+3208,Kab. Kuningan,kab-kuningan,exact
+3209,Kab. Cirebon,kab-cirebon,exact
+3210,Kab. Majalengka,kab-majalengka,exact
+3211,Kab. Sumedang,kab-sumedang,exact
+3212,Kab. Indramayu,kab-indramayu,exact
+3213,Kab. Subang,kab-subang,exact
+3214,Kab. Purwakarta,kab-purwakarta,exact
+3215,Kab. Karawang,kab-karawang,exact
+3216,Kab. Bekasi,kab-bekasi,exact
+3217,Kab. Bandung Barat,kab-bandung-barat,exact
+3218,Kab. Pangandaran,kab-pangandaran,exact
+3271,Kota Bogor,kota-bogor,exact
+3272,Kota Sukabumi,kota-sukabumi,exact
+3273,Kota Bandung,kota-bandung,exact
+3274,Kota Cirebon,kota-cirebon,exact
+3275,Kota Bekasi,kota-bekasi,exact
+3276,Kota Depok,kota-depok,exact
+3277,Kota Cimahi,kota-cimahi,exact
+3278,Kota Tasikmalaya,kota-tasikmalaya,exact
+3279,Kota Banjar,kota-banjar,exact
+3301,Kab. Cilacap,kab-cilacap,exact
+3302,Kab. Banyumas,kab-banyumas,exact
+3303,Kab. Purbalingga,kab-purbalingga,exact
+3304,Kab. Banjarnegara,kab-banjarnegara,exact
+3305,Kab. Kebumen,kab-kebumen,exact
+3306,Kab. Purworejo,kab-purworejo,exact
+3307,Kab. Wonosobo,kab-wonosobo,exact
+3308,Kab. Magelang,kab-magelang,exact
+3309,Kab. Boyolali,kab-boyolali,exact
+3310,Kab. Klaten,kab-klaten,exact
+3311,Kab. Sukoharjo,kab-sukoharjo,exact
+3312,Kab. Wonogiri,kab-wonogiri,exact
+3313,Kab. Karanganyar,kab-karanganyar,exact
+3314,Kab. Sragen,kab-sragen,exact
+3315,Kab. Grobogan,kab-grobogan,exact
+3316,Kab. Blora,kab-blora,exact
+3317,Kab. Rembang,kab-rembang,exact
+3318,Kab. Pati,kab-pati,exact
+3319,Kab. Kudus,kab-kudus,exact
+3320,Kab. Jepara,kab-jepara,exact
+3321,Kab. Demak,kab-demak,exact
+3322,Kab. Semarang,kab-semarang,exact
+3323,Kab. Temanggung,kab-temanggung,exact
+3324,Kab. Kendal,kab-kendal,exact
+3325,Kab. Batang,kab-batang,exact
+3326,Kab. Pekalongan,kab-pekalongan,exact
+3327,Kab. Pemalang,kab-pemalang,exact
+3328,Kab. Tegal,kab-tegal,exact
+3329,Kab. Brebes,kab-brebes,exact
+3371,Kota Magelang,kota-magelang,exact
+3372,Kota Surakarta,kota-surakarta,exact
+3373,Kota Salatiga,kota-salatiga,exact
+3374,Kota Semarang,kota-semarang,exact
+3375,Kota Pekalongan,kota-pekalongan,exact
+3376,Kota Tegal,kota-tegal,exact
+3401,Kab. Kulon Progo,kab-kulon-progo,exact
+3402,Kab. Bantul,kab-bantul,exact
+3403,Kab. Gunungkidul,kab-gunung-kidul,exact
+3404,Kab. Sleman,kab-sleman,exact
+3471,Kota Yogyakarta,kota-yogyakarta,exact
+3501,Kab. Pacitan,kab-pacitan,exact
+3502,Kab. Ponorogo,kab-ponorogo,exact
+3503,Kab. Trenggalek,kab-trenggalek,exact
+3504,Kab. Tulungagung,kab-tulungagung,exact
+3505,Kab. Blitar,kab-blitar,exact
+3506,Kab. Kediri,kab-kediri,exact
+3507,Kab. Malang,kab-malang,exact
+3508,Kab. Lumajang,kab-lumajang,exact
+3509,Kab. Jember,kab-jember,exact
+3510,Kab. Banyuwangi,kab-banyuwangi,exact
+3511,Kab. Bondowoso,kab-bondowoso,exact
+3512,Kab. Situbondo,kab-situbondo,exact
+3513,Kab. Probolinggo,kab-probolinggo,exact
+3514,Kab. Pasuruan,kab-pasuruan,exact
+3515,Kab. Sidoarjo,kab-sidoarjo,exact
+3516,Kab. Mojokerto,kab-mojokerto,exact
+3517,Kab. Jombang,kab-jombang,exact
+3518,Kab. Nganjuk,kab-nganjuk,exact
+3519,Kab. Madiun,kab-madiun,exact
+3520,Kab. Magetan,kab-magetan,exact
+3521,Kab. Ngawi,kab-ngawi,exact
+3522,Kab. Bojonegoro,kab-bojonegoro,exact
+3523,Kab. Tuban,kab-tuban,exact
+3524,Kab. Lamongan,kab-lamongan,exact
+3525,Kab. Gresik,kab-gresik,exact
+3526,Kab. Bangkalan,kab-bangkalan,exact
+3527,Kab. Sampang,kab-sampang,exact
+3528,Kab. Pamekasan,kab-pamekasan,exact
+3529,Kab. Sumenep,kab-sumenep,exact
+3571,Kota Kediri,kota-kediri,exact
+3572,Kota Blitar,kota-blitar,exact
+3573,Kota Malang,kota-malang,exact
+3574,Kota Probolinggo,kota-probolinggo,exact
+3575,Kota Pasuruan,kota-pasuruan,exact
+3576,Kota Mojokerto,kota-mojokerto,exact
+3577,Kota Madiun,kota-madiun,exact
+3578,Kota Surabaya,kota-surabaya,exact
+3579,Kota Batu,kota-batu,exact
+3601,Kab. Pandeglang,kab-pandeglang,exact
+3602,Kab. Lebak,kab-lebak,exact
+3603,Kab. Tangerang,kab-tangerang,exact
+3604,Kab. Serang,kab-serang,exact
+3671,Kota Tangerang,kota-tangerang,exact
+3672,Kota Cilegon,kota-cilegon,exact
+3673,Kota Serang,kota-serang,exact
+3674,Kota Tangerang Selatan,kota-tangerang-selatan,exact
+5101,Kab. Jembrana,kab-jembrana,exact
+5102,Kab. Tabanan,kab-tabanan,exact
+5103,Kab. Badung,kab-badung,exact
+5104,Kab. Gianyar,kab-gianyar,exact
+5105,Kab. Klungkung,kab-klungkung,exact
+5106,Kab. Bangli,kab-bangli,exact
+5107,Kab. Karangasem,kab-karang-asem,exact
+5108,Kab. Buleleng,kab-buleleng,exact
+5171,Kota Denpasar,kota-denpasar,exact
+5201,Kab. Lombok Barat,kab-lombok-barat,exact
+5202,Kab. Lombok Tengah,kab-lombok-tengah,exact
+5203,Kab. Lombok Timur,kab-lombok-timur,exact
+5204,Kab. Sumbawa,kab-sumbawa,exact
+5205,Kab. Dompu,kab-dompu,exact
+5206,Kab. Bima,kab-bima,exact
+5207,Kab. Sumbawa Barat,kab-sumbawa-barat,exact
+5208,Kab. Lombok Utara,kab-lombok-utara,exact
+5271,Kota Mataram,kota-mataram,exact
+5272,Kota Bima,kota-bima,exact
+5301,Kab. Kupang,kab-kupang,exact
+5302,Kab Timor Tengah Selatan,kab-timor-tengah-selatan,exact
+5303,Kab. Timor Tengah Utara,kab-timor-tengah-utara,exact
+5304,Kab. Belu,kab-belu,exact
+5305,Kab. Alor,kab-alor,exact
+5306,Kab. Flores Timur,kab-flores-timur,exact
+5307,Kab. Sikka,kab-sikka,exact
+5308,Kab. Ende,kab-ende,exact
+5309,Kab. Ngada,kab-ngada,exact
+5310,Kab. Manggarai,kab-manggarai,exact
+5311,Kab. Sumba Timur,kab-sumba-timur,exact
+5312,Kab. Sumba Barat,kab-sumba-barat,exact
+5313,Kab. Lembata,kab-lembata,exact
+5314,Kab. Rote Ndao,kab-rote-ndao,exact
+5315,Kab. Manggarai Barat,kab-manggarai-barat,exact
+5316,Kab. Nagekeo,kab-nagekeo,exact
+5317,Kab. Sumba Tengah,kab-sumba-tengah,exact
+5318,Kab. Sumba Barat Daya,kab-sumba-barat-daya,exact
+5319,Kab. Manggarai Timur,kab-manggarai-timur,exact
+5320,Kab. Sabu Raijua,kab-sabu-raijua,exact
+5321,Kab. Malaka,kab-malaka,exact
+5371,Kota Kupang,kota-kupang,exact
+6101,Kab. Sambas,kab-sambas,exact
+6102,Kab. Mempawah,kab-mempawah,exact
+6103,Kab. Sanggau,kab-sanggau,exact
+6104,Kab. Ketapang,kab-ketapang,exact
+6105,Kab. Sintang,kab-sintang,exact
+6106,Kab. Kapuas Hulu,kab-kapuas-hulu,exact
+6107,Kab. Bengkayang,kab-bengkayang,exact
+6108,Kab. Landak,kab-landak,exact
+6109,Kab. Sekadau,kab-sekadau,exact
+6110,Kab. Melawi,kab-melawi,exact
+6111,Kab. Kayong Utara,kab-kayong-utara,exact
+6112,Kab. Kubu Raya,kab-kubu-raya,exact
+6171,Kota Pontianak,kota-pontianak,exact
+6172,Kota Singkawang,kota-singkawang,exact
+6201,Kab. Kotawaringin Barat,kab-kotawaringin-barat,exact
+6202,Kab. Kotawaringin Timur,kab-kotawaringin-timur,exact
+6203,Kab. Kapuas,kab-kapuas,exact
+6204,Kab. Barito Selatan,kab-barito-selatan,exact
+6205,Kab. Barito Utara,kab-barito-utara,exact
+6206,Kab. Katingan,kab-katingan,exact
+6207,Kab. Seruyan,kab-seruyan,exact
+6208,Kab. Sukamara,kab-sukamara,exact
+6209,Kab. Lamandau,kab-lamandau,exact
+6210,Kab. Gunung Mas,kab-gunung-mas,exact
+6211,Kab. Pulang Pisau,kab-pulang-pisau,exact
+6212,Kab. Murung Raya,kab-murung-raya,exact
+6213,Kab. Barito Timur,kab-barito-timur,exact
+6271,Kota Palangkaraya,kota-palangka-raya,exact
+6301,Kab. Tanah Laut,kab-tanah-laut,exact
+6302,Kab. Kotabaru,kab-kotabaru,exact
+6303,Kab. Banjar,kab-banjar,exact
+6304,Kab. Barito Kuala,kab-barito-kuala,exact
+6305,Kab. Tapin,kab-tapin,exact
+6306,Kab. Hulu Sungai Selatan,kab-hulu-sungai-selatan,exact
+6307,Kab. Hulu Sungai Tengah,kab-hulu-sungai-tengah,exact
+6308,Kab. Hulu Sungai Utara,kab-hulu-sungai-utara,exact
+6309,Kab. Tabalong,kab-tabalong,exact
+6310,Kab. Tanah Bumbu,kab-tanah-bumbu,exact
+6311,Kab. Balangan,kab-balangan,exact
+6371,Kota Banjarmasin,kota-banjarmasin,exact
+6372,Kota Banjarbaru,kota-banjar-baru,exact
+6401,Kab. Paser,kab-paser,exact
+6402,Kab. Kutai Kartanegara,kab-kutai-kartanegara,exact
+6403,Kab. Berau,kab-berau,exact
+6407,Kab. Kutai Barat,kab-kutai-barat,exact
+6408,Kab. Kutai Timur,kab-kutai-timur,exact
+6409,Kab. Penajam Paser Utara,kab-penajam-paser-utara,exact
+6411,Kab. Mahakam Ulu,kab-mahakam-hulu,fuzzy 0.95
+6471,Kota Balikpapan,kota-balikpapan,exact
+6472,Kota Samarinda,kota-samarinda,exact
+6474,Kota Bontang,kota-bontang,exact
+6501,Kab. Bulungan,kab-bulungan,exact
+6502,Kab. Malinau,kab-malinau,exact
+6503,Kab. Nunukan,kab-nunukan,exact
+6504,Kab. Tana Tidung,kab-tana-tidung,exact
+6571,Kota Tarakan,kota-tarakan,exact
+7101,Kab. Bolaang Mongondow,kab-bolaang-mongondow,exact
+7102,Kab. Minahasa,kab-minahasa,exact
+7103,Kab. Kepulauan Sangihe,kab-kepulauan-sangihe,exact
+7104,Kab. Kepulauan Talaud,kab-kepulauan-talaud,exact
+7105,Kab. Minahasa Selatan,kab-minahasa-selatan,exact
+7106,Kab. Minahasa Utara,kab-minahasa-utara,exact
+7107,Kab. Minahasa Tenggara,kab-minahasa-tenggara,exact
+7108,Kab. Bolaang Mongondow Utara,kab-bolaang-mongondow-utara,exact
+7109,Kab. Kep. Siau Tagulandang Biaro,kab-siau-tagulandang-biaro,fuzzy 0.82
+7110,Kab. Bolaang Mongondow Timur,kab-bolaang-mongondow-timur,exact
+7111,Kab. Bolaang Mongondow Selatan,kab-bolaang-mongondow-selatan,exact
+7171,Kota Manado,kota-manado,exact
+7172,Kota Bitung,kota-bitung,exact
+7173,Kota Tomohon,kota-tomohon,exact
+7174,Kota Kotamobagu,kota-kotamobagu,exact
+7201,Kab. Banggai,kab-banggai,exact
+7202,Kab. Poso,kab-poso,exact
+7203,Kab. Donggala,kab-donggala,exact
+7204,Kab. Toli Toli,kab-toli-toli,exact
+7205,Kab. Buol,kab-buol,exact
+7206,Kab. Morowali,kab-morowali,exact
+7207,Kab. Banggai Kepulauan,kab-banggai-kepulauan,exact
+7208,Kab. Parigi Moutong,kab-parigi-moutong,exact
+7209,Kab. Tojo Una Una,kab-tojo-una-una,exact
+7210,Kab. Sigi,kab-sigi,exact
+7211,Kab. Banggai Laut,kab-banggai-laut,exact
+7212,Kab. Morowali Utara,kab-morowali-utara,exact
+7271,Kota Palu,kota-palu,exact
+7301,Kab. Kepulauan Selayar,kab-kepulauan-selayar,exact
+7302,Kab. Bulukumba,kab-bulukumba,exact
+7303,Kab. Bantaeng,kab-bantaeng,exact
+7304,Kab. Jeneponto,kab-jeneponto,exact
+7305,Kab. Takalar,kab-takalar,exact
+7306,Kab. Gowa,kab-gowa,exact
+7307,Kab. Sinjai,kab-sinjai,exact
+7308,Kab. Bone,kab-bone,exact
+7309,Kab. Maros,kab-maros,exact
+7310,Kab. Pangkajene Kepulauan,kab-pangkajene-dan-kepulauan,fuzzy 0.93
+7311,Kab. Barru,kab-barru,exact
+7312,Kab. Soppeng,kab-soppeng,exact
+7313,Kab. Wajo,kab-wajo,exact
+7314,Kab. Sidenreng Rappang,kab-sidenreng-rappang,exact
+7315,Kab. Pinrang,kab-pinrang,exact
+7316,Kab. Enrekang,kab-enrekang,exact
+7317,Kab. Luwu,kab-luwu,exact
+7318,Kab. Tana Toraja,kab-tana-toraja,exact
+7322,Kab. Luwu Utara,kab-luwu-utara,exact
+7324,Kab. Luwu Timur,kab-luwu-timur,exact
+7326,Kab. Toraja Utara,kab-toraja-utara,exact
+7371,Kota Makassar,kota-makassar,exact
+7372,Kota Pare Pare,kota-parepare,exact
+7373,Kota Palopo,kota-palopo,exact
+7401,Kab. Kolaka,kab-kolaka,exact
+7402,Kab. Konawe,kab-konawe,exact
+7403,Kab. Muna,kab-muna,exact
+7404,Kab. Buton,kab-buton,exact
+7405,Kab. Konawe Selatan,kab-konawe-selatan,exact
+7406,Kab. Bombana,kab-bombana,exact
+7407,Kab. Wakatobi,kab-wakatobi,exact
+7408,Kab. Kolaka Utara,kab-kolaka-utara,exact
+7409,Kab. Konawe Utara,kab-konawe-utara,exact
+7410,Kab. Buton Utara,kab-buton-utara,exact
+7411,Kab. Kolaka Timur,kab-kolaka-timur,exact
+7412,Kab. Konawe Kepulauan,kab-konawe-kepulauan,exact
+7413,Kab. Muna Barat,kab-muna-barat,exact
+7414,Kab. Buton Tengah,kab-buton-tengah,exact
+7415,Kab. Buton Selatan,kab-buton-selatan,exact
+7471,Kota Kendari,kota-kendari,exact
+7472,Kota Bau Bau,kota-baubau,exact
+7501,Kab. Gorontalo,kab-gorontalo,exact
+7502,Kab. Boalemo,kab-boalemo,exact
+7503,Kab. Bone Bolango,kab-bone-bolango,exact
+7504,Kab. Pohuwato,kab-pohuwato,exact
+7505,Kab. Gorontalo Utara,kab-gorontalo-utara,exact
+7571,Kota Gorontalo,kota-gorontalo,exact
+7601,Kab. Pasangkayu,kab-mamuju-utara,override
+7602,Kab. Mamuju,kab-mamuju,exact
+7603,Kab. Mamasa,kab-mamasa,exact
+7604,Kab. Polewali Mandar,kab-polewali-mandar,exact
+7605,Kab. Majene,kab-majene,exact
+7606,Kab. Mamuju Tengah,kab-mamuju-tengah,exact
+8101,Kab. Maluku Tengah,kab-maluku-tengah,exact
+8102,Kab. Maluku Tenggara,kab-maluku-tenggara,exact
+8103,Kab. Kepulauan Tanimbar,kab-maluku-tenggara-barat,override
+8104,Kab. Buru,kab-buru,exact
+8105,Kab. Seram Bagian Timur,kab-seram-bagian-timur,exact
+8106,Kab. Seram Bagian Barat,kab-seram-bagian-barat,exact
+8107,Kab. Kepulauan Aru,kab-kepulauan-aru,exact
+8108,Kab. Maluku Barat Daya,kab-maluku-barat-daya,exact
+8109,Kab. Buru Selatan,kab-buru-selatan,exact
+8171,Kota Ambon,kota-ambon,exact
+8172,Kota Tual,kota-tual,exact
+8201,Kab. Halmahera Barat,kab-halmahera-barat,exact
+8202,Kab. Halmahera Tengah,kab-halmahera-tengah,exact
+8203,Kab. Halmahera Utara,kab-halmahera-utara,exact
+8204,Kab. Halmahera Selatan,kab-halmahera-selatan,exact
+8205,Kab. Kepulauan Sula,kab-kepulauan-sula,exact
+8206,Kab. Halmahera Timur,kab-halmahera-timur,exact
+8207,Kab. Pulau Morotai,kab-pulau-morotai,exact
+8208,Kab. Pulau Taliabu,kab-pulau-taliabu,exact
+8271,Kota Ternate,kota-ternate,exact
+8272,Kota Tidore Kepulauan,kota-tidore-kepulauan,exact
+9103,Kab. Jayapura,kab-jayapura,exact
+9105,Kab. Kepulauan Yapen,kab-kepulauan-yapen,exact
+9106,Kab. Biak Numfor,kab-biak-numfor,exact
+9110,Kab. Sarmi,kab-sarmi,exact
+9111,Kab. Keerom,kab-keerom,exact
+9115,Kab. Waropen,kab-waropen,exact
+9119,Kab. Supiori,kab-supiori,exact
+9120,Kab. Mamberamo Raya,kab-mamberamo-raya,exact
+9171,Kota Jayapura,kota-jayapura,exact
+9202,Kab. Manokwari,kab-manokwari,exact
+9203,Kab. Fak Fak,kab-fakfak,exact
+9206,Kab. Teluk Bintuni,kab-teluk-bintuni,exact
+9207,Kab. Teluk Wondama,kab-teluk-wondama,exact
+9208,Kab. Kaimana,kab-kaimana,exact
+9211,Kab. Manokwari Selatan,kab-manokwari-selatan,exact
+9212,Kab. Pegunungan Arfak,kab-pegunungan-arfak,exact
+9301,Kab. Merauke,kab-merauke,exact
+9302,Kab. Boven Digoel,kab-boven-digoel,exact
+9303,Kab. Mappi,kab-mappi,exact
+9304,Kab. Asmat,kab-asmat,exact
+9401,Kab. Nabire,kab-nabire,exact
+9402,Kab. Puncak Jaya,kab-puncak-jaya,exact
+9403,Kab. Paniai,kab-paniai,exact
+9404,Kab. Mimika,kab-mimika,exact
+9405,Kab. Puncak,kab-puncak,exact
+9406,Kab. Dogiyai,kab-dogiyai,exact
+9407,Kab. Intan Jaya,kab-intan-jaya,exact
+9408,Kab. Deiyai,kab-deiyai,exact
+9501,Kab. Jayawijaya,kab-jayawijaya,exact
+9502,Kab Pegunungan Bintang,kab-pegunungan-bintang,exact
+9503,Kab. Yahukimo,kab-yahukimo,exact
+9504,Kab. Tolikara,kab-tolikara,exact
+9505,Kab. Mamberamo Tengah,kab-mamberamo-tengah,exact
+9506,Kab. Yalimo,kab-yalimo,exact
+9507,Kab. Lanny Jaya,kab-lanny-jaya,exact
+9508,Kab. Nduga,kab-nduga,exact
+9601,Kab. Sorong,kab-sorong,exact
+9602,Kab. Sorong Selatan,kab-sorong-selatan,exact
+9603,Kab. Raja Ampat,kab-raja-ampat,exact
+9604,Kab. Tambrauw,kab-tambrauw,exact
+9605,Kab. Maybrat,kab-maybrat,exact
+9671,Kota Sorong,kota-sorong,exact

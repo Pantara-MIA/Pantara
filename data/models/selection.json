@@ -1,0 +1,37 @@
+{
+ "province": {
+  "bawang-merah": "v2",
+  "bawang-putih": "v2",
+  "beras-medium": "v2",
+  "beras-premium": "v2",
+  "cabai-merah-besar": "v2",
+  "cabai-merah-keriting": "v2",
+  "cabai-rawit-hijau": "v2",
+  "cabai-rawit-merah": "v2",
+  "daging-ayam-ras": "v2",
+  "daging-sapi": "v2",
+  "gula-pasir": "v2",
+  "minyak-goreng": "v2",
+  "telur-ayam-ras": "v2"
+ },
+ "regency": {
+  "bawang-bombay": "v2",
+  "bawang-merah": "v2",
+  "bawang-putih": "v2",
+  "beras-medium": "v2",
+  "beras-premium": "v2",
+  "beras-sphp": "v2",
+  "cabai-merah-besar": "fhs",
+  "cabai-merah-keriting": "fhs",
+  "cabai-rawit-hijau": "v2",
+  "cabai-rawit-merah": "fhs",
+  "daging-ayam-ras": "v2",
+  "daging-sapi": "v2",
+  "gula-pasir": "v2",
+  "kentang": "v2",
+  "minyak-goreng": "v2",
+  "sawi-hijau": "v2",
+  "telur-ayam-ras": "v2",
+  "tomat": "v2"
+ }
+}

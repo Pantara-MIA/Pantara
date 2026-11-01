@@ -1,0 +1,10 @@
+# Secrets and local state never go into the image build context.
+.env
+.dbcheck/
+.playwright-mcp/
+web/node_modules/
+web/dist/
+*.exe
+model/.cache/
+model/data/
+bin/

@@ -1,0 +1,28 @@
+# Secrets: share .env privately, never commit it (.env.example is the template).
+.env
+.env.*
+!.env.example
+
+# Build output (rebuild with `cd web && npm run build` and `go build`).
+web/node_modules/
+web/dist/
+bin/
+*.exe
+
+# Raw download caches of the data fetchers (refetched by model/fetch_*.py).
+model/.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local tooling state
+.dbcheck/
+.playwright-mcp/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

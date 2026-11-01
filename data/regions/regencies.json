@@ -1,0 +1,5709 @@
+[
+ {
+  "province": "aceh",
+  "regions": [
+   {
+    "id": "kab-aceh-barat",
+    "name": "Kab. Aceh Barat",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-aceh-jaya",
+     "kab-aceh-tengah",
+     "kab-nagan-raya",
+     "kab-pidie"
+    ]
+   },
+   {
+    "id": "kab-aceh-barat-daya",
+    "name": "Kab. Aceh Barat Daya",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-aceh-selatan",
+     "kab-gayo-lues",
+     "kab-nagan-raya",
+     "kab-simeulue"
+    ]
+   },
+   {
+    "id": "kab-aceh-besar",
+    "name": "Kab. Aceh Besar",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-aceh-jaya",
+     "kab-pidie",
+     "kota-banda-aceh",
+     "kota-sabang"
+    ]
+   },
+   {
+    "id": "kab-aceh-jaya",
+    "name": "Kab. Aceh Jaya",
+    "type": "regency",
+    "population": 300000,
+    "neighbors": [
+     "kab-aceh-barat",
+     "kab-aceh-besar",
+     "kab-pidie"
+    ]
+   },
+   {
+    "id": "kab-aceh-selatan",
+    "name": "Kab. Aceh Selatan",
+    "type": "regency",
+    "population": 310000,
+    "neighbors": [
+     "kab-aceh-barat-daya",
+     "kab-aceh-singkil",
+     "kab-aceh-tenggara",
+     "kab-gayo-lues",
+     "kab-simeulue",
+     "kota-subulussalam"
+    ]
+   },
+   {
+    "id": "kab-aceh-singkil",
+    "name": "Kab. Aceh Singkil",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-aceh-selatan",
+     "kota-subulussalam"
+    ]
+   },
+   {
+    "id": "kab-aceh-tamiang",
+    "name": "Kab. Aceh Tamiang",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-aceh-timur",
+     "kab-gayo-lues",
+     "kota-langsa"
+    ]
+   },
+   {
+    "id": "kab-aceh-tengah",
+    "name": "Kab. Aceh Tengah",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-aceh-barat",
+     "kab-aceh-timur",
+     "kab-bener-meriah",
+     "kab-bireuen",
+     "kab-gayo-lues",
+     "kab-nagan-raya",
+     "kab-pidie"
+    ]
+   },
+   {
+    "id": "kab-aceh-tenggara",
+    "name": "Kab. Aceh Tenggara",
+    "type": "regency",
+    "population": 310000,
+    "neighbors": [
+     "kab-aceh-selatan",
+     "kab-gayo-lues",
+     "kota-subulussalam"
+    ]
+   },
+   {
+    "id": "kab-aceh-timur",
+    "name": "Kab. Aceh Timur",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-aceh-tamiang",
+     "kab-aceh-tengah",
+     "kab-aceh-utara",
+     "kab-bener-meriah",
+     "kab-gayo-lues",
+     "kota-langsa"
+    ]
+   },
+   {
+    "id": "kab-aceh-utara",
+    "name": "Kab. Aceh Utara",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-aceh-timur",
+     "kab-bener-meriah",
+     "kab-bireuen",
+     "kota-lhokseumawe"
+    ]
+   },
+   {
+    "id": "kab-bener-meriah",
+    "name": "Kab. Bener Meriah",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-aceh-tengah",
+     "kab-aceh-timur",
+     "kab-aceh-utara",
+     "kab-bireuen"
+    ]
+   },
+   {
+    "id": "kab-bireuen",
+    "name": "Kab. Bireuen",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-aceh-tengah",
+     "kab-aceh-utara",
+     "kab-bener-meriah",
+     "kab-pidie",
+     "kab-pidie-jaya"
+    ]
+   },
+   {
+    "id": "kab-gayo-lues",
+    "name": "Kab. Gayo Lues",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-aceh-barat-daya",
+     "kab-aceh-selatan",
+     "kab-aceh-tamiang",
+     "kab-aceh-tengah",
+     "kab-aceh-tenggara",
+     "kab-aceh-timur",
+     "kab-nagan-raya"
+    ]
+   },
+   {
+    "id": "kota-banda-aceh",
+    "name": "Kota Banda Aceh",
+    "type": "city",
+    "population": 90000,
+    "neighbors": [
+     "kab-aceh-besar",
+     "kota-sabang"
+    ]
+   },
+   {
+    "id": "kota-langsa",
+    "name": "Kota Langsa",
+    "type": "city",
+    "population": 170000,
+    "neighbors": [
+     "kab-aceh-tamiang",
+     "kab-aceh-timur"
+    ]
+   },
+   {
+    "id": "kota-lhokseumawe",
+    "name": "Kota Lhokseumawe",
+    "type": "city",
+    "population": 140000,
+    "neighbors": [
+     "kab-aceh-utara"
+    ]
+   },
+   {
+    "id": "kota-sabang",
+    "name": "Kota Sabang",
+    "type": "city",
+    "population": 130000,
+    "neighbors": [
+     "kab-aceh-besar",
+     "kota-banda-aceh"
+    ]
+   },
+   {
+    "id": "kota-subulussalam",
+    "name": "Kota Subulussalam",
+    "type": "city",
+    "population": 410000,
+    "neighbors": [
+     "kab-aceh-selatan",
+     "kab-aceh-singkil",
+     "kab-aceh-tenggara"
+    ]
+   },
+   {
+    "id": "kab-nagan-raya",
+    "name": "Kab. Nagan Raya",
+    "type": "regency",
+    "population": 280000,
+    "neighbors": [
+     "kab-aceh-barat",
+     "kab-aceh-barat-daya",
+     "kab-aceh-tengah",
+     "kab-gayo-lues"
+    ]
+   },
+   {
+    "id": "kab-pidie",
+    "name": "Kab. Pidie",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-aceh-barat",
+     "kab-aceh-besar",
+     "kab-aceh-jaya",
+     "kab-aceh-tengah",
+     "kab-bireuen",
+     "kab-pidie-jaya"
+    ]
+   },
+   {
+    "id": "kab-pidie-jaya",
+    "name": "Kab. Pidie Jaya",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-bireuen",
+     "kab-pidie"
+    ]
+   },
+   {
+    "id": "kab-simeulue",
+    "name": "Kab. Simeulue",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-aceh-barat-daya",
+     "kab-aceh-selatan"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "bali",
+  "regions": [
+   {
+    "id": "kab-badung",
+    "name": "Kab. Badung",
+    "type": "regency",
+    "population": 380000,
+    "neighbors": [
+     "kab-bangli",
+     "kab-buleleng",
+     "kab-gianyar",
+     "kab-tabanan",
+     "kota-denpasar"
+    ]
+   },
+   {
+    "id": "kab-bangli",
+    "name": "Kab. Bangli",
+    "type": "regency",
+    "population": 440000,
+    "neighbors": [
+     "kab-badung",
+     "kab-buleleng",
+     "kab-gianyar",
+     "kab-karang-asem",
+     "kab-klungkung"
+    ]
+   },
+   {
+    "id": "kab-buleleng",
+    "name": "Kab. Buleleng",
+    "type": "regency",
+    "population": 690000,
+    "neighbors": [
+     "kab-badung",
+     "kab-bangli",
+     "kab-jembrana",
+     "kab-karang-asem",
+     "kab-tabanan"
+    ]
+   },
+   {
+    "id": "kab-gianyar",
+    "name": "Kab. Gianyar",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-badung",
+     "kab-bangli",
+     "kab-klungkung",
+     "kota-denpasar"
+    ]
+   },
+   {
+    "id": "kab-jembrana",
+    "name": "Kab. Jembrana",
+    "type": "regency",
+    "population": 560000,
+    "neighbors": [
+     "kab-buleleng",
+     "kab-tabanan"
+    ]
+   },
+   {
+    "id": "kab-karang-asem",
+    "name": "Kab. Karang Asem",
+    "type": "regency",
+    "population": 550000,
+    "neighbors": [
+     "kab-bangli",
+     "kab-buleleng",
+     "kab-klungkung"
+    ]
+   },
+   {
+    "id": "kab-klungkung",
+    "name": "Kab. Klungkung",
+    "type": "regency",
+    "population": 340000,
+    "neighbors": [
+     "kab-bangli",
+     "kab-gianyar",
+     "kab-karang-asem"
+    ]
+   },
+   {
+    "id": "kota-denpasar",
+    "name": "Kota Denpasar",
+    "type": "city",
+    "population": 540000,
+    "neighbors": [
+     "kab-badung",
+     "kab-gianyar"
+    ]
+   },
+   {
+    "id": "kab-tabanan",
+    "name": "Kab. Tabanan",
+    "type": "regency",
+    "population": 560000,
+    "neighbors": [
+     "kab-badung",
+     "kab-buleleng",
+     "kab-jembrana"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "banten",
+  "regions": [
+   {
+    "id": "kota-cilegon",
+    "name": "Kota Cilegon",
+    "type": "city",
+    "population": 1250000,
+    "neighbors": [
+     "kab-serang"
+    ]
+   },
+   {
+    "id": "kota-serang",
+    "name": "Kota Serang",
+    "type": "city",
+    "population": 1580000,
+    "neighbors": [
+     "kab-serang"
+    ]
+   },
+   {
+    "id": "kota-tangerang",
+    "name": "Kota Tangerang",
+    "type": "city",
+    "population": 1310000,
+    "neighbors": [
+     "kab-tangerang",
+     "kota-tangerang-selatan"
+    ]
+   },
+   {
+    "id": "kota-tangerang-selatan",
+    "name": "Kota Tangerang Selatan",
+    "type": "city",
+    "population": 1250000,
+    "neighbors": [
+     "kab-tangerang",
+     "kota-tangerang"
+    ]
+   },
+   {
+    "id": "kab-lebak",
+    "name": "Kab. Lebak",
+    "type": "regency",
+    "population": 2240000,
+    "neighbors": [
+     "kab-pandeglang",
+     "kab-serang",
+     "kab-tangerang"
+    ]
+   },
+   {
+    "id": "kab-pandeglang",
+    "name": "Kab. Pandeglang",
+    "type": "regency",
+    "population": 2050000,
+    "neighbors": [
+     "kab-lebak",
+     "kab-serang"
+    ]
+   },
+   {
+    "id": "kab-serang",
+    "name": "Kab. Serang",
+    "type": "regency",
+    "population": 1490000,
+    "neighbors": [
+     "kab-lebak",
+     "kab-pandeglang",
+     "kab-tangerang",
+     "kota-cilegon",
+     "kota-serang"
+    ]
+   },
+   {
+    "id": "kab-tangerang",
+    "name": "Kab. Tangerang",
+    "type": "regency",
+    "population": 1250000,
+    "neighbors": [
+     "kab-lebak",
+     "kab-serang",
+     "kota-tangerang",
+     "kota-tangerang-selatan"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "bengkulu",
+  "regions": [
+   {
+    "id": "kab-bengkulu-selatan",
+    "name": "Kab. Bengkulu Selatan",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-kaur",
+     "kab-seluma"
+    ]
+   },
+   {
+    "id": "kab-bengkulu-tengah",
+    "name": "Kab. Bengkulu Tengah",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-bengkulu-utara",
+     "kab-kepahiang",
+     "kab-rejang-lebong",
+     "kab-seluma",
+     "kota-bengkulu"
+    ]
+   },
+   {
+    "id": "kab-bengkulu-utara",
+    "name": "Kab. Bengkulu Utara",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-bengkulu-tengah",
+     "kab-lebong",
+     "kab-mukomuko",
+     "kab-rejang-lebong"
+    ]
+   },
+   {
+    "id": "kab-kaur",
+    "name": "Kab. Kaur",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-bengkulu-selatan"
+    ]
+   },
+   {
+    "id": "kab-kepahiang",
+    "name": "Kab. Kepahiang",
+    "type": "regency",
+    "population": 130000,
+    "neighbors": [
+     "kab-bengkulu-tengah",
+     "kab-rejang-lebong",
+     "kab-seluma"
+    ]
+   },
+   {
+    "id": "kota-bengkulu",
+    "name": "Kota Bengkulu",
+    "type": "city",
+    "population": 160000,
+    "neighbors": [
+     "kab-bengkulu-tengah",
+     "kab-seluma"
+    ]
+   },
+   {
+    "id": "kab-lebong",
+    "name": "Kab. Lebong",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-bengkulu-utara",
+     "kab-rejang-lebong"
+    ]
+   },
+   {
+    "id": "kab-mukomuko",
+    "name": "Kab. Mukomuko",
+    "type": "regency",
+    "population": 310000,
+    "neighbors": [
+     "kab-bengkulu-utara"
+    ]
+   },
+   {
+    "id": "kab-rejang-lebong",
+    "name": "Kab. Rejang Lebong",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-bengkulu-tengah",
+     "kab-bengkulu-utara",
+     "kab-kepahiang",
+     "kab-lebong"
+    ]
+   },
+   {
+    "id": "kab-seluma",
+    "name": "Kab. Seluma",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-bengkulu-selatan",
+     "kab-bengkulu-tengah",
+     "kab-kepahiang",
+     "kota-bengkulu"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "di-yogyakarta",
+  "regions": [
+   {
+    "id": "kab-bantul",
+    "name": "Kab. Bantul",
+    "type": "regency",
+    "population": 690000,
+    "neighbors": [
+     "kab-gunung-kidul",
+     "kab-kulon-progo",
+     "kab-sleman",
+     "kota-yogyakarta"
+    ]
+   },
+   {
+    "id": "kab-gunung-kidul",
+    "name": "Kab. Gunung Kidul",
+    "type": "regency",
+    "population": 1170000,
+    "neighbors": [
+     "kab-bantul",
+     "kab-sleman"
+    ]
+   },
+   {
+    "id": "kota-yogyakarta",
+    "name": "Kota Yogyakarta",
+    "type": "city",
+    "population": 440000,
+    "neighbors": [
+     "kab-bantul",
+     "kab-sleman"
+    ]
+   },
+   {
+    "id": "kab-kulon-progo",
+    "name": "Kab. Kulon Progo",
+    "type": "regency",
+    "population": 730000,
+    "neighbors": [
+     "kab-bantul",
+     "kab-sleman"
+    ]
+   },
+   {
+    "id": "kab-sleman",
+    "name": "Kab. Sleman",
+    "type": "regency",
+    "population": 730000,
+    "neighbors": [
+     "kab-bantul",
+     "kab-gunung-kidul",
+     "kab-kulon-progo",
+     "kota-yogyakarta"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "dki-jakarta",
+  "regions": [
+   {
+    "id": "kab-kepulauan-seribu",
+    "name": "Kab. Kepulauan Seribu",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kota-jakarta-barat",
+     "kota-jakarta-utara"
+    ]
+   },
+   {
+    "id": "kota-jakarta-barat",
+    "name": "Kota Jakarta Barat",
+    "type": "city",
+    "population": 2110000,
+    "neighbors": [
+     "kab-kepulauan-seribu",
+     "kota-jakarta-pusat",
+     "kota-jakarta-selatan",
+     "kota-jakarta-utara"
+    ]
+   },
+   {
+    "id": "kota-jakarta-pusat",
+    "name": "Kota Jakarta Pusat",
+    "type": "city",
+    "population": 1300000,
+    "neighbors": [
+     "kota-jakarta-barat",
+     "kota-jakarta-selatan",
+     "kota-jakarta-timur",
+     "kota-jakarta-utara"
+    ]
+   },
+   {
+    "id": "kota-jakarta-selatan",
+    "name": "Kota Jakarta Selatan",
+    "type": "city",
+    "population": 2270000,
+    "neighbors": [
+     "kota-jakarta-barat",
+     "kota-jakarta-pusat",
+     "kota-jakarta-timur"
+    ]
+   },
+   {
+    "id": "kota-jakarta-timur",
+    "name": "Kota Jakarta Timur",
+    "type": "city",
+    "population": 2560000,
+    "neighbors": [
+     "kota-jakarta-pusat",
+     "kota-jakarta-selatan",
+     "kota-jakarta-utara"
+    ]
+   },
+   {
+    "id": "kota-jakarta-utara",
+    "name": "Kota Jakarta Utara",
+    "type": "city",
+    "population": 2230000,
+    "neighbors": [
+     "kab-kepulauan-seribu",
+     "kota-jakarta-barat",
+     "kota-jakarta-pusat",
+     "kota-jakarta-timur"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "gorontalo",
+  "regions": [
+   {
+    "id": "kab-boalemo",
+    "name": "Kab. Boalemo",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-gorontalo",
+     "kab-gorontalo-utara",
+     "kab-pohuwato"
+    ]
+   },
+   {
+    "id": "kab-bone-bolango",
+    "name": "Kab. Bone Bolango",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-gorontalo",
+     "kab-gorontalo-utara",
+     "kota-gorontalo"
+    ]
+   },
+   {
+    "id": "kab-gorontalo",
+    "name": "Kab. Gorontalo",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-boalemo",
+     "kab-bone-bolango",
+     "kab-gorontalo-utara",
+     "kota-gorontalo"
+    ]
+   },
+   {
+    "id": "kab-gorontalo-utara",
+    "name": "Kab. Gorontalo Utara",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-boalemo",
+     "kab-bone-bolango",
+     "kab-gorontalo",
+     "kab-pohuwato"
+    ]
+   },
+   {
+    "id": "kota-gorontalo",
+    "name": "Kota Gorontalo",
+    "type": "city",
+    "population": 100000,
+    "neighbors": [
+     "kab-bone-bolango",
+     "kab-gorontalo"
+    ]
+   },
+   {
+    "id": "kab-pohuwato",
+    "name": "Kab. Pohuwato",
+    "type": "regency",
+    "population": 310000,
+    "neighbors": [
+     "kab-boalemo",
+     "kab-gorontalo-utara"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "jambi",
+  "regions": [
+   {
+    "id": "kab-batang-hari",
+    "name": "Kab. Batang Hari",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-muaro-jambi",
+     "kab-sarolangun",
+     "kab-tanjung-jabung-barat",
+     "kab-tebo"
+    ]
+   },
+   {
+    "id": "kab-bungo",
+    "name": "Kab. Bungo",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-kerinci",
+     "kab-merangin",
+     "kab-tebo"
+    ]
+   },
+   {
+    "id": "kab-kerinci",
+    "name": "Kab. Kerinci",
+    "type": "regency",
+    "population": 290000,
+    "neighbors": [
+     "kab-bungo",
+     "kab-merangin",
+     "kota-sungai-penuh"
+    ]
+   },
+   {
+    "id": "kota-jambi",
+    "name": "Kota Jambi",
+    "type": "city",
+    "population": 160000,
+    "neighbors": [
+     "kab-muaro-jambi"
+    ]
+   },
+   {
+    "id": "kota-sungai-penuh",
+    "name": "Kota Sungai Penuh",
+    "type": "city",
+    "population": 240000,
+    "neighbors": [
+     "kab-kerinci"
+    ]
+   },
+   {
+    "id": "kab-merangin",
+    "name": "Kab. Merangin",
+    "type": "regency",
+    "population": 430000,
+    "neighbors": [
+     "kab-bungo",
+     "kab-kerinci",
+     "kab-sarolangun",
+     "kab-tebo"
+    ]
+   },
+   {
+    "id": "kab-muaro-jambi",
+    "name": "Kab. Muaro Jambi",
+    "type": "regency",
+    "population": 380000,
+    "neighbors": [
+     "kab-batang-hari",
+     "kab-tanjung-jabung-barat",
+     "kab-tanjung-jabung-timur",
+     "kota-jambi"
+    ]
+   },
+   {
+    "id": "kab-sarolangun",
+    "name": "Kab. Sarolangun",
+    "type": "regency",
+    "population": 390000,
+    "neighbors": [
+     "kab-batang-hari",
+     "kab-merangin",
+     "kab-tebo"
+    ]
+   },
+   {
+    "id": "kab-tanjung-jabung-barat",
+    "name": "Kab. Tanjung Jabung Barat",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-batang-hari",
+     "kab-muaro-jambi",
+     "kab-tanjung-jabung-timur",
+     "kab-tebo"
+    ]
+   },
+   {
+    "id": "kab-tanjung-jabung-timur",
+    "name": "Kab. Tanjung Jabung Timur",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-muaro-jambi",
+     "kab-tanjung-jabung-barat"
+    ]
+   },
+   {
+    "id": "kab-tebo",
+    "name": "Kab. Tebo",
+    "type": "regency",
+    "population": 400000,
+    "neighbors": [
+     "kab-batang-hari",
+     "kab-bungo",
+     "kab-merangin",
+     "kab-sarolangun",
+     "kab-tanjung-jabung-barat"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "jawa-tengah",
+  "regions": [
+   {
+    "id": "kab-banjarnegara",
+    "name": "Kab. Banjarnegara",
+    "type": "regency",
+    "population": 1170000,
+    "neighbors": [
+     "kab-banyumas",
+     "kab-batang",
+     "kab-kebumen",
+     "kab-pekalongan",
+     "kab-purbalingga",
+     "kab-wonosobo"
+    ]
+   },
+   {
+    "id": "kab-banyumas",
+    "name": "Kab. Banyumas",
+    "type": "regency",
+    "population": 1280000,
+    "neighbors": [
+     "kab-banjarnegara",
+     "kab-brebes",
+     "kab-cilacap",
+     "kab-kebumen",
+     "kab-pemalang",
+     "kab-purbalingga",
+     "kab-tegal"
+    ]
+   },
+   {
+    "id": "kab-batang",
+    "name": "Kab. Batang",
+    "type": "regency",
+    "population": 1010000,
+    "neighbors": [
+     "kab-banjarnegara",
+     "kab-kendal",
+     "kab-pekalongan",
+     "kab-wonosobo",
+     "kota-pekalongan"
+    ]
+   },
+   {
+    "id": "kab-blora",
+    "name": "Kab. Blora",
+    "type": "regency",
+    "population": 1520000,
+    "neighbors": [
+     "kab-grobogan",
+     "kab-pati",
+     "kab-rembang"
+    ]
+   },
+   {
+    "id": "kab-boyolali",
+    "name": "Kab. Boyolali",
+    "type": "regency",
+    "population": 1130000,
+    "neighbors": [
+     "kab-grobogan",
+     "kab-karanganyar",
+     "kab-klaten",
+     "kab-magelang",
+     "kab-semarang",
+     "kab-sragen",
+     "kab-sukoharjo",
+     "kota-surakarta"
+    ]
+   },
+   {
+    "id": "kab-brebes",
+    "name": "Kab. Brebes",
+    "type": "regency",
+    "population": 1440000,
+    "neighbors": [
+     "kab-banyumas",
+     "kab-cilacap",
+     "kab-tegal",
+     "kota-tegal"
+    ]
+   },
+   {
+    "id": "kab-cilacap",
+    "name": "Kab. Cilacap",
+    "type": "regency",
+    "population": 1670000,
+    "neighbors": [
+     "kab-banyumas",
+     "kab-brebes",
+     "kab-kebumen"
+    ]
+   },
+   {
+    "id": "kab-demak",
+    "name": "Kab. Demak",
+    "type": "regency",
+    "population": 1090000,
+    "neighbors": [
+     "kab-grobogan",
+     "kab-jepara",
+     "kab-kudus",
+     "kab-semarang",
+     "kota-semarang"
+    ]
+   },
+   {
+    "id": "kab-grobogan",
+    "name": "Kab. Grobogan",
+    "type": "regency",
+    "population": 1550000,
+    "neighbors": [
+     "kab-blora",
+     "kab-boyolali",
+     "kab-demak",
+     "kab-kudus",
+     "kab-pati",
+     "kab-semarang",
+     "kab-sragen"
+    ]
+   },
+   {
+    "id": "kab-jepara",
+    "name": "Kab. Jepara",
+    "type": "regency",
+    "population": 1100000,
+    "neighbors": [
+     "kab-demak",
+     "kab-kudus",
+     "kab-pati"
+    ]
+   },
+   {
+    "id": "kab-karanganyar",
+    "name": "Kab. Karanganyar",
+    "type": "regency",
+    "population": 980000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-sragen",
+     "kab-sukoharjo",
+     "kab-wonogiri",
+     "kota-surakarta"
+    ]
+   },
+   {
+    "id": "kab-kebumen",
+    "name": "Kab. Kebumen",
+    "type": "regency",
+    "population": 1260000,
+    "neighbors": [
+     "kab-banjarnegara",
+     "kab-banyumas",
+     "kab-cilacap",
+     "kab-purworejo",
+     "kab-wonosobo"
+    ]
+   },
+   {
+    "id": "kab-kendal",
+    "name": "Kab. Kendal",
+    "type": "regency",
+    "population": 1090000,
+    "neighbors": [
+     "kab-batang",
+     "kab-semarang",
+     "kab-temanggung",
+     "kab-wonosobo",
+     "kota-semarang"
+    ]
+   },
+   {
+    "id": "kab-klaten",
+    "name": "Kab. Klaten",
+    "type": "regency",
+    "population": 910000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-sukoharjo"
+    ]
+   },
+   {
+    "id": "kota-magelang",
+    "name": "Kota Magelang",
+    "type": "city",
+    "population": 360000,
+    "neighbors": [
+     "kab-magelang"
+    ]
+   },
+   {
+    "id": "kota-pekalongan",
+    "name": "Kota Pekalongan",
+    "type": "city",
+    "population": 580000,
+    "neighbors": [
+     "kab-batang",
+     "kab-pekalongan"
+    ]
+   },
+   {
+    "id": "kota-salatiga",
+    "name": "Kota Salatiga",
+    "type": "city",
+    "population": 630000,
+    "neighbors": [
+     "kab-semarang"
+    ]
+   },
+   {
+    "id": "kota-semarang",
+    "name": "Kota Semarang",
+    "type": "city",
+    "population": 1690000,
+    "neighbors": [
+     "kab-demak",
+     "kab-kendal",
+     "kab-semarang"
+    ]
+   },
+   {
+    "id": "kota-surakarta",
+    "name": "Kota Surakarta",
+    "type": "city",
+    "population": 590000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-karanganyar",
+     "kab-sukoharjo"
+    ]
+   },
+   {
+    "id": "kota-tegal",
+    "name": "Kota Tegal",
+    "type": "city",
+    "population": 540000,
+    "neighbors": [
+     "kab-brebes",
+     "kab-tegal"
+    ]
+   },
+   {
+    "id": "kab-kudus",
+    "name": "Kab. Kudus",
+    "type": "regency",
+    "population": 720000,
+    "neighbors": [
+     "kab-demak",
+     "kab-grobogan",
+     "kab-jepara",
+     "kab-pati"
+    ]
+   },
+   {
+    "id": "kab-magelang",
+    "name": "Kab. Magelang",
+    "type": "regency",
+    "population": 1170000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-purworejo",
+     "kab-semarang",
+     "kab-temanggung",
+     "kab-wonosobo",
+     "kota-magelang"
+    ]
+   },
+   {
+    "id": "kab-pati",
+    "name": "Kab. Pati",
+    "type": "regency",
+    "population": 1370000,
+    "neighbors": [
+     "kab-blora",
+     "kab-grobogan",
+     "kab-jepara",
+     "kab-kudus",
+     "kab-rembang"
+    ]
+   },
+   {
+    "id": "kab-pekalongan",
+    "name": "Kab. Pekalongan",
+    "type": "regency",
+    "population": 1030000,
+    "neighbors": [
+     "kab-banjarnegara",
+     "kab-batang",
+     "kab-pemalang",
+     "kab-purbalingga",
+     "kota-pekalongan"
+    ]
+   },
+   {
+    "id": "kab-pemalang",
+    "name": "Kab. Pemalang",
+    "type": "regency",
+    "population": 1160000,
+    "neighbors": [
+     "kab-banyumas",
+     "kab-pekalongan",
+     "kab-purbalingga",
+     "kab-tegal"
+    ]
+   },
+   {
+    "id": "kab-purbalingga",
+    "name": "Kab. Purbalingga",
+    "type": "regency",
+    "population": 980000,
+    "neighbors": [
+     "kab-banjarnegara",
+     "kab-banyumas",
+     "kab-pekalongan",
+     "kab-pemalang"
+    ]
+   },
+   {
+    "id": "kab-purworejo",
+    "name": "Kab. Purworejo",
+    "type": "regency",
+    "population": 1140000,
+    "neighbors": [
+     "kab-kebumen",
+     "kab-magelang",
+     "kab-wonosobo"
+    ]
+   },
+   {
+    "id": "kab-rembang",
+    "name": "Kab. Rembang",
+    "type": "regency",
+    "population": 1110000,
+    "neighbors": [
+     "kab-blora",
+     "kab-pati"
+    ]
+   },
+   {
+    "id": "kab-semarang",
+    "name": "Kab. Semarang",
+    "type": "regency",
+    "population": 1120000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-demak",
+     "kab-grobogan",
+     "kab-kendal",
+     "kab-magelang",
+     "kab-temanggung",
+     "kota-salatiga",
+     "kota-semarang"
+    ]
+   },
+   {
+    "id": "kab-sragen",
+    "name": "Kab. Sragen",
+    "type": "regency",
+    "population": 1080000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-grobogan",
+     "kab-karanganyar"
+    ]
+   },
+   {
+    "id": "kab-sukoharjo",
+    "name": "Kab. Sukoharjo",
+    "type": "regency",
+    "population": 760000,
+    "neighbors": [
+     "kab-boyolali",
+     "kab-karanganyar",
+     "kab-klaten",
+     "kab-wonogiri",
+     "kota-surakarta"
+    ]
+   },
+   {
+    "id": "kab-tegal",
+    "name": "Kab. Tegal",
+    "type": "regency",
+    "population": 1090000,
+    "neighbors": [
+     "kab-banyumas",
+     "kab-brebes",
+     "kab-pemalang",
+     "kota-tegal"
+    ]
+   },
+   {
+    "id": "kab-temanggung",
+    "name": "Kab. Temanggung",
+    "type": "regency",
+    "population": 1020000,
+    "neighbors": [
+     "kab-kendal",
+     "kab-magelang",
+     "kab-semarang",
+     "kab-wonosobo"
+    ]
+   },
+   {
+    "id": "kab-wonogiri",
+    "name": "Kab. Wonogiri",
+    "type": "regency",
+    "population": 1510000,
+    "neighbors": [
+     "kab-karanganyar",
+     "kab-sukoharjo"
+    ]
+   },
+   {
+    "id": "kab-wonosobo",
+    "name": "Kab. Wonosobo",
+    "type": "regency",
+    "population": 1080000,
+    "neighbors": [
+     "kab-banjarnegara",
+     "kab-batang",
+     "kab-kebumen",
+     "kab-kendal",
+     "kab-magelang",
+     "kab-purworejo",
+     "kab-temanggung"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "jawa-timur",
+  "regions": [
+   {
+    "id": "kab-bangkalan",
+    "name": "Kab. Bangkalan",
+    "type": "regency",
+    "population": 1120000,
+    "neighbors": [
+     "kab-sampang"
+    ]
+   },
+   {
+    "id": "kab-banyuwangi",
+    "name": "Kab. Banyuwangi",
+    "type": "regency",
+    "population": 1860000,
+    "neighbors": [
+     "kab-bondowoso",
+     "kab-jember",
+     "kab-situbondo"
+    ]
+   },
+   {
+    "id": "kab-blitar",
+    "name": "Kab. Blitar",
+    "type": "regency",
+    "population": 1310000,
+    "neighbors": [
+     "kab-kediri",
+     "kab-malang",
+     "kab-tulungagung",
+     "kota-blitar"
+    ]
+   },
+   {
+    "id": "kab-bojonegoro",
+    "name": "Kab. Bojonegoro",
+    "type": "regency",
+    "population": 1490000,
+    "neighbors": [
+     "kab-jombang",
+     "kab-lamongan",
+     "kab-madiun",
+     "kab-nganjuk",
+     "kab-ngawi",
+     "kab-tuban"
+    ]
+   },
+   {
+    "id": "kab-bondowoso",
+    "name": "Kab. Bondowoso",
+    "type": "regency",
+    "population": 1220000,
+    "neighbors": [
+     "kab-banyuwangi",
+     "kab-jember",
+     "kab-probolinggo",
+     "kab-situbondo"
+    ]
+   },
+   {
+    "id": "kab-gresik",
+    "name": "Kab. Gresik",
+    "type": "regency",
+    "population": 1100000,
+    "neighbors": [
+     "kab-lamongan",
+     "kab-mojokerto",
+     "kab-sidoarjo",
+     "kota-surabaya"
+    ]
+   },
+   {
+    "id": "kab-jember",
+    "name": "Kab. Jember",
+    "type": "regency",
+    "population": 1780000,
+    "neighbors": [
+     "kab-banyuwangi",
+     "kab-bondowoso",
+     "kab-lumajang",
+     "kab-probolinggo"
+    ]
+   },
+   {
+    "id": "kab-jombang",
+    "name": "Kab. Jombang",
+    "type": "regency",
+    "population": 1040000,
+    "neighbors": [
+     "kab-bojonegoro",
+     "kab-kediri",
+     "kab-lamongan",
+     "kab-malang",
+     "kab-mojokerto",
+     "kab-nganjuk"
+    ]
+   },
+   {
+    "id": "kab-kediri",
+    "name": "Kab. Kediri",
+    "type": "regency",
+    "population": 1240000,
+    "neighbors": [
+     "kab-blitar",
+     "kab-jombang",
+     "kab-malang",
+     "kab-nganjuk",
+     "kab-tulungagung",
+     "kota-kediri"
+    ]
+   },
+   {
+    "id": "kota-batu",
+    "name": "Kota Batu",
+    "type": "city",
+    "population": 1080000,
+    "neighbors": [
+     "kab-malang",
+     "kab-mojokerto",
+     "kab-pasuruan"
+    ]
+   },
+   {
+    "id": "kota-blitar",
+    "name": "Kota Blitar",
+    "type": "city",
+    "population": 450000,
+    "neighbors": [
+     "kab-blitar"
+    ]
+   },
+   {
+    "id": "kota-kediri",
+    "name": "Kota Kediri",
+    "type": "city",
+    "population": 640000,
+    "neighbors": [
+     "kab-kediri"
+    ]
+   },
+   {
+    "id": "kota-madiun",
+    "name": "Kota Madiun",
+    "type": "city",
+    "population": 460000,
+    "neighbors": [
+     "kab-madiun",
+     "kab-magetan"
+    ]
+   },
+   {
+    "id": "kota-malang",
+    "name": "Kota Malang",
+    "type": "city",
+    "population": 810000,
+    "neighbors": [
+     "kab-malang"
+    ]
+   },
+   {
+    "id": "kota-mojokerto",
+    "name": "Kota Mojokerto",
+    "type": "city",
+    "population": 350000,
+    "neighbors": [
+     "kab-mojokerto"
+    ]
+   },
+   {
+    "id": "kota-pasuruan",
+    "name": "Kota Pasuruan",
+    "type": "city",
+    "population": 480000,
+    "neighbors": [
+     "kab-pasuruan"
+    ]
+   },
+   {
+    "id": "kota-probolinggo",
+    "name": "Kota Probolinggo",
+    "type": "city",
+    "population": 570000,
+    "neighbors": [
+     "kab-probolinggo"
+    ]
+   },
+   {
+    "id": "kota-surabaya",
+    "name": "Kota Surabaya",
+    "type": "city",
+    "population": 1420000,
+    "neighbors": [
+     "kab-gresik",
+     "kab-sidoarjo"
+    ]
+   },
+   {
+    "id": "kab-lamongan",
+    "name": "Kab. Lamongan",
+    "type": "regency",
+    "population": 1300000,
+    "neighbors": [
+     "kab-bojonegoro",
+     "kab-gresik",
+     "kab-jombang",
+     "kab-mojokerto",
+     "kab-tuban"
+    ]
+   },
+   {
+    "id": "kab-lumajang",
+    "name": "Kab. Lumajang",
+    "type": "regency",
+    "population": 1320000,
+    "neighbors": [
+     "kab-jember",
+     "kab-malang",
+     "kab-probolinggo"
+    ]
+   },
+   {
+    "id": "kab-madiun",
+    "name": "Kab. Madiun",
+    "type": "regency",
+    "population": 1040000,
+    "neighbors": [
+     "kab-bojonegoro",
+     "kab-magetan",
+     "kab-nganjuk",
+     "kab-ngawi",
+     "kab-ponorogo",
+     "kota-madiun"
+    ]
+   },
+   {
+    "id": "kab-magetan",
+    "name": "Kab. Magetan",
+    "type": "regency",
+    "population": 820000,
+    "neighbors": [
+     "kab-madiun",
+     "kab-ngawi",
+     "kab-ponorogo",
+     "kota-madiun"
+    ]
+   },
+   {
+    "id": "kab-malang",
+    "name": "Kab. Malang",
+    "type": "regency",
+    "population": 1850000,
+    "neighbors": [
+     "kab-blitar",
+     "kab-jombang",
+     "kab-kediri",
+     "kab-lumajang",
+     "kab-mojokerto",
+     "kab-pasuruan",
+     "kab-probolinggo",
+     "kota-batu",
+     "kota-malang"
+    ]
+   },
+   {
+    "id": "kab-mojokerto",
+    "name": "Kab. Mojokerto",
+    "type": "regency",
+    "population": 980000,
+    "neighbors": [
+     "kab-gresik",
+     "kab-jombang",
+     "kab-lamongan",
+     "kab-malang",
+     "kab-pasuruan",
+     "kab-sidoarjo",
+     "kota-batu",
+     "kota-mojokerto"
+    ]
+   },
+   {
+    "id": "kab-nganjuk",
+    "name": "Kab. Nganjuk",
+    "type": "regency",
+    "population": 1110000,
+    "neighbors": [
+     "kab-bojonegoro",
+     "kab-jombang",
+     "kab-kediri",
+     "kab-madiun",
+     "kab-ponorogo",
+     "kab-tulungagung"
+    ]
+   },
+   {
+    "id": "kab-ngawi",
+    "name": "Kab. Ngawi",
+    "type": "regency",
+    "population": 1160000,
+    "neighbors": [
+     "kab-bojonegoro",
+     "kab-madiun",
+     "kab-magetan"
+    ]
+   },
+   {
+    "id": "kab-pacitan",
+    "name": "Kab. Pacitan",
+    "type": "regency",
+    "population": 1170000,
+    "neighbors": [
+     "kab-ponorogo",
+     "kab-trenggalek"
+    ]
+   },
+   {
+    "id": "kab-pamekasan",
+    "name": "Kab. Pamekasan",
+    "type": "regency",
+    "population": 880000,
+    "neighbors": [
+     "kab-sampang",
+     "kab-sumenep"
+    ]
+   },
+   {
+    "id": "kab-pasuruan",
+    "name": "Kab. Pasuruan",
+    "type": "regency",
+    "population": 1200000,
+    "neighbors": [
+     "kab-malang",
+     "kab-mojokerto",
+     "kab-probolinggo",
+     "kab-sidoarjo",
+     "kota-batu",
+     "kota-pasuruan"
+    ]
+   },
+   {
+    "id": "kab-ponorogo",
+    "name": "Kab. Ponorogo",
+    "type": "regency",
+    "population": 1170000,
+    "neighbors": [
+     "kab-madiun",
+     "kab-magetan",
+     "kab-nganjuk",
+     "kab-pacitan",
+     "kab-trenggalek",
+     "kab-tulungagung"
+    ]
+   },
+   {
+    "id": "kab-probolinggo",
+    "name": "Kab. Probolinggo",
+    "type": "regency",
+    "population": 1290000,
+    "neighbors": [
+     "kab-bondowoso",
+     "kab-jember",
+     "kab-lumajang",
+     "kab-malang",
+     "kab-pasuruan",
+     "kab-situbondo",
+     "kota-probolinggo"
+    ]
+   },
+   {
+    "id": "kab-sampang",
+    "name": "Kab. Sampang",
+    "type": "regency",
+    "population": 1090000,
+    "neighbors": [
+     "kab-bangkalan",
+     "kab-pamekasan"
+    ]
+   },
+   {
+    "id": "kab-sidoarjo",
+    "name": "Kab. Sidoarjo",
+    "type": "regency",
+    "population": 830000,
+    "neighbors": [
+     "kab-gresik",
+     "kab-mojokerto",
+     "kab-pasuruan",
+     "kota-surabaya"
+    ]
+   },
+   {
+    "id": "kab-situbondo",
+    "name": "Kab. Situbondo",
+    "type": "regency",
+    "population": 1260000,
+    "neighbors": [
+     "kab-banyuwangi",
+     "kab-bondowoso",
+     "kab-probolinggo"
+    ]
+   },
+   {
+    "id": "kab-sumenep",
+    "name": "Kab. Sumenep",
+    "type": "regency",
+    "population": 1420000,
+    "neighbors": [
+     "kab-pamekasan"
+    ]
+   },
+   {
+    "id": "kab-trenggalek",
+    "name": "Kab. Trenggalek",
+    "type": "regency",
+    "population": 1090000,
+    "neighbors": [
+     "kab-pacitan",
+     "kab-ponorogo",
+     "kab-tulungagung"
+    ]
+   },
+   {
+    "id": "kab-tuban",
+    "name": "Kab. Tuban",
+    "type": "regency",
+    "population": 1380000,
+    "neighbors": [
+     "kab-bojonegoro",
+     "kab-lamongan"
+    ]
+   },
+   {
+    "id": "kab-tulungagung",
+    "name": "Kab. Tulungagung",
+    "type": "regency",
+    "population": 1050000,
+    "neighbors": [
+     "kab-blitar",
+     "kab-kediri",
+     "kab-nganjuk",
+     "kab-ponorogo",
+     "kab-trenggalek"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kalimantan-barat",
+  "regions": [
+   {
+    "id": "kab-bengkayang",
+    "name": "Kab. Bengkayang",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-landak",
+     "kab-mempawah",
+     "kab-sambas",
+     "kab-sanggau",
+     "kota-singkawang"
+    ]
+   },
+   {
+    "id": "kab-kapuas-hulu",
+    "name": "Kab. Kapuas Hulu",
+    "type": "regency",
+    "population": 750000,
+    "neighbors": [
+     "kab-sintang"
+    ]
+   },
+   {
+    "id": "kab-kayong-utara",
+    "name": "Kab. Kayong Utara",
+    "type": "regency",
+    "population": 290000,
+    "neighbors": [
+     "kab-ketapang",
+     "kab-kubu-raya"
+    ]
+   },
+   {
+    "id": "kab-ketapang",
+    "name": "Kab. Ketapang",
+    "type": "regency",
+    "population": 740000,
+    "neighbors": [
+     "kab-kayong-utara",
+     "kab-kubu-raya",
+     "kab-melawi",
+     "kab-sanggau",
+     "kab-sekadau",
+     "kab-sintang"
+    ]
+   },
+   {
+    "id": "kota-pontianak",
+    "name": "Kota Pontianak",
+    "type": "city",
+    "population": 110000,
+    "neighbors": [
+     "kab-kubu-raya",
+     "kab-mempawah"
+    ]
+   },
+   {
+    "id": "kota-singkawang",
+    "name": "Kota Singkawang",
+    "type": "city",
+    "population": 230000,
+    "neighbors": [
+     "kab-bengkayang",
+     "kab-sambas"
+    ]
+   },
+   {
+    "id": "kab-kubu-raya",
+    "name": "Kab. Kubu Raya",
+    "type": "regency",
+    "population": 400000,
+    "neighbors": [
+     "kab-kayong-utara",
+     "kab-ketapang",
+     "kab-landak",
+     "kab-mempawah",
+     "kab-sanggau",
+     "kota-pontianak"
+    ]
+   },
+   {
+    "id": "kab-landak",
+    "name": "Kab. Landak",
+    "type": "regency",
+    "population": 390000,
+    "neighbors": [
+     "kab-bengkayang",
+     "kab-kubu-raya",
+     "kab-mempawah",
+     "kab-sanggau"
+    ]
+   },
+   {
+    "id": "kab-melawi",
+    "name": "Kab. Melawi",
+    "type": "regency",
+    "population": 430000,
+    "neighbors": [
+     "kab-ketapang",
+     "kab-sintang"
+    ]
+   },
+   {
+    "id": "kab-mempawah",
+    "name": "Kab. Mempawah",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-bengkayang",
+     "kab-kubu-raya",
+     "kab-landak",
+     "kota-pontianak"
+    ]
+   },
+   {
+    "id": "kab-sambas",
+    "name": "Kab. Sambas",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-bengkayang",
+     "kota-singkawang"
+    ]
+   },
+   {
+    "id": "kab-sanggau",
+    "name": "Kab. Sanggau",
+    "type": "regency",
+    "population": 480000,
+    "neighbors": [
+     "kab-bengkayang",
+     "kab-ketapang",
+     "kab-kubu-raya",
+     "kab-landak",
+     "kab-sekadau",
+     "kab-sintang"
+    ]
+   },
+   {
+    "id": "kab-sekadau",
+    "name": "Kab. Sekadau",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-ketapang",
+     "kab-sanggau",
+     "kab-sintang"
+    ]
+   },
+   {
+    "id": "kab-sintang",
+    "name": "Kab. Sintang",
+    "type": "regency",
+    "population": 640000,
+    "neighbors": [
+     "kab-kapuas-hulu",
+     "kab-ketapang",
+     "kab-melawi",
+     "kab-sanggau",
+     "kab-sekadau"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kalimantan-selatan",
+  "regions": [
+   {
+    "id": "kab-balangan",
+    "name": "Kab. Balangan",
+    "type": "regency",
+    "population": 270000,
+    "neighbors": [
+     "kab-hulu-sungai-tengah",
+     "kab-hulu-sungai-utara",
+     "kab-kotabaru",
+     "kab-tabalong"
+    ]
+   },
+   {
+    "id": "kab-banjar",
+    "name": "Kab. Banjar",
+    "type": "regency",
+    "population": 430000,
+    "neighbors": [
+     "kab-barito-kuala",
+     "kab-hulu-sungai-selatan",
+     "kab-kotabaru",
+     "kab-tanah-bumbu",
+     "kab-tanah-laut",
+     "kab-tapin",
+     "kota-banjar-baru",
+     "kota-banjarmasin"
+    ]
+   },
+   {
+    "id": "kab-barito-kuala",
+    "name": "Kab. Barito Kuala",
+    "type": "regency",
+    "population": 310000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-hulu-sungai-utara",
+     "kab-tapin",
+     "kota-banjarmasin"
+    ]
+   },
+   {
+    "id": "kab-hulu-sungai-selatan",
+    "name": "Kab. Hulu Sungai Selatan",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-hulu-sungai-tengah",
+     "kab-hulu-sungai-utara",
+     "kab-kotabaru",
+     "kab-tapin"
+    ]
+   },
+   {
+    "id": "kab-hulu-sungai-tengah",
+    "name": "Kab. Hulu Sungai Tengah",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-balangan",
+     "kab-hulu-sungai-selatan",
+     "kab-hulu-sungai-utara",
+     "kab-kotabaru"
+    ]
+   },
+   {
+    "id": "kab-hulu-sungai-utara",
+    "name": "Kab. Hulu Sungai Utara",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-balangan",
+     "kab-barito-kuala",
+     "kab-hulu-sungai-selatan",
+     "kab-hulu-sungai-tengah",
+     "kab-tabalong",
+     "kab-tapin"
+    ]
+   },
+   {
+    "id": "kota-banjar-baru",
+    "name": "Kota Banjar Baru",
+    "type": "city",
+    "population": 280000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-tanah-laut"
+    ]
+   },
+   {
+    "id": "kota-banjarmasin",
+    "name": "Kota Banjarmasin",
+    "type": "city",
+    "population": 160000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-barito-kuala"
+    ]
+   },
+   {
+    "id": "kab-kotabaru",
+    "name": "Kab. Kotabaru",
+    "type": "regency",
+    "population": 600000,
+    "neighbors": [
+     "kab-balangan",
+     "kab-banjar",
+     "kab-hulu-sungai-selatan",
+     "kab-hulu-sungai-tengah",
+     "kab-tanah-bumbu"
+    ]
+   },
+   {
+    "id": "kab-tabalong",
+    "name": "Kab. Tabalong",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-balangan",
+     "kab-hulu-sungai-utara"
+    ]
+   },
+   {
+    "id": "kab-tanah-bumbu",
+    "name": "Kab. Tanah Bumbu",
+    "type": "regency",
+    "population": 430000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-kotabaru",
+     "kab-tanah-laut"
+    ]
+   },
+   {
+    "id": "kab-tanah-laut",
+    "name": "Kab. Tanah Laut",
+    "type": "regency",
+    "population": 390000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-tanah-bumbu",
+     "kota-banjar-baru"
+    ]
+   },
+   {
+    "id": "kab-tapin",
+    "name": "Kab. Tapin",
+    "type": "regency",
+    "population": 290000,
+    "neighbors": [
+     "kab-banjar",
+     "kab-barito-kuala",
+     "kab-hulu-sungai-selatan",
+     "kab-hulu-sungai-utara"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kalimantan-tengah",
+  "regions": [
+   {
+    "id": "kab-barito-selatan",
+    "name": "Kab. Barito Selatan",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-barito-timur",
+     "kab-barito-utara",
+     "kab-kapuas"
+    ]
+   },
+   {
+    "id": "kab-barito-timur",
+    "name": "Kab. Barito Timur",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-barito-selatan"
+    ]
+   },
+   {
+    "id": "kab-barito-utara",
+    "name": "Kab. Barito Utara",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-barito-selatan",
+     "kab-kapuas",
+     "kab-murung-raya"
+    ]
+   },
+   {
+    "id": "kab-gunung-mas",
+    "name": "Kab. Gunung Mas",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-kapuas",
+     "kab-katingan",
+     "kab-murung-raya",
+     "kab-pulang-pisau",
+     "kota-palangka-raya"
+    ]
+   },
+   {
+    "id": "kab-kapuas",
+    "name": "Kab. Kapuas",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-barito-selatan",
+     "kab-barito-utara",
+     "kab-gunung-mas",
+     "kab-murung-raya",
+     "kab-pulang-pisau"
+    ]
+   },
+   {
+    "id": "kab-katingan",
+    "name": "Kab. Katingan",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-gunung-mas",
+     "kab-kotawaringin-timur",
+     "kab-pulang-pisau",
+     "kab-seruyan",
+     "kota-palangka-raya"
+    ]
+   },
+   {
+    "id": "kota-palangka-raya",
+    "name": "Kota Palangka Raya",
+    "type": "city",
+    "population": 240000,
+    "neighbors": [
+     "kab-gunung-mas",
+     "kab-katingan",
+     "kab-pulang-pisau"
+    ]
+   },
+   {
+    "id": "kab-kotawaringin-barat",
+    "name": "Kab. Kotawaringin Barat",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-lamandau",
+     "kab-seruyan",
+     "kab-sukamara"
+    ]
+   },
+   {
+    "id": "kab-kotawaringin-timur",
+    "name": "Kab. Kotawaringin Timur",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-katingan",
+     "kab-seruyan"
+    ]
+   },
+   {
+    "id": "kab-lamandau",
+    "name": "Kab. Lamandau",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-kotawaringin-barat",
+     "kab-seruyan",
+     "kab-sukamara"
+    ]
+   },
+   {
+    "id": "kab-murung-raya",
+    "name": "Kab. Murung Raya",
+    "type": "regency",
+    "population": 290000,
+    "neighbors": [
+     "kab-barito-utara",
+     "kab-gunung-mas",
+     "kab-kapuas"
+    ]
+   },
+   {
+    "id": "kab-pulang-pisau",
+    "name": "Kab. Pulang Pisau",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-gunung-mas",
+     "kab-kapuas",
+     "kab-katingan",
+     "kota-palangka-raya"
+    ]
+   },
+   {
+    "id": "kab-seruyan",
+    "name": "Kab. Seruyan",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-katingan",
+     "kab-kotawaringin-barat",
+     "kab-kotawaringin-timur",
+     "kab-lamandau"
+    ]
+   },
+   {
+    "id": "kab-sukamara",
+    "name": "Kab. Sukamara",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-kotawaringin-barat",
+     "kab-lamandau"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kalimantan-timur",
+  "regions": [
+   {
+    "id": "kab-berau",
+    "name": "Kab. Berau",
+    "type": "regency",
+    "population": 570000,
+    "neighbors": [
+     "kab-kutai-timur"
+    ]
+   },
+   {
+    "id": "kota-balikpapan",
+    "name": "Kota Balikpapan",
+    "type": "city",
+    "population": 220000,
+    "neighbors": [
+     "kab-kutai-kartanegara",
+     "kab-penajam-paser-utara"
+    ]
+   },
+   {
+    "id": "kota-bontang",
+    "name": "Kota Bontang",
+    "type": "city",
+    "population": 120000,
+    "neighbors": [
+     "kab-kutai-kartanegara",
+     "kab-kutai-timur"
+    ]
+   },
+   {
+    "id": "kota-samarinda",
+    "name": "Kota Samarinda",
+    "type": "city",
+    "population": 260000,
+    "neighbors": [
+     "kab-kutai-kartanegara"
+    ]
+   },
+   {
+    "id": "kab-kutai-barat",
+    "name": "Kab. Kutai Barat",
+    "type": "regency",
+    "population": 440000,
+    "neighbors": [
+     "kab-kutai-kartanegara",
+     "kab-mahakam-hulu",
+     "kab-paser",
+     "kab-penajam-paser-utara"
+    ]
+   },
+   {
+    "id": "kab-kutai-kartanegara",
+    "name": "Kab. Kutai Kartanegara",
+    "type": "regency",
+    "population": 600000,
+    "neighbors": [
+     "kab-kutai-barat",
+     "kab-kutai-timur",
+     "kab-mahakam-hulu",
+     "kab-penajam-paser-utara",
+     "kota-balikpapan",
+     "kota-bontang",
+     "kota-samarinda"
+    ]
+   },
+   {
+    "id": "kab-kutai-timur",
+    "name": "Kab. Kutai Timur",
+    "type": "regency",
+    "population": 670000,
+    "neighbors": [
+     "kab-berau",
+     "kab-kutai-kartanegara",
+     "kota-bontang"
+    ]
+   },
+   {
+    "id": "kab-mahakam-hulu",
+    "name": "Kab. Mahakam Hulu",
+    "type": "regency",
+    "population": 510000,
+    "neighbors": [
+     "kab-kutai-barat",
+     "kab-kutai-kartanegara"
+    ]
+   },
+   {
+    "id": "kab-paser",
+    "name": "Kab. Paser",
+    "type": "regency",
+    "population": 390000,
+    "neighbors": [
+     "kab-kutai-barat",
+     "kab-penajam-paser-utara"
+    ]
+   },
+   {
+    "id": "kab-penajam-paser-utara",
+    "name": "Kab. Penajam Paser Utara",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-kutai-barat",
+     "kab-kutai-kartanegara",
+     "kab-paser",
+     "kota-balikpapan"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kalimantan-utara",
+  "regions": [
+   {
+    "id": "kab-bulungan",
+    "name": "Kab. Bulungan",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-malinau",
+     "kab-tana-tidung",
+     "kota-tarakan"
+    ]
+   },
+   {
+    "id": "kota-tarakan",
+    "name": "Kota Tarakan",
+    "type": "city",
+    "population": 60000,
+    "neighbors": [
+     "kab-bulungan",
+     "kab-tana-tidung"
+    ]
+   },
+   {
+    "id": "kab-malinau",
+    "name": "Kab. Malinau",
+    "type": "regency",
+    "population": 280000,
+    "neighbors": [
+     "kab-bulungan",
+     "kab-nunukan",
+     "kab-tana-tidung"
+    ]
+   },
+   {
+    "id": "kab-nunukan",
+    "name": "Kab. Nunukan",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-malinau",
+     "kab-tana-tidung"
+    ]
+   },
+   {
+    "id": "kab-tana-tidung",
+    "name": "Kab. Tana Tidung",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-bulungan",
+     "kab-malinau",
+     "kab-nunukan",
+     "kota-tarakan"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kepulauan-bangka-belitung",
+  "regions": [
+   {
+    "id": "kab-bangka",
+    "name": "Kab. Bangka",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-bangka-barat",
+     "kab-bangka-tengah",
+     "kota-pangkal-pinang"
+    ]
+   },
+   {
+    "id": "kab-bangka-barat",
+    "name": "Kab. Bangka Barat",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-bangka"
+    ]
+   },
+   {
+    "id": "kab-bangka-selatan",
+    "name": "Kab. Bangka Selatan",
+    "type": "regency",
+    "population": 270000,
+    "neighbors": [
+     "kab-bangka-tengah"
+    ]
+   },
+   {
+    "id": "kab-bangka-tengah",
+    "name": "Kab. Bangka Tengah",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-bangka",
+     "kab-bangka-selatan",
+     "kota-pangkal-pinang"
+    ]
+   },
+   {
+    "id": "kab-belitung",
+    "name": "Kab. Belitung",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-belitung-timur"
+    ]
+   },
+   {
+    "id": "kab-belitung-timur",
+    "name": "Kab. Belitung Timur",
+    "type": "regency",
+    "population": 230000,
+    "neighbors": [
+     "kab-belitung"
+    ]
+   },
+   {
+    "id": "kota-pangkal-pinang",
+    "name": "Kota Pangkal Pinang",
+    "type": "city",
+    "population": 120000,
+    "neighbors": [
+     "kab-bangka",
+     "kab-bangka-tengah"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "kepulauan-riau",
+  "regions": [
+   {
+    "id": "kab-bintan",
+    "name": "Kab. Bintan",
+    "type": "regency",
+    "population": 270000,
+    "neighbors": [
+     "kab-kepulauan-anambas",
+     "kab-lingga",
+     "kab-natuna",
+     "kota-tanjung-pinang"
+    ]
+   },
+   {
+    "id": "kab-karimun",
+    "name": "Kab. Karimun",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kota-batam",
+     "kota-tanjung-pinang"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-anambas",
+    "name": "Kab. Kepulauan Anambas",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-bintan",
+     "kab-natuna",
+     "kota-tanjung-pinang"
+    ]
+   },
+   {
+    "id": "kota-batam",
+    "name": "Kota Batam",
+    "type": "city",
+    "population": 590000,
+    "neighbors": [
+     "kab-karimun"
+    ]
+   },
+   {
+    "id": "kota-tanjung-pinang",
+    "name": "Kota Tanjung Pinang",
+    "type": "city",
+    "population": 230000,
+    "neighbors": [
+     "kab-bintan",
+     "kab-karimun",
+     "kab-kepulauan-anambas",
+     "kab-lingga"
+    ]
+   },
+   {
+    "id": "kab-lingga",
+    "name": "Kab. Lingga",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-bintan",
+     "kota-tanjung-pinang"
+    ]
+   },
+   {
+    "id": "kab-natuna",
+    "name": "Kab. Natuna",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-bintan",
+     "kab-kepulauan-anambas"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "lampung",
+  "regions": [
+   {
+    "id": "kota-bandar-lampung",
+    "name": "Kota Bandar Lampung",
+    "type": "city",
+    "population": 450000,
+    "neighbors": [
+     "kab-lampung-selatan",
+     "kab-pesawaran"
+    ]
+   },
+   {
+    "id": "kota-metro",
+    "name": "Kota Metro",
+    "type": "city",
+    "population": 300000,
+    "neighbors": [
+     "kab-lampung-tengah",
+     "kab-lampung-timur"
+    ]
+   },
+   {
+    "id": "kab-lampung-barat",
+    "name": "Kab. Lampung Barat",
+    "type": "regency",
+    "population": 670000,
+    "neighbors": [
+     "kab-lampung-tengah",
+     "kab-lampung-utara",
+     "kab-pesisir-barat",
+     "kab-tanggamus",
+     "kab-way-kanan"
+    ]
+   },
+   {
+    "id": "kab-lampung-selatan",
+    "name": "Kab. Lampung Selatan",
+    "type": "regency",
+    "population": 630000,
+    "neighbors": [
+     "kab-lampung-tengah",
+     "kab-lampung-timur",
+     "kab-pesawaran",
+     "kota-bandar-lampung"
+    ]
+   },
+   {
+    "id": "kab-lampung-tengah",
+    "name": "Kab. Lampung Tengah",
+    "type": "regency",
+    "population": 920000,
+    "neighbors": [
+     "kab-lampung-barat",
+     "kab-lampung-selatan",
+     "kab-lampung-timur",
+     "kab-lampung-utara",
+     "kab-pesawaran",
+     "kab-pringsewu",
+     "kab-tanggamus",
+     "kab-tulang-bawang-barat",
+     "kab-tulangbawang",
+     "kota-metro"
+    ]
+   },
+   {
+    "id": "kab-lampung-timur",
+    "name": "Kab. Lampung Timur",
+    "type": "regency",
+    "population": 850000,
+    "neighbors": [
+     "kab-lampung-selatan",
+     "kab-lampung-tengah",
+     "kab-tulangbawang",
+     "kota-metro"
+    ]
+   },
+   {
+    "id": "kab-lampung-utara",
+    "name": "Kab. Lampung Utara",
+    "type": "regency",
+    "population": 680000,
+    "neighbors": [
+     "kab-lampung-barat",
+     "kab-lampung-tengah",
+     "kab-tulang-bawang-barat",
+     "kab-way-kanan"
+    ]
+   },
+   {
+    "id": "kab-mesuji",
+    "name": "Kab. Mesuji",
+    "type": "regency",
+    "population": 630000,
+    "neighbors": [
+     "kab-tulang-bawang-barat",
+     "kab-tulangbawang"
+    ]
+   },
+   {
+    "id": "kab-pesawaran",
+    "name": "Kab. Pesawaran",
+    "type": "regency",
+    "population": 500000,
+    "neighbors": [
+     "kab-lampung-selatan",
+     "kab-lampung-tengah",
+     "kab-pringsewu",
+     "kab-tanggamus",
+     "kota-bandar-lampung"
+    ]
+   },
+   {
+    "id": "kab-pesisir-barat",
+    "name": "Kab. Pesisir Barat",
+    "type": "regency",
+    "population": 700000,
+    "neighbors": [
+     "kab-lampung-barat",
+     "kab-tanggamus"
+    ]
+   },
+   {
+    "id": "kab-pringsewu",
+    "name": "Kab. Pringsewu",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-lampung-tengah",
+     "kab-pesawaran",
+     "kab-tanggamus"
+    ]
+   },
+   {
+    "id": "kab-tanggamus",
+    "name": "Kab. Tanggamus",
+    "type": "regency",
+    "population": 710000,
+    "neighbors": [
+     "kab-lampung-barat",
+     "kab-lampung-tengah",
+     "kab-pesawaran",
+     "kab-pesisir-barat",
+     "kab-pringsewu"
+    ]
+   },
+   {
+    "id": "kab-tulang-bawang-barat",
+    "name": "Kab. Tulang Bawang Barat",
+    "type": "regency",
+    "population": 490000,
+    "neighbors": [
+     "kab-lampung-tengah",
+     "kab-lampung-utara",
+     "kab-mesuji",
+     "kab-tulangbawang",
+     "kab-way-kanan"
+    ]
+   },
+   {
+    "id": "kab-tulangbawang",
+    "name": "Kab. Tulangbawang",
+    "type": "regency",
+    "population": 750000,
+    "neighbors": [
+     "kab-lampung-tengah",
+     "kab-lampung-timur",
+     "kab-mesuji",
+     "kab-tulang-bawang-barat"
+    ]
+   },
+   {
+    "id": "kab-way-kanan",
+    "name": "Kab. Way Kanan",
+    "type": "regency",
+    "population": 820000,
+    "neighbors": [
+     "kab-lampung-barat",
+     "kab-lampung-utara",
+     "kab-tulang-bawang-barat"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "maluku",
+  "regions": [
+   {
+    "id": "kab-buru",
+    "name": "Kab. Buru",
+    "type": "regency",
+    "population": 180000,
+    "neighbors": [
+     "kab-buru-selatan",
+     "kab-maluku-barat-daya"
+    ]
+   },
+   {
+    "id": "kab-buru-selatan",
+    "name": "Kab. Buru Selatan",
+    "type": "regency",
+    "population": 180000,
+    "neighbors": [
+     "kab-buru",
+     "kab-maluku-barat-daya"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-aru",
+    "name": "Kab. Kepulauan Aru",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-maluku-tenggara",
+     "kota-tual"
+    ]
+   },
+   {
+    "id": "kota-ambon",
+    "name": "Kota Ambon",
+    "type": "city",
+    "population": 120000,
+    "neighbors": [
+     "kab-maluku-tengah"
+    ]
+   },
+   {
+    "id": "kota-tual",
+    "name": "Kota Tual",
+    "type": "city",
+    "population": 100000,
+    "neighbors": [
+     "kab-kepulauan-aru",
+     "kab-maluku-tenggara-barat"
+    ]
+   },
+   {
+    "id": "kab-maluku-barat-daya",
+    "name": "Kab. Maluku Barat Daya",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-buru",
+     "kab-buru-selatan"
+    ]
+   },
+   {
+    "id": "kab-maluku-tengah",
+    "name": "Kab. Maluku Tengah",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-seram-bagian-barat",
+     "kab-seram-bagian-timur",
+     "kota-ambon"
+    ]
+   },
+   {
+    "id": "kab-maluku-tenggara",
+    "name": "Kab. Maluku Tenggara",
+    "type": "regency",
+    "population": 90000,
+    "neighbors": [
+     "kab-kepulauan-aru",
+     "kab-maluku-tenggara-barat"
+    ]
+   },
+   {
+    "id": "kab-maluku-tenggara-barat",
+    "name": "Kab. Maluku Tenggara Barat",
+    "type": "regency",
+    "population": 180000,
+    "neighbors": [
+     "kab-maluku-tenggara",
+     "kota-tual"
+    ]
+   },
+   {
+    "id": "kab-seram-bagian-barat",
+    "name": "Kab. Seram Bagian Barat",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-maluku-tengah"
+    ]
+   },
+   {
+    "id": "kab-seram-bagian-timur",
+    "name": "Kab. Seram Bagian Timur",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-maluku-tengah"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "maluku-utara",
+  "regions": [
+   {
+    "id": "kab-halmahera-barat",
+    "name": "Kab. Halmahera Barat",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-halmahera-timur",
+     "kab-halmahera-utara",
+     "kab-pulau-morotai",
+     "kota-ternate",
+     "kota-tidore-kepulauan"
+    ]
+   },
+   {
+    "id": "kab-halmahera-selatan",
+    "name": "Kab. Halmahera Selatan",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-halmahera-tengah",
+     "kab-kepulauan-sula",
+     "kota-tidore-kepulauan"
+    ]
+   },
+   {
+    "id": "kab-halmahera-tengah",
+    "name": "Kab. Halmahera Tengah",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-halmahera-selatan",
+     "kab-halmahera-timur",
+     "kota-tidore-kepulauan"
+    ]
+   },
+   {
+    "id": "kab-halmahera-timur",
+    "name": "Kab. Halmahera Timur",
+    "type": "regency",
+    "population": 180000,
+    "neighbors": [
+     "kab-halmahera-barat",
+     "kab-halmahera-tengah",
+     "kab-halmahera-utara",
+     "kota-tidore-kepulauan"
+    ]
+   },
+   {
+    "id": "kab-halmahera-utara",
+    "name": "Kab. Halmahera Utara",
+    "type": "regency",
+    "population": 130000,
+    "neighbors": [
+     "kab-halmahera-barat",
+     "kab-halmahera-timur",
+     "kab-pulau-morotai"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-sula",
+    "name": "Kab. Kepulauan Sula",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-halmahera-selatan",
+     "kab-pulau-taliabu"
+    ]
+   },
+   {
+    "id": "kota-ternate",
+    "name": "Kota Ternate",
+    "type": "city",
+    "population": 70000,
+    "neighbors": [
+     "kab-halmahera-barat",
+     "kota-tidore-kepulauan"
+    ]
+   },
+   {
+    "id": "kota-tidore-kepulauan",
+    "name": "Kota Tidore Kepulauan",
+    "type": "city",
+    "population": 230000,
+    "neighbors": [
+     "kab-halmahera-barat",
+     "kab-halmahera-selatan",
+     "kab-halmahera-tengah",
+     "kab-halmahera-timur",
+     "kota-ternate"
+    ]
+   },
+   {
+    "id": "kab-pulau-morotai",
+    "name": "Kab. Pulau Morotai",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-halmahera-barat",
+     "kab-halmahera-utara"
+    ]
+   },
+   {
+    "id": "kab-pulau-taliabu",
+    "name": "Kab. Pulau Taliabu",
+    "type": "regency",
+    "population": 120000,
+    "neighbors": [
+     "kab-kepulauan-sula"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "nusa-tenggara-barat",
+  "regions": [
+   {
+    "id": "kab-bima",
+    "name": "Kab. Bima",
+    "type": "regency",
+    "population": 860000,
+    "neighbors": [
+     "kab-dompu",
+     "kota-bima"
+    ]
+   },
+   {
+    "id": "kab-dompu",
+    "name": "Kab. Dompu",
+    "type": "regency",
+    "population": 640000,
+    "neighbors": [
+     "kab-bima",
+     "kab-sumbawa"
+    ]
+   },
+   {
+    "id": "kota-bima",
+    "name": "Kota Bima",
+    "type": "city",
+    "population": 480000,
+    "neighbors": [
+     "kab-bima"
+    ]
+   },
+   {
+    "id": "kota-mataram",
+    "name": "Kota Mataram",
+    "type": "city",
+    "population": 260000,
+    "neighbors": [
+     "kab-lombok-barat"
+    ]
+   },
+   {
+    "id": "kab-lombok-barat",
+    "name": "Kab. Lombok Barat",
+    "type": "regency",
+    "population": 400000,
+    "neighbors": [
+     "kab-lombok-tengah",
+     "kab-lombok-utara",
+     "kota-mataram"
+    ]
+   },
+   {
+    "id": "kab-lombok-tengah",
+    "name": "Kab. Lombok Tengah",
+    "type": "regency",
+    "population": 450000,
+    "neighbors": [
+     "kab-lombok-barat",
+     "kab-lombok-timur",
+     "kab-lombok-utara"
+    ]
+   },
+   {
+    "id": "kab-lombok-timur",
+    "name": "Kab. Lombok Timur",
+    "type": "regency",
+    "population": 530000,
+    "neighbors": [
+     "kab-lombok-tengah",
+     "kab-lombok-utara"
+    ]
+   },
+   {
+    "id": "kab-lombok-utara",
+    "name": "Kab. Lombok Utara",
+    "type": "regency",
+    "population": 380000,
+    "neighbors": [
+     "kab-lombok-barat",
+     "kab-lombok-tengah",
+     "kab-lombok-timur"
+    ]
+   },
+   {
+    "id": "kab-sumbawa",
+    "name": "Kab. Sumbawa",
+    "type": "regency",
+    "population": 1080000,
+    "neighbors": [
+     "kab-dompu",
+     "kab-sumbawa-barat"
+    ]
+   },
+   {
+    "id": "kab-sumbawa-barat",
+    "name": "Kab. Sumbawa Barat",
+    "type": "regency",
+    "population": 560000,
+    "neighbors": [
+     "kab-sumbawa"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "nusa-tenggara-timur",
+  "regions": [
+   {
+    "id": "kab-alor",
+    "name": "Kab. Alor",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-belu",
+     "kab-lembata",
+     "kab-timor-tengah-utara"
+    ]
+   },
+   {
+    "id": "kab-belu",
+    "name": "Kab. Belu",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-alor",
+     "kab-malaka",
+     "kab-timor-tengah-utara"
+    ]
+   },
+   {
+    "id": "kab-ende",
+    "name": "Kab. Ende",
+    "type": "regency",
+    "population": 270000,
+    "neighbors": [
+     "kab-nagekeo",
+     "kab-sikka"
+    ]
+   },
+   {
+    "id": "kab-flores-timur",
+    "name": "Kab. Flores Timur",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-lembata",
+     "kab-sikka"
+    ]
+   },
+   {
+    "id": "kota-kupang",
+    "name": "Kota Kupang",
+    "type": "city",
+    "population": 180000,
+    "neighbors": [
+     "kab-kupang",
+     "kab-rote-ndao"
+    ]
+   },
+   {
+    "id": "kab-kupang",
+    "name": "Kab. Kupang",
+    "type": "regency",
+    "population": 420000,
+    "neighbors": [
+     "kab-rote-ndao",
+     "kab-timor-tengah-selatan",
+     "kab-timor-tengah-utara",
+     "kota-kupang"
+    ]
+   },
+   {
+    "id": "kab-lembata",
+    "name": "Kab. Lembata",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-alor",
+     "kab-flores-timur"
+    ]
+   },
+   {
+    "id": "kab-malaka",
+    "name": "Kab. Malaka",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-belu",
+     "kab-timor-tengah-selatan",
+     "kab-timor-tengah-utara"
+    ]
+   },
+   {
+    "id": "kab-manggarai",
+    "name": "Kab. Manggarai",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-manggarai-barat",
+     "kab-manggarai-timur"
+    ]
+   },
+   {
+    "id": "kab-manggarai-barat",
+    "name": "Kab. Manggarai Barat",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-manggarai"
+    ]
+   },
+   {
+    "id": "kab-manggarai-timur",
+    "name": "Kab. Manggarai Timur",
+    "type": "regency",
+    "population": 290000,
+    "neighbors": [
+     "kab-manggarai",
+     "kab-ngada"
+    ]
+   },
+   {
+    "id": "kab-nagekeo",
+    "name": "Kab. Nagekeo",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-ende",
+     "kab-ngada"
+    ]
+   },
+   {
+    "id": "kab-ngada",
+    "name": "Kab. Ngada",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-manggarai-timur",
+     "kab-nagekeo"
+    ]
+   },
+   {
+    "id": "kab-rote-ndao",
+    "name": "Kab. Rote Ndao",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-kupang",
+     "kab-sabu-raijua",
+     "kota-kupang"
+    ]
+   },
+   {
+    "id": "kab-sabu-raijua",
+    "name": "Kab. Sabu Raijua",
+    "type": "regency",
+    "population": 130000,
+    "neighbors": [
+     "kab-rote-ndao",
+     "kab-sumba-timur"
+    ]
+   },
+   {
+    "id": "kab-sikka",
+    "name": "Kab. Sikka",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-ende",
+     "kab-flores-timur"
+    ]
+   },
+   {
+    "id": "kab-sumba-barat",
+    "name": "Kab. Sumba Barat",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-sumba-barat-daya",
+     "kab-sumba-tengah"
+    ]
+   },
+   {
+    "id": "kab-sumba-barat-daya",
+    "name": "Kab. Sumba Barat Daya",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-sumba-barat"
+    ]
+   },
+   {
+    "id": "kab-sumba-tengah",
+    "name": "Kab. Sumba Tengah",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-sumba-barat",
+     "kab-sumba-timur"
+    ]
+   },
+   {
+    "id": "kab-sumba-timur",
+    "name": "Kab. Sumba Timur",
+    "type": "regency",
+    "population": 490000,
+    "neighbors": [
+     "kab-sabu-raijua",
+     "kab-sumba-tengah"
+    ]
+   },
+   {
+    "id": "kab-timor-tengah-selatan",
+    "name": "Kab. Timor Tengah Selatan",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-kupang",
+     "kab-malaka",
+     "kab-timor-tengah-utara"
+    ]
+   },
+   {
+    "id": "kab-timor-tengah-utara",
+    "name": "Kab. Timor Tengah Utara",
+    "type": "regency",
+    "population": 300000,
+    "neighbors": [
+     "kab-alor",
+     "kab-belu",
+     "kab-kupang",
+     "kab-malaka",
+     "kab-timor-tengah-selatan"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "papua",
+  "regions": [
+   {
+    "id": "kab-asmat",
+    "name": "Kab. Asmat",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-mappi",
+     "kab-mimika",
+     "kab-nduga",
+     "kab-yahukimo"
+    ]
+   },
+   {
+    "id": "kab-biak-numfor",
+    "name": "Kab. Biak Numfor",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-kepulauan-yapen",
+     "kab-supiori"
+    ]
+   },
+   {
+    "id": "kab-boven-digoel",
+    "name": "Kab. Boven Digoel",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-mappi",
+     "kab-merauke",
+     "kab-pegunungan-bintang",
+     "kab-yahukimo"
+    ]
+   },
+   {
+    "id": "kab-deiyai",
+    "name": "Kab. Deiyai",
+    "type": "regency",
+    "population": 70000,
+    "neighbors": [
+     "kab-dogiyai",
+     "kab-mimika",
+     "kab-paniai"
+    ]
+   },
+   {
+    "id": "kab-dogiyai",
+    "name": "Kab. Dogiyai",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-deiyai",
+     "kab-mimika",
+     "kab-nabire",
+     "kab-paniai"
+    ]
+   },
+   {
+    "id": "kab-intan-jaya",
+    "name": "Kab. Intan Jaya",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-nabire",
+     "kab-paniai",
+     "kab-puncak",
+     "kab-waropen"
+    ]
+   },
+   {
+    "id": "kab-jayapura",
+    "name": "Kab. Jayapura",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-keerom",
+     "kab-pegunungan-bintang",
+     "kab-sarmi",
+     "kab-yahukimo",
+     "kab-yalimo",
+     "kota-jayapura"
+    ]
+   },
+   {
+    "id": "kab-jayawijaya",
+    "name": "Kab. Jayawijaya",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-lanny-jaya",
+     "kab-mamberamo-tengah",
+     "kab-nduga",
+     "kab-yahukimo",
+     "kab-yalimo"
+    ]
+   },
+   {
+    "id": "kab-keerom",
+    "name": "Kab. Keerom",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-jayapura",
+     "kab-pegunungan-bintang",
+     "kota-jayapura"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-yapen",
+    "name": "Kab. Kepulauan Yapen",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-biak-numfor",
+     "kab-waropen"
+    ]
+   },
+   {
+    "id": "kota-jayapura",
+    "name": "Kota Jayapura",
+    "type": "city",
+    "population": 110000,
+    "neighbors": [
+     "kab-jayapura",
+     "kab-keerom"
+    ]
+   },
+   {
+    "id": "kab-lanny-jaya",
+    "name": "Kab. Lanny Jaya",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-jayawijaya",
+     "kab-mamberamo-tengah",
+     "kab-nduga",
+     "kab-puncak",
+     "kab-puncak-jaya",
+     "kab-tolikara"
+    ]
+   },
+   {
+    "id": "kab-mamberamo-raya",
+    "name": "Kab. Mamberamo Raya",
+    "type": "regency",
+    "population": 280000,
+    "neighbors": [
+     "kab-mamberamo-tengah",
+     "kab-puncak",
+     "kab-puncak-jaya",
+     "kab-sarmi",
+     "kab-tolikara",
+     "kab-waropen"
+    ]
+   },
+   {
+    "id": "kab-mamberamo-tengah",
+    "name": "Kab. Mamberamo Tengah",
+    "type": "regency",
+    "population": 90000,
+    "neighbors": [
+     "kab-jayawijaya",
+     "kab-lanny-jaya",
+     "kab-mamberamo-raya",
+     "kab-sarmi",
+     "kab-tolikara",
+     "kab-yalimo"
+    ]
+   },
+   {
+    "id": "kab-mappi",
+    "name": "Kab. Mappi",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-asmat",
+     "kab-boven-digoel",
+     "kab-merauke"
+    ]
+   },
+   {
+    "id": "kab-merauke",
+    "name": "Kab. Merauke",
+    "type": "regency",
+    "population": 340000,
+    "neighbors": [
+     "kab-boven-digoel",
+     "kab-mappi"
+    ]
+   },
+   {
+    "id": "kab-mimika",
+    "name": "Kab. Mimika",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-asmat",
+     "kab-deiyai",
+     "kab-dogiyai",
+     "kab-nduga",
+     "kab-paniai",
+     "kab-puncak"
+    ]
+   },
+   {
+    "id": "kab-nabire",
+    "name": "Kab. Nabire",
+    "type": "regency",
+    "population": 180000,
+    "neighbors": [
+     "kab-dogiyai",
+     "kab-intan-jaya",
+     "kab-paniai",
+     "kab-waropen"
+    ]
+   },
+   {
+    "id": "kab-nduga",
+    "name": "Kab. Nduga",
+    "type": "regency",
+    "population": 140000,
+    "neighbors": [
+     "kab-asmat",
+     "kab-jayawijaya",
+     "kab-lanny-jaya",
+     "kab-mimika",
+     "kab-yahukimo"
+    ]
+   },
+   {
+    "id": "kab-paniai",
+    "name": "Kab. Paniai",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-deiyai",
+     "kab-dogiyai",
+     "kab-intan-jaya",
+     "kab-mimika",
+     "kab-nabire",
+     "kab-puncak"
+    ]
+   },
+   {
+    "id": "kab-pegunungan-bintang",
+    "name": "Kab. Pegunungan Bintang",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-boven-digoel",
+     "kab-jayapura",
+     "kab-keerom",
+     "kab-yahukimo"
+    ]
+   },
+   {
+    "id": "kab-puncak",
+    "name": "Kab. Puncak",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-intan-jaya",
+     "kab-lanny-jaya",
+     "kab-mamberamo-raya",
+     "kab-mimika",
+     "kab-paniai",
+     "kab-puncak-jaya",
+     "kab-waropen"
+    ]
+   },
+   {
+    "id": "kab-puncak-jaya",
+    "name": "Kab. Puncak Jaya",
+    "type": "regency",
+    "population": 110000,
+    "neighbors": [
+     "kab-lanny-jaya",
+     "kab-mamberamo-raya",
+     "kab-puncak",
+     "kab-tolikara"
+    ]
+   },
+   {
+    "id": "kab-sarmi",
+    "name": "Kab. Sarmi",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-jayapura",
+     "kab-mamberamo-raya",
+     "kab-mamberamo-tengah",
+     "kab-yalimo"
+    ]
+   },
+   {
+    "id": "kab-supiori",
+    "name": "Kab. Supiori",
+    "type": "regency",
+    "population": 40000,
+    "neighbors": [
+     "kab-biak-numfor"
+    ]
+   },
+   {
+    "id": "kab-tolikara",
+    "name": "Kab. Tolikara",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-lanny-jaya",
+     "kab-mamberamo-raya",
+     "kab-mamberamo-tengah",
+     "kab-puncak-jaya"
+    ]
+   },
+   {
+    "id": "kab-waropen",
+    "name": "Kab. Waropen",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-intan-jaya",
+     "kab-kepulauan-yapen",
+     "kab-mamberamo-raya",
+     "kab-nabire",
+     "kab-puncak"
+    ]
+   },
+   {
+    "id": "kab-yahukimo",
+    "name": "Kab. Yahukimo",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-asmat",
+     "kab-boven-digoel",
+     "kab-jayapura",
+     "kab-jayawijaya",
+     "kab-nduga",
+     "kab-pegunungan-bintang",
+     "kab-yalimo"
+    ]
+   },
+   {
+    "id": "kab-yalimo",
+    "name": "Kab. Yalimo",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-jayapura",
+     "kab-jayawijaya",
+     "kab-mamberamo-tengah",
+     "kab-sarmi",
+     "kab-yahukimo"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "papua-barat",
+  "regions": [
+   {
+    "id": "kab-fakfak",
+    "name": "Kab. Fakfak",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-kaimana",
+     "kab-teluk-bintuni"
+    ]
+   },
+   {
+    "id": "kab-kaimana",
+    "name": "Kab. Kaimana",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-fakfak",
+     "kab-teluk-bintuni",
+     "kab-teluk-wondama"
+    ]
+   },
+   {
+    "id": "kota-sorong",
+    "name": "Kota Sorong",
+    "type": "city",
+    "population": 70000,
+    "neighbors": [
+     "kab-sorong"
+    ]
+   },
+   {
+    "id": "kab-manokwari",
+    "name": "Kab. Manokwari",
+    "type": "regency",
+    "population": 70000,
+    "neighbors": [
+     "kab-manokwari-selatan",
+     "kab-pegunungan-arfak",
+     "kab-tambrauw"
+    ]
+   },
+   {
+    "id": "kab-manokwari-selatan",
+    "name": "Kab. Manokwari Selatan",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-manokwari",
+     "kab-pegunungan-arfak",
+     "kab-teluk-bintuni",
+     "kab-teluk-wondama"
+    ]
+   },
+   {
+    "id": "kab-maybrat",
+    "name": "Kab. Maybrat",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-sorong-selatan",
+     "kab-tambrauw",
+     "kab-teluk-bintuni"
+    ]
+   },
+   {
+    "id": "kab-pegunungan-arfak",
+    "name": "Kab. Pegunungan Arfak",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-manokwari",
+     "kab-manokwari-selatan",
+     "kab-tambrauw",
+     "kab-teluk-bintuni"
+    ]
+   },
+   {
+    "id": "kab-raja-ampat",
+    "name": "Kab. Raja Ampat",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-sorong"
+    ]
+   },
+   {
+    "id": "kab-sorong",
+    "name": "Kab. Sorong",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-raja-ampat",
+     "kab-sorong-selatan",
+     "kab-tambrauw",
+     "kota-sorong"
+    ]
+   },
+   {
+    "id": "kab-sorong-selatan",
+    "name": "Kab. Sorong Selatan",
+    "type": "regency",
+    "population": 130000,
+    "neighbors": [
+     "kab-maybrat",
+     "kab-sorong",
+     "kab-tambrauw",
+     "kab-teluk-bintuni"
+    ]
+   },
+   {
+    "id": "kab-tambrauw",
+    "name": "Kab. Tambrauw",
+    "type": "regency",
+    "population": 180000,
+    "neighbors": [
+     "kab-manokwari",
+     "kab-maybrat",
+     "kab-pegunungan-arfak",
+     "kab-sorong",
+     "kab-sorong-selatan",
+     "kab-teluk-bintuni"
+    ]
+   },
+   {
+    "id": "kab-teluk-bintuni",
+    "name": "Kab. Teluk Bintuni",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-fakfak",
+     "kab-kaimana",
+     "kab-manokwari-selatan",
+     "kab-maybrat",
+     "kab-pegunungan-arfak",
+     "kab-sorong-selatan",
+     "kab-tambrauw",
+     "kab-teluk-wondama"
+    ]
+   },
+   {
+    "id": "kab-teluk-wondama",
+    "name": "Kab. Teluk Wondama",
+    "type": "regency",
+    "population": 130000,
+    "neighbors": [
+     "kab-kaimana",
+     "kab-manokwari-selatan",
+     "kab-teluk-bintuni"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "riau",
+  "regions": [
+   {
+    "id": "kab-bengkalis",
+    "name": "Kab. Bengkalis",
+    "type": "regency",
+    "population": 560000,
+    "neighbors": [
+     "kab-rokan-hilir",
+     "kab-rokan-hulu",
+     "kab-siak",
+     "kota-dumai"
+    ]
+   },
+   {
+    "id": "kab-indragiri-hilir",
+    "name": "Kab. Indragiri Hilir",
+    "type": "regency",
+    "population": 710000,
+    "neighbors": [
+     "kab-indragiri-hulu",
+     "kab-pelalawan"
+    ]
+   },
+   {
+    "id": "kab-indragiri-hulu",
+    "name": "Kab. Indragiri Hulu",
+    "type": "regency",
+    "population": 550000,
+    "neighbors": [
+     "kab-indragiri-hilir",
+     "kab-kuantan-singingi",
+     "kab-pelalawan"
+    ]
+   },
+   {
+    "id": "kab-kampar",
+    "name": "Kab. Kampar",
+    "type": "regency",
+    "population": 630000,
+    "neighbors": [
+     "kab-kuantan-singingi",
+     "kab-pelalawan",
+     "kab-rokan-hulu",
+     "kab-siak",
+     "kota-pekanbaru"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-meranti",
+    "name": "Kab. Kepulauan Meranti",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-pelalawan",
+     "kab-siak"
+    ]
+   },
+   {
+    "id": "kota-dumai",
+    "name": "Kota Dumai",
+    "type": "city",
+    "population": 730000,
+    "neighbors": [
+     "kab-bengkalis",
+     "kab-rokan-hilir"
+    ]
+   },
+   {
+    "id": "kota-pekanbaru",
+    "name": "Kota Pekanbaru",
+    "type": "city",
+    "population": 380000,
+    "neighbors": [
+     "kab-kampar",
+     "kab-pelalawan",
+     "kab-siak"
+    ]
+   },
+   {
+    "id": "kab-kuantan-singingi",
+    "name": "Kab. Kuantan Singingi",
+    "type": "regency",
+    "population": 440000,
+    "neighbors": [
+     "kab-indragiri-hulu",
+     "kab-kampar",
+     "kab-pelalawan"
+    ]
+   },
+   {
+    "id": "kab-pelalawan",
+    "name": "Kab. Pelalawan",
+    "type": "regency",
+    "population": 700000,
+    "neighbors": [
+     "kab-indragiri-hilir",
+     "kab-indragiri-hulu",
+     "kab-kampar",
+     "kab-kepulauan-meranti",
+     "kab-kuantan-singingi",
+     "kab-siak",
+     "kota-pekanbaru"
+    ]
+   },
+   {
+    "id": "kab-rokan-hilir",
+    "name": "Kab. Rokan Hilir",
+    "type": "regency",
+    "population": 590000,
+    "neighbors": [
+     "kab-bengkalis",
+     "kab-rokan-hulu",
+     "kota-dumai"
+    ]
+   },
+   {
+    "id": "kab-rokan-hulu",
+    "name": "Kab. Rokan Hulu",
+    "type": "regency",
+    "population": 520000,
+    "neighbors": [
+     "kab-bengkalis",
+     "kab-kampar",
+     "kab-rokan-hilir",
+     "kab-siak"
+    ]
+   },
+   {
+    "id": "kab-siak",
+    "name": "Kab. Siak",
+    "type": "regency",
+    "population": 540000,
+    "neighbors": [
+     "kab-bengkalis",
+     "kab-kampar",
+     "kab-kepulauan-meranti",
+     "kab-pelalawan",
+     "kab-rokan-hulu",
+     "kota-pekanbaru"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sulawesi-barat",
+  "regions": [
+   {
+    "id": "kab-majene",
+    "name": "Kab. Majene",
+    "type": "regency",
+    "population": 140000,
+    "neighbors": [
+     "kab-mamasa",
+     "kab-mamuju",
+     "kab-polewali-mandar"
+    ]
+   },
+   {
+    "id": "kab-mamasa",
+    "name": "Kab. Mamasa",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-majene",
+     "kab-mamuju",
+     "kab-polewali-mandar"
+    ]
+   },
+   {
+    "id": "kab-mamuju",
+    "name": "Kab. Mamuju",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-majene",
+     "kab-mamasa",
+     "kab-mamuju-tengah"
+    ]
+   },
+   {
+    "id": "kab-mamuju-tengah",
+    "name": "Kab. Mamuju Tengah",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-mamuju",
+     "kab-mamuju-utara"
+    ]
+   },
+   {
+    "id": "kab-mamuju-utara",
+    "name": "Kab. Mamuju Utara",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-mamuju-tengah"
+    ]
+   },
+   {
+    "id": "kab-polewali-mandar",
+    "name": "Kab. Polewali Mandar",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-majene",
+     "kab-mamasa"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sulawesi-selatan",
+  "regions": [
+   {
+    "id": "kab-bantaeng",
+    "name": "Kab. Bantaeng",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-bulukumba",
+     "kab-gowa",
+     "kab-jeneponto",
+     "kab-kepulauan-selayar",
+     "kab-sinjai"
+    ]
+   },
+   {
+    "id": "kab-barru",
+    "name": "Kab. Barru",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-bone",
+     "kab-pangkajene-dan-kepulauan",
+     "kab-sidenreng-rappang",
+     "kab-soppeng",
+     "kota-parepare"
+    ]
+   },
+   {
+    "id": "kab-bone",
+    "name": "Kab. Bone",
+    "type": "regency",
+    "population": 640000,
+    "neighbors": [
+     "kab-barru",
+     "kab-gowa",
+     "kab-maros",
+     "kab-pangkajene-dan-kepulauan",
+     "kab-sinjai",
+     "kab-soppeng",
+     "kab-wajo"
+    ]
+   },
+   {
+    "id": "kab-bulukumba",
+    "name": "Kab. Bulukumba",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-bantaeng",
+     "kab-kepulauan-selayar",
+     "kab-sinjai"
+    ]
+   },
+   {
+    "id": "kab-enrekang",
+    "name": "Kab. Enrekang",
+    "type": "regency",
+    "population": 400000,
+    "neighbors": [
+     "kab-luwu",
+     "kab-pinrang",
+     "kab-sidenreng-rappang",
+     "kab-tana-toraja"
+    ]
+   },
+   {
+    "id": "kab-gowa",
+    "name": "Kab. Gowa",
+    "type": "regency",
+    "population": 400000,
+    "neighbors": [
+     "kab-bantaeng",
+     "kab-bone",
+     "kab-jeneponto",
+     "kab-maros",
+     "kab-sinjai",
+     "kab-takalar",
+     "kota-makassar"
+    ]
+   },
+   {
+    "id": "kab-jeneponto",
+    "name": "Kab. Jeneponto",
+    "type": "regency",
+    "population": 270000,
+    "neighbors": [
+     "kab-bantaeng",
+     "kab-gowa",
+     "kab-takalar"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-selayar",
+    "name": "Kab. Kepulauan Selayar",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-bantaeng",
+     "kab-bulukumba"
+    ]
+   },
+   {
+    "id": "kota-makassar",
+    "name": "Kota Makassar",
+    "type": "city",
+    "population": 320000,
+    "neighbors": [
+     "kab-gowa",
+     "kab-maros",
+     "kab-takalar"
+    ]
+   },
+   {
+    "id": "kota-palopo",
+    "name": "Kota Palopo",
+    "type": "city",
+    "population": 400000,
+    "neighbors": [
+     "kab-luwu",
+     "kab-toraja-utara"
+    ]
+   },
+   {
+    "id": "kota-parepare",
+    "name": "Kota Parepare",
+    "type": "city",
+    "population": 220000,
+    "neighbors": [
+     "kab-barru",
+     "kab-pinrang",
+     "kab-sidenreng-rappang"
+    ]
+   },
+   {
+    "id": "kab-luwu",
+    "name": "Kab. Luwu",
+    "type": "regency",
+    "population": 510000,
+    "neighbors": [
+     "kab-enrekang",
+     "kab-luwu-utara",
+     "kab-sidenreng-rappang",
+     "kab-tana-toraja",
+     "kab-toraja-utara",
+     "kab-wajo",
+     "kota-palopo"
+    ]
+   },
+   {
+    "id": "kab-luwu-timur",
+    "name": "Kab. Luwu Timur",
+    "type": "regency",
+    "population": 770000,
+    "neighbors": [
+     "kab-luwu-utara"
+    ]
+   },
+   {
+    "id": "kab-luwu-utara",
+    "name": "Kab. Luwu Utara",
+    "type": "regency",
+    "population": 820000,
+    "neighbors": [
+     "kab-luwu",
+     "kab-luwu-timur",
+     "kab-toraja-utara"
+    ]
+   },
+   {
+    "id": "kab-maros",
+    "name": "Kab. Maros",
+    "type": "regency",
+    "population": 360000,
+    "neighbors": [
+     "kab-bone",
+     "kab-gowa",
+     "kab-pangkajene-dan-kepulauan",
+     "kota-makassar"
+    ]
+   },
+   {
+    "id": "kab-pangkajene-dan-kepulauan",
+    "name": "Kab. Pangkajene Dan Kepulauan",
+    "type": "regency",
+    "population": 280000,
+    "neighbors": [
+     "kab-barru",
+     "kab-bone",
+     "kab-maros"
+    ]
+   },
+   {
+    "id": "kab-pinrang",
+    "name": "Kab. Pinrang",
+    "type": "regency",
+    "population": 410000,
+    "neighbors": [
+     "kab-enrekang",
+     "kab-sidenreng-rappang",
+     "kab-tana-toraja",
+     "kota-parepare"
+    ]
+   },
+   {
+    "id": "kab-sidenreng-rappang",
+    "name": "Kab. Sidenreng Rappang",
+    "type": "regency",
+    "population": 420000,
+    "neighbors": [
+     "kab-barru",
+     "kab-enrekang",
+     "kab-luwu",
+     "kab-pinrang",
+     "kab-soppeng",
+     "kab-wajo",
+     "kota-parepare"
+    ]
+   },
+   {
+    "id": "kab-sinjai",
+    "name": "Kab. Sinjai",
+    "type": "regency",
+    "population": 280000,
+    "neighbors": [
+     "kab-bantaeng",
+     "kab-bone",
+     "kab-bulukumba",
+     "kab-gowa"
+    ]
+   },
+   {
+    "id": "kab-soppeng",
+    "name": "Kab. Soppeng",
+    "type": "regency",
+    "population": 350000,
+    "neighbors": [
+     "kab-barru",
+     "kab-bone",
+     "kab-sidenreng-rappang",
+     "kab-wajo"
+    ]
+   },
+   {
+    "id": "kab-takalar",
+    "name": "Kab. Takalar",
+    "type": "regency",
+    "population": 230000,
+    "neighbors": [
+     "kab-gowa",
+     "kab-jeneponto",
+     "kota-makassar"
+    ]
+   },
+   {
+    "id": "kab-tana-toraja",
+    "name": "Kab. Tana Toraja",
+    "type": "regency",
+    "population": 420000,
+    "neighbors": [
+     "kab-enrekang",
+     "kab-luwu",
+     "kab-pinrang",
+     "kab-toraja-utara"
+    ]
+   },
+   {
+    "id": "kab-toraja-utara",
+    "name": "Kab. Toraja Utara",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-luwu",
+     "kab-luwu-utara",
+     "kab-tana-toraja",
+     "kota-palopo"
+    ]
+   },
+   {
+    "id": "kab-wajo",
+    "name": "Kab. Wajo",
+    "type": "regency",
+    "population": 470000,
+    "neighbors": [
+     "kab-bone",
+     "kab-luwu",
+     "kab-sidenreng-rappang",
+     "kab-soppeng"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sulawesi-tengah",
+  "regions": [
+   {
+    "id": "kab-banggai",
+    "name": "Kab. Banggai",
+    "type": "regency",
+    "population": 330000,
+    "neighbors": [
+     "kab-banggai-kepulauan",
+     "kab-morowali-utara",
+     "kab-tojo-una-una"
+    ]
+   },
+   {
+    "id": "kab-banggai-kepulauan",
+    "name": "Kab. Banggai Kepulauan",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-banggai",
+     "kab-banggai-laut"
+    ]
+   },
+   {
+    "id": "kab-banggai-laut",
+    "name": "Kab. Banggai Laut",
+    "type": "regency",
+    "population": 90000,
+    "neighbors": [
+     "kab-banggai-kepulauan"
+    ]
+   },
+   {
+    "id": "kab-buol",
+    "name": "Kab. Buol",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-parigi-moutong",
+     "kab-toli-toli"
+    ]
+   },
+   {
+    "id": "kab-donggala",
+    "name": "Kab. Donggala",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-parigi-moutong",
+     "kab-sigi",
+     "kab-toli-toli",
+     "kota-palu"
+    ]
+   },
+   {
+    "id": "kota-palu",
+    "name": "Kota Palu",
+    "type": "city",
+    "population": 180000,
+    "neighbors": [
+     "kab-donggala",
+     "kab-parigi-moutong",
+     "kab-sigi"
+    ]
+   },
+   {
+    "id": "kab-morowali",
+    "name": "Kab. Morowali",
+    "type": "regency",
+    "population": 230000,
+    "neighbors": [
+     "kab-morowali-utara"
+    ]
+   },
+   {
+    "id": "kab-morowali-utara",
+    "name": "Kab. Morowali Utara",
+    "type": "regency",
+    "population": 340000,
+    "neighbors": [
+     "kab-banggai",
+     "kab-morowali",
+     "kab-poso",
+     "kab-tojo-una-una"
+    ]
+   },
+   {
+    "id": "kab-parigi-moutong",
+    "name": "Kab. Parigi Moutong",
+    "type": "regency",
+    "population": 270000,
+    "neighbors": [
+     "kab-buol",
+     "kab-donggala",
+     "kab-poso",
+     "kab-sigi",
+     "kab-toli-toli",
+     "kota-palu"
+    ]
+   },
+   {
+    "id": "kab-poso",
+    "name": "Kab. Poso",
+    "type": "regency",
+    "population": 300000,
+    "neighbors": [
+     "kab-morowali-utara",
+     "kab-parigi-moutong",
+     "kab-sigi",
+     "kab-tojo-una-una"
+    ]
+   },
+   {
+    "id": "kab-sigi",
+    "name": "Kab. Sigi",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-donggala",
+     "kab-parigi-moutong",
+     "kab-poso",
+     "kota-palu"
+    ]
+   },
+   {
+    "id": "kab-tojo-una-una",
+    "name": "Kab. Tojo Una-Una",
+    "type": "regency",
+    "population": 260000,
+    "neighbors": [
+     "kab-banggai",
+     "kab-morowali-utara",
+     "kab-poso"
+    ]
+   },
+   {
+    "id": "kab-toli-toli",
+    "name": "Kab. Toli-Toli",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-buol",
+     "kab-donggala",
+     "kab-parigi-moutong"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sulawesi-tenggara",
+  "regions": [
+   {
+    "id": "kab-bombana",
+    "name": "Kab. Bombana",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-buton-tengah",
+     "kab-kolaka",
+     "kab-kolaka-timur",
+     "kab-konawe-selatan"
+    ]
+   },
+   {
+    "id": "kab-buton",
+    "name": "Kab. Buton",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-buton-selatan",
+     "kab-buton-utara",
+     "kab-muna",
+     "kab-wakatobi",
+     "kota-baubau"
+    ]
+   },
+   {
+    "id": "kab-buton-selatan",
+    "name": "Kab. Buton Selatan",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-buton",
+     "kota-baubau"
+    ]
+   },
+   {
+    "id": "kab-buton-tengah",
+    "name": "Kab. Buton Tengah",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-bombana",
+     "kab-muna"
+    ]
+   },
+   {
+    "id": "kab-buton-utara",
+    "name": "Kab. Buton Utara",
+    "type": "regency",
+    "population": 150000,
+    "neighbors": [
+     "kab-buton",
+     "kab-konawe-kepulauan",
+     "kab-muna",
+     "kab-wakatobi"
+    ]
+   },
+   {
+    "id": "kab-kolaka",
+    "name": "Kab. Kolaka",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-bombana",
+     "kab-kolaka-timur",
+     "kab-kolaka-utara"
+    ]
+   },
+   {
+    "id": "kab-kolaka-timur",
+    "name": "Kab. Kolaka Timur",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-bombana",
+     "kab-kolaka",
+     "kab-kolaka-utara",
+     "kab-konawe",
+     "kab-konawe-selatan",
+     "kab-konawe-utara"
+    ]
+   },
+   {
+    "id": "kab-kolaka-utara",
+    "name": "Kab. Kolaka Utara",
+    "type": "regency",
+    "population": 200000,
+    "neighbors": [
+     "kab-kolaka",
+     "kab-kolaka-timur",
+     "kab-konawe",
+     "kab-konawe-utara"
+    ]
+   },
+   {
+    "id": "kab-konawe",
+    "name": "Kab. Konawe",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-kolaka-timur",
+     "kab-kolaka-utara",
+     "kab-konawe-selatan",
+     "kab-konawe-utara",
+     "kota-kendari"
+    ]
+   },
+   {
+    "id": "kab-konawe-kepulauan",
+    "name": "Kab. Konawe Kepulauan",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-buton-utara",
+     "kota-kendari"
+    ]
+   },
+   {
+    "id": "kab-konawe-selatan",
+    "name": "Kab. Konawe Selatan",
+    "type": "regency",
+    "population": 230000,
+    "neighbors": [
+     "kab-bombana",
+     "kab-kolaka-timur",
+     "kab-konawe",
+     "kota-kendari"
+    ]
+   },
+   {
+    "id": "kab-konawe-utara",
+    "name": "Kab. Konawe Utara",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-kolaka-timur",
+     "kab-kolaka-utara",
+     "kab-konawe"
+    ]
+   },
+   {
+    "id": "kota-baubau",
+    "name": "Kota Baubau",
+    "type": "city",
+    "population": 150000,
+    "neighbors": [
+     "kab-buton",
+     "kab-buton-selatan"
+    ]
+   },
+   {
+    "id": "kota-kendari",
+    "name": "Kota Kendari",
+    "type": "city",
+    "population": 150000,
+    "neighbors": [
+     "kab-konawe",
+     "kab-konawe-kepulauan",
+     "kab-konawe-selatan"
+    ]
+   },
+   {
+    "id": "kab-muna",
+    "name": "Kab. Muna",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-buton",
+     "kab-buton-tengah",
+     "kab-buton-utara",
+     "kab-muna-barat"
+    ]
+   },
+   {
+    "id": "kab-muna-barat",
+    "name": "Kab. Muna Barat",
+    "type": "regency",
+    "population": 100000,
+    "neighbors": [
+     "kab-muna"
+    ]
+   },
+   {
+    "id": "kab-wakatobi",
+    "name": "Kab. Wakatobi",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-buton",
+     "kab-buton-utara"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sulawesi-utara",
+  "regions": [
+   {
+    "id": "kab-bolaang-mongondow",
+    "name": "Kab. Bolaang Mongondow",
+    "type": "regency",
+    "population": 300000,
+    "neighbors": [
+     "kab-bolaang-mongondow-selatan",
+     "kab-bolaang-mongondow-timur",
+     "kab-bolaang-mongondow-utara",
+     "kab-minahasa-selatan",
+     "kota-kotamobagu"
+    ]
+   },
+   {
+    "id": "kab-bolaang-mongondow-selatan",
+    "name": "Kab. Bolaang Mongondow Selatan",
+    "type": "regency",
+    "population": 230000,
+    "neighbors": [
+     "kab-bolaang-mongondow",
+     "kab-bolaang-mongondow-timur",
+     "kab-bolaang-mongondow-utara"
+    ]
+   },
+   {
+    "id": "kab-bolaang-mongondow-timur",
+    "name": "Kab. Bolaang Mongondow Timur",
+    "type": "regency",
+    "population": 160000,
+    "neighbors": [
+     "kab-bolaang-mongondow",
+     "kab-bolaang-mongondow-selatan",
+     "kab-minahasa-selatan",
+     "kab-minahasa-tenggara",
+     "kota-kotamobagu"
+    ]
+   },
+   {
+    "id": "kab-bolaang-mongondow-utara",
+    "name": "Kab. Bolaang Mongondow Utara",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-bolaang-mongondow",
+     "kab-bolaang-mongondow-selatan"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-sangihe",
+    "name": "Kab. Kepulauan Sangihe",
+    "type": "regency",
+    "population": 130000,
+    "neighbors": [
+     "kab-kepulauan-talaud",
+     "kab-siau-tagulandang-biaro"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-talaud",
+    "name": "Kab. Kepulauan Talaud",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-kepulauan-sangihe"
+    ]
+   },
+   {
+    "id": "kota-bitung",
+    "name": "Kota Bitung",
+    "type": "city",
+    "population": 240000,
+    "neighbors": [
+     "kab-minahasa-utara"
+    ]
+   },
+   {
+    "id": "kota-kotamobagu",
+    "name": "Kota Kotamobagu",
+    "type": "city",
+    "population": 140000,
+    "neighbors": [
+     "kab-bolaang-mongondow",
+     "kab-bolaang-mongondow-timur"
+    ]
+   },
+   {
+    "id": "kota-manado",
+    "name": "Kota Manado",
+    "type": "city",
+    "population": 170000,
+    "neighbors": [
+     "kab-minahasa",
+     "kab-minahasa-utara"
+    ]
+   },
+   {
+    "id": "kota-tomohon",
+    "name": "Kota Tomohon",
+    "type": "city",
+    "population": 160000,
+    "neighbors": [
+     "kab-minahasa"
+    ]
+   },
+   {
+    "id": "kab-minahasa",
+    "name": "Kab. Minahasa",
+    "type": "regency",
+    "population": 190000,
+    "neighbors": [
+     "kab-minahasa-selatan",
+     "kab-minahasa-tenggara",
+     "kab-minahasa-utara",
+     "kota-manado",
+     "kota-tomohon"
+    ]
+   },
+   {
+    "id": "kab-minahasa-selatan",
+    "name": "Kab. Minahasa Selatan",
+    "type": "regency",
+    "population": 210000,
+    "neighbors": [
+     "kab-bolaang-mongondow",
+     "kab-bolaang-mongondow-timur",
+     "kab-minahasa",
+     "kab-minahasa-tenggara"
+    ]
+   },
+   {
+    "id": "kab-minahasa-tenggara",
+    "name": "Kab. Minahasa Tenggara",
+    "type": "regency",
+    "population": 140000,
+    "neighbors": [
+     "kab-bolaang-mongondow-timur",
+     "kab-minahasa",
+     "kab-minahasa-selatan"
+    ]
+   },
+   {
+    "id": "kab-minahasa-utara",
+    "name": "Kab. Minahasa Utara",
+    "type": "regency",
+    "population": 170000,
+    "neighbors": [
+     "kab-minahasa",
+     "kota-bitung",
+     "kota-manado"
+    ]
+   },
+   {
+    "id": "kab-siau-tagulandang-biaro",
+    "name": "Kab. Siau Tagulandang Biaro",
+    "type": "regency",
+    "population": 80000,
+    "neighbors": [
+     "kab-kepulauan-sangihe"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sumatera-barat",
+  "regions": [
+   {
+    "id": "kab-agam",
+    "name": "Kab. Agam",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-lima-puluh-kota",
+     "kab-padang-pariaman",
+     "kab-pasaman",
+     "kab-pasaman-barat",
+     "kab-tanah-datar",
+     "kota-bukittinggi"
+    ]
+   },
+   {
+    "id": "kab-dharmasraya",
+    "name": "Kab. Dharmasraya",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-sijunjung",
+     "kab-solok",
+     "kab-solok-selatan"
+    ]
+   },
+   {
+    "id": "kab-kepulauan-mentawai",
+    "name": "Kab. Kepulauan Mentawai",
+    "type": "regency",
+    "population": 520000,
+    "neighbors": [
+     "kab-padang-pariaman",
+     "kota-pariaman"
+    ]
+   },
+   {
+    "id": "kota-bukittinggi",
+    "name": "Kota Bukittinggi",
+    "type": "city",
+    "population": 80000,
+    "neighbors": [
+     "kab-agam"
+    ]
+   },
+   {
+    "id": "kota-padang",
+    "name": "Kota Padang",
+    "type": "city",
+    "population": 440000,
+    "neighbors": [
+     "kab-padang-pariaman",
+     "kab-pesisir-selatan",
+     "kab-solok",
+     "kota-solok"
+    ]
+   },
+   {
+    "id": "kota-padang-panjang",
+    "name": "Kota Padang Panjang",
+    "type": "city",
+    "population": 80000,
+    "neighbors": [
+     "kab-tanah-datar"
+    ]
+   },
+   {
+    "id": "kota-pariaman",
+    "name": "Kota Pariaman",
+    "type": "city",
+    "population": 130000,
+    "neighbors": [
+     "kab-kepulauan-mentawai",
+     "kab-padang-pariaman"
+    ]
+   },
+   {
+    "id": "kota-payakumbuh",
+    "name": "Kota Payakumbuh",
+    "type": "city",
+    "population": 140000,
+    "neighbors": [
+     "kab-lima-puluh-kota"
+    ]
+   },
+   {
+    "id": "kota-sawah-lunto",
+    "name": "Kota Sawah Lunto",
+    "type": "city",
+    "population": 260000,
+    "neighbors": [
+     "kab-sijunjung",
+     "kab-solok",
+     "kab-tanah-datar"
+    ]
+   },
+   {
+    "id": "kota-solok",
+    "name": "Kota Solok",
+    "type": "city",
+    "population": 130000,
+    "neighbors": [
+     "kab-solok",
+     "kota-padang"
+    ]
+   },
+   {
+    "id": "kab-lima-puluh-kota",
+    "name": "Kab. Lima Puluh Kota",
+    "type": "regency",
+    "population": 390000,
+    "neighbors": [
+     "kab-agam",
+     "kab-pasaman",
+     "kab-sijunjung",
+     "kab-tanah-datar",
+     "kota-payakumbuh"
+    ]
+   },
+   {
+    "id": "kab-padang-pariaman",
+    "name": "Kab. Padang Pariaman",
+    "type": "regency",
+    "population": 250000,
+    "neighbors": [
+     "kab-agam",
+     "kab-kepulauan-mentawai",
+     "kab-solok",
+     "kab-tanah-datar",
+     "kota-padang",
+     "kota-pariaman"
+    ]
+   },
+   {
+    "id": "kab-pasaman",
+    "name": "Kab. Pasaman",
+    "type": "regency",
+    "population": 420000,
+    "neighbors": [
+     "kab-agam",
+     "kab-lima-puluh-kota",
+     "kab-pasaman-barat"
+    ]
+   },
+   {
+    "id": "kab-pasaman-barat",
+    "name": "Kab. Pasaman Barat",
+    "type": "regency",
+    "population": 410000,
+    "neighbors": [
+     "kab-agam",
+     "kab-pasaman"
+    ]
+   },
+   {
+    "id": "kab-pesisir-selatan",
+    "name": "Kab. Pesisir Selatan",
+    "type": "regency",
+    "population": 520000,
+    "neighbors": [
+     "kab-solok",
+     "kab-solok-selatan",
+     "kota-padang"
+    ]
+   },
+   {
+    "id": "kab-sijunjung",
+    "name": "Kab. Sijunjung",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-dharmasraya",
+     "kab-lima-puluh-kota",
+     "kab-solok",
+     "kab-tanah-datar",
+     "kota-sawah-lunto"
+    ]
+   },
+   {
+    "id": "kab-solok",
+    "name": "Kab. Solok",
+    "type": "regency",
+    "population": 380000,
+    "neighbors": [
+     "kab-dharmasraya",
+     "kab-padang-pariaman",
+     "kab-pesisir-selatan",
+     "kab-sijunjung",
+     "kab-solok-selatan",
+     "kab-tanah-datar",
+     "kota-padang",
+     "kota-sawah-lunto",
+     "kota-solok"
+    ]
+   },
+   {
+    "id": "kab-solok-selatan",
+    "name": "Kab. Solok Selatan",
+    "type": "regency",
+    "population": 400000,
+    "neighbors": [
+     "kab-dharmasraya",
+     "kab-pesisir-selatan",
+     "kab-solok"
+    ]
+   },
+   {
+    "id": "kab-tanah-datar",
+    "name": "Kab. Tanah Datar",
+    "type": "regency",
+    "population": 240000,
+    "neighbors": [
+     "kab-agam",
+     "kab-lima-puluh-kota",
+     "kab-padang-pariaman",
+     "kab-sijunjung",
+     "kab-solok",
+     "kota-padang-panjang",
+     "kota-sawah-lunto"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sumatera-selatan",
+  "regions": [
+   {
+    "id": "kab-banyu-asin",
+    "name": "Kab. Banyu Asin",
+    "type": "regency",
+    "population": 780000,
+    "neighbors": [
+     "kab-muara-enim",
+     "kab-musi-banyuasin",
+     "kab-ogan-ilir",
+     "kab-ogan-komering-ilir",
+     "kab-penukal-abab-lematang-ilir",
+     "kota-palembang"
+    ]
+   },
+   {
+    "id": "kab-empat-lawang",
+    "name": "Kab. Empat Lawang",
+    "type": "regency",
+    "population": 360000,
+    "neighbors": [
+     "kab-lahat",
+     "kab-musi-rawas"
+    ]
+   },
+   {
+    "id": "kota-lubuklinggau",
+    "name": "Kota Lubuklinggau",
+    "type": "city",
+    "population": 350000,
+    "neighbors": [
+     "kab-musi-rawas"
+    ]
+   },
+   {
+    "id": "kota-pagar-alam",
+    "name": "Kota Pagar Alam",
+    "type": "city",
+    "population": 450000,
+    "neighbors": [
+     "kab-lahat",
+     "kab-muara-enim"
+    ]
+   },
+   {
+    "id": "kota-palembang",
+    "name": "Kota Palembang",
+    "type": "city",
+    "population": 350000,
+    "neighbors": [
+     "kab-banyu-asin",
+     "kab-muara-enim",
+     "kab-ogan-ilir"
+    ]
+   },
+   {
+    "id": "kota-prabumulih",
+    "name": "Kota Prabumulih",
+    "type": "city",
+    "population": 370000,
+    "neighbors": [
+     "kab-muara-enim",
+     "kab-ogan-ilir",
+     "kab-penukal-abab-lematang-ilir"
+    ]
+   },
+   {
+    "id": "kab-lahat",
+    "name": "Kab. Lahat",
+    "type": "regency",
+    "population": 480000,
+    "neighbors": [
+     "kab-empat-lawang",
+     "kab-muara-enim",
+     "kab-musi-rawas",
+     "kota-pagar-alam"
+    ]
+   },
+   {
+    "id": "kab-muara-enim",
+    "name": "Kab. Muara Enim",
+    "type": "regency",
+    "population": 610000,
+    "neighbors": [
+     "kab-banyu-asin",
+     "kab-lahat",
+     "kab-musi-rawas",
+     "kab-ogan-ilir",
+     "kab-ogan-komering-ulu",
+     "kab-ogan-komering-ulu-selatan",
+     "kab-penukal-abab-lematang-ilir",
+     "kota-pagar-alam",
+     "kota-palembang",
+     "kota-prabumulih"
+    ]
+   },
+   {
+    "id": "kab-musi-banyuasin",
+    "name": "Kab. Musi Banyuasin",
+    "type": "regency",
+    "population": 900000,
+    "neighbors": [
+     "kab-banyu-asin",
+     "kab-musi-rawas",
+     "kab-musi-rawas-utara",
+     "kab-penukal-abab-lematang-ilir"
+    ]
+   },
+   {
+    "id": "kab-musi-rawas",
+    "name": "Kab. Musi Rawas",
+    "type": "regency",
+    "population": 590000,
+    "neighbors": [
+     "kab-empat-lawang",
+     "kab-lahat",
+     "kab-muara-enim",
+     "kab-musi-banyuasin",
+     "kab-musi-rawas-utara",
+     "kab-penukal-abab-lematang-ilir",
+     "kota-lubuklinggau"
+    ]
+   },
+   {
+    "id": "kab-musi-rawas-utara",
+    "name": "Kab. Musi Rawas Utara",
+    "type": "regency",
+    "population": 560000,
+    "neighbors": [
+     "kab-musi-banyuasin",
+     "kab-musi-rawas"
+    ]
+   },
+   {
+    "id": "kab-ogan-ilir",
+    "name": "Kab. Ogan Ilir",
+    "type": "regency",
+    "population": 360000,
+    "neighbors": [
+     "kab-banyu-asin",
+     "kab-muara-enim",
+     "kab-ogan-komering-ilir",
+     "kab-ogan-komering-ulu",
+     "kab-ogan-komering-ulu-timur",
+     "kota-palembang",
+     "kota-prabumulih"
+    ]
+   },
+   {
+    "id": "kab-ogan-komering-ilir",
+    "name": "Kab. Ogan Komering Ilir",
+    "type": "regency",
+    "population": 990000,
+    "neighbors": [
+     "kab-banyu-asin",
+     "kab-ogan-ilir",
+     "kab-ogan-komering-ulu-timur"
+    ]
+   },
+   {
+    "id": "kab-ogan-komering-ulu",
+    "name": "Kab. Ogan Komering Ulu",
+    "type": "regency",
+    "population": 460000,
+    "neighbors": [
+     "kab-muara-enim",
+     "kab-ogan-ilir",
+     "kab-ogan-komering-ulu-selatan",
+     "kab-ogan-komering-ulu-timur"
+    ]
+   },
+   {
+    "id": "kab-ogan-komering-ulu-selatan",
+    "name": "Kab. Ogan Komering Ulu Selatan",
+    "type": "regency",
+    "population": 480000,
+    "neighbors": [
+     "kab-muara-enim",
+     "kab-ogan-komering-ulu",
+     "kab-ogan-komering-ulu-timur"
+    ]
+   },
+   {
+    "id": "kab-ogan-komering-ulu-timur",
+    "name": "Kab. Ogan Komering Ulu Timur",
+    "type": "regency",
+    "population": 430000,
+    "neighbors": [
+     "kab-ogan-ilir",
+     "kab-ogan-komering-ilir",
+     "kab-ogan-komering-ulu",
+     "kab-ogan-komering-ulu-selatan"
+    ]
+   },
+   {
+    "id": "kab-penukal-abab-lematang-ilir",
+    "name": "Kab. Penukal Abab Lematang Ilir",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-banyu-asin",
+     "kab-muara-enim",
+     "kab-musi-banyuasin",
+     "kab-musi-rawas",
+     "kota-prabumulih"
+    ]
+   }
+  ]
+ },
+ {
+  "province": "sumatera-utara",
+  "regions": [
+   {
+    "id": "kab-asahan",
+    "name": "Kab. Asahan",
+    "type": "regency",
+    "population": 650000,
+    "neighbors": [
+     "kab-batu-bara",
+     "kab-labuhan-batu-utara",
+     "kab-simalungun",
+     "kab-toba-samosir",
+     "kota-tanjung-balai"
+    ]
+   },
+   {
+    "id": "kab-batu-bara",
+    "name": "Kab. Batu Bara",
+    "type": "regency",
+    "population": 320000,
+    "neighbors": [
+     "kab-asahan",
+     "kab-serdang-bedagai",
+     "kab-simalungun"
+    ]
+   },
+   {
+    "id": "kab-dairi",
+    "name": "Kab. Dairi",
+    "type": "regency",
+    "population": 470000,
+    "neighbors": [
+     "kab-karo",
+     "kab-pakpak-bharat",
+     "kab-samosir"
+    ]
+   },
+   {
+    "id": "kab-deli-serdang",
+    "name": "Kab. Deli Serdang",
+    "type": "regency",
+    "population": 540000,
+    "neighbors": [
+     "kab-karo",
+     "kab-langkat",
+     "kab-serdang-bedagai",
+     "kab-simalungun",
+     "kota-binjai",
+     "kota-medan"
+    ]
+   },
+   {
+    "id": "kab-humbang-hasundutan",
+    "name": "Kab. Humbang Hasundutan",
+    "type": "regency",
+    "population": 530000,
+    "neighbors": [
+     "kab-pakpak-bharat",
+     "kab-samosir",
+     "kab-tapanuli-tengah",
+     "kab-tapanuli-utara"
+    ]
+   },
+   {
+    "id": "kab-karo",
+    "name": "Kab. Karo",
+    "type": "regency",
+    "population": 490000,
+    "neighbors": [
+     "kab-dairi",
+     "kab-deli-serdang",
+     "kab-langkat",
+     "kab-simalungun"
+    ]
+   },
+   {
+    "id": "kota-binjai",
+    "name": "Kota Binjai",
+    "type": "city",
+    "population": 260000,
+    "neighbors": [
+     "kab-deli-serdang",
+     "kab-langkat"
+    ]
+   },
+   {
+    "id": "kota-gunungsitoli",
+    "name": "Kota Gunungsitoli",
+    "type": "city",
+    "population": 460000,
+    "neighbors": [
+     "kab-nias",
+     "kab-nias-utara"
+    ]
+   },
+   {
+    "id": "kota-medan",
+    "name": "Kota Medan",
+    "type": "city",
+    "population": 440000,
+    "neighbors": [
+     "kab-deli-serdang"
+    ]
+   },
+   {
+    "id": "kota-padangsidimpuan",
+    "name": "Kota Padangsidimpuan",
+    "type": "city",
+    "population": 310000,
+    "neighbors": [
+     "kab-tapanuli-selatan"
+    ]
+   },
+   {
+    "id": "kota-pematang-siantar",
+    "name": "Kota Pematang Siantar",
+    "type": "city",
+    "population": 230000,
+    "neighbors": [
+     "kab-simalungun"
+    ]
+   },
+   {
+    "id": "kota-sibolga",
+    "name": "Kota Sibolga",
+    "type": "city",
+    "population": 90000,
+    "neighbors": [
+     "kab-tapanuli-tengah"
+    ]
+   },
+   {
+    "id": "kota-tanjung-balai",
+    "name": "Kota Tanjung Balai",
+    "type": "city",
+    "population": 210000,
+    "neighbors": [
+     "kab-asahan"
+    ]
+   },
+   {
+    "id": "kota-tebing-tinggi",
+    "name": "Kota Tebing Tinggi",
+    "type": "city",
+    "population": 170000,
+    "neighbors": [
+     "kab-serdang-bedagai"
+    ]
+   },
+   {
+    "id": "kab-labuhan-batu",
+    "name": "Kab. Labuhan Batu",
+    "type": "regency",
+    "population": 550000,
+    "neighbors": [
+     "kab-labuhan-batu-selatan",
+     "kab-labuhan-batu-utara",
+     "kab-padang-lawas-utara"
+    ]
+   },
+   {
+    "id": "kab-labuhan-batu-selatan",
+    "name": "Kab. Labuhan Batu Selatan",
+    "type": "regency",
+    "population": 580000,
+    "neighbors": [
+     "kab-labuhan-batu",
+     "kab-padang-lawas-utara"
+    ]
+   },
+   {
+    "id": "kab-labuhan-batu-utara",
+    "name": "Kab. Labuhan Batu Utara",
+    "type": "regency",
+    "population": 630000,
+    "neighbors": [
+     "kab-asahan",
+     "kab-labuhan-batu",
+     "kab-padang-lawas-utara",
+     "kab-tapanuli-selatan",
+     "kab-tapanuli-utara",
+     "kab-toba-samosir"
+    ]
+   },
+   {
+    "id": "kab-langkat",
+    "name": "Kab. Langkat",
+    "type": "regency",
+    "population": 830000,
+    "neighbors": [
+     "kab-deli-serdang",
+     "kab-karo",
+     "kota-binjai"
+    ]
+   },
+   {
+    "id": "kab-mandailing-natal",
+    "name": "Kab. Mandailing Natal",
+    "type": "regency",
+    "population": 850000,
+    "neighbors": [
+     "kab-padang-lawas",
+     "kab-tapanuli-selatan"
+    ]
+   },
+   {
+    "id": "kab-nias",
+    "name": "Kab. Nias",
+    "type": "regency",
+    "population": 310000,
+    "neighbors": [
+     "kab-nias-barat",
+     "kab-nias-selatan",
+     "kab-nias-utara",
+     "kota-gunungsitoli"
+    ]
+   },
+   {
+    "id": "kab-nias-barat",
+    "name": "Kab. Nias Barat",
+    "type": "regency",
+    "population": 220000,
+    "neighbors": [
+     "kab-nias",
+     "kab-nias-selatan",
+     "kab-nias-utara"
+    ]
+   },
+   {
+    "id": "kab-nias-selatan",
+    "name": "Kab. Nias Selatan",
+    "type": "regency",
+    "population": 530000,
+    "neighbors": [
+     "kab-nias",
+     "kab-nias-barat"
+    ]
+   },
+   {
+    "id": "kab-nias-utara",
+    "name": "Kab. Nias Utara",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-nias",
+     "kab-nias-barat",
+     "kota-gunungsitoli"
+    ]
+   },
+   {
+    "id": "kab-padang-lawas",
+    "name": "Kab. Padang Lawas",
+    "type": "regency",
+    "population": 650000,
+    "neighbors": [
+     "kab-mandailing-natal",
+     "kab-padang-lawas-utara",
+     "kab-tapanuli-selatan"
+    ]
+   },
+   {
+    "id": "kab-padang-lawas-utara",
+    "name": "Kab. Padang Lawas Utara",
+    "type": "regency",
+    "population": 660000,
+    "neighbors": [
+     "kab-labuhan-batu",
+     "kab-labuhan-batu-selatan",
+     "kab-labuhan-batu-utara",
+     "kab-padang-lawas",
+     "kab-tapanuli-selatan"
+    ]
+   },
+   {
+    "id": "kab-pakpak-bharat",
+    "name": "Kab. Pakpak Bharat",
+    "type": "regency",
+    "population": 380000,
+    "neighbors": [
+     "kab-dairi",
+     "kab-humbang-hasundutan",
+     "kab-samosir",
+     "kab-tapanuli-tengah"
+    ]
+   },
+   {
+    "id": "kab-samosir",
+    "name": "Kab. Samosir",
+    "type": "regency",
+    "population": 370000,
+    "neighbors": [
+     "kab-dairi",
+     "kab-humbang-hasundutan",
+     "kab-pakpak-bharat"
+    ]
+   },
+   {
+    "id": "kab-serdang-bedagai",
+    "name": "Kab. Serdang Bedagai",
+    "type": "regency",
+    "population": 470000,
+    "neighbors": [
+     "kab-batu-bara",
+     "kab-deli-serdang",
+     "kab-simalungun",
+     "kota-tebing-tinggi"
+    ]
+   },
+   {
+    "id": "kab-simalungun",
+    "name": "Kab. Simalungun",
+    "type": "regency",
+    "population": 700000,
+    "neighbors": [
+     "kab-asahan",
+     "kab-batu-bara",
+     "kab-deli-serdang",
+     "kab-karo",
+     "kab-serdang-bedagai",
+     "kab-toba-samosir",
+     "kota-pematang-siantar"
+    ]
+   },
+   {
+    "id": "kab-tapanuli-selatan",
+    "name": "Kab. Tapanuli Selatan",
+    "type": "regency",
+    "population": 690000,
+    "neighbors": [
+     "kab-labuhan-batu-utara",
+     "kab-mandailing-natal",
+     "kab-padang-lawas",
+     "kab-padang-lawas-utara",
+     "kab-tapanuli-tengah",
+     "kab-tapanuli-utara",
+     "kota-padangsidimpuan"
+    ]
+   },
+   {
+    "id": "kab-tapanuli-tengah",
+    "name": "Kab. Tapanuli Tengah",
+    "type": "regency",
+    "population": 510000,
+    "neighbors": [
+     "kab-humbang-hasundutan",
+     "kab-pakpak-bharat",
+     "kab-tapanuli-selatan",
+     "kab-tapanuli-utara",
+     "kota-sibolga"
+    ]
+   },
+   {
+    "id": "kab-tapanuli-utara",
+    "name": "Kab. Tapanuli Utara",
+    "type": "regency",
+    "population": 640000,
+    "neighbors": [
+     "kab-humbang-hasundutan",
+     "kab-labuhan-batu-utara",
+     "kab-tapanuli-selatan",
+     "kab-tapanuli-tengah",
+     "kab-toba-samosir"
+    ]
+   },
+   {
+    "id": "kab-toba-samosir",
+    "name": "Kab. Toba Samosir",
+    "type": "regency",
+    "population": 490000,
+    "neighbors": [
+     "kab-asahan",
+     "kab-labuhan-batu-utara",
+     "kab-simalungun",
+     "kab-tapanuli-utara"
+    ]
+   }
+  ]
+ }
+]

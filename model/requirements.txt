@@ -1,0 +1,7 @@
+requests==2.31.0
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.1
+python-dotenv==1.0.1
+holidays==0.107
+lightgbm==4.7.0
