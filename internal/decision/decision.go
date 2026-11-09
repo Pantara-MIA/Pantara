@@ -69,7 +69,7 @@ func CalculateDecision(currentPrice, p10, p50, p90 float64, d float64, s float64
 	bulkAllowed := L >= 14
 	lockReason := ""
 	if !bulkAllowed {
-		lockReason = "Umur simpan metode dapur Anda tidak menutup 14 hari, sehingga borong 2 minggu tidak dinilai."
+		lockReason = "Cara simpan Anda belum tahan 14 hari, sehingga borong 2 minggu tidak disarankan."
 	}
 
 	bestK := 1

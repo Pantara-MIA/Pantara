@@ -23,8 +23,8 @@ type Tab = 'rekomendasi' | 'radar' | 'substitusi' | 'susut' | 'profil';
 
 const TABS = [
   { value: 'rekomendasi' as Tab, label: 'Rekomendasi belanja', icon: ShoppingBasket },
-  { value: 'radar' as Tab, label: 'Harga & anggaran', icon: Radar },
-  { value: 'substitusi' as Tab, label: 'Bahan pengganti', icon: Shuffle },
+  { value: 'radar' as Tab, label: 'Radar harga & anggaran', icon: Radar },
+  { value: 'substitusi' as Tab, label: 'Sinyal substitusi', icon: Shuffle },
   { value: 'susut' as Tab, label: 'Simulasi susut', icon: FlaskConical },
   { value: 'profil' as Tab, label: 'Profil usaha', icon: Store },
 ];
@@ -149,7 +149,7 @@ export default function MsmeDashboard() {
           <>
             {tab === 'rekomendasi' && <RecommendationTab {...tabProps} />}
             {tab === 'radar' && <RadarTab {...tabProps} />}
-            {tab === 'substitusi' && <SubstitutionTab {...tabProps} />}
+            {tab === 'substitusi' && <SubstitutionTab {...tabProps} onPickDate={setAsOf} />}
             {tab === 'susut' && <WasteTab key={`${activeCommodity}|${data?.current_price}`} {...tabProps} />}
             {tab === 'profil' && <ProfileTab profile={profile} onChange={setProfile} />}
           </>

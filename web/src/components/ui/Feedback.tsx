@@ -8,7 +8,7 @@ export function Notice({
   children,
 }: {
   tone?: 'info' | 'warning';
-  title?: string;
+  title?: ReactNode;
   children: ReactNode;
 }) {
   const cls = tone === 'warning' ? 'border-gold/60 bg-gold-soft text-gold-ink' : 'border-line-strong bg-accent-soft text-accent-strong';

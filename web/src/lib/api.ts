@@ -123,6 +123,8 @@ export interface ProcurementResponse {
   decision: DecisionResult;
   substitution?: SubstitutionDetail | null;
   substitution_candidates: { commodity: string; active: boolean; detail?: SubstitutionDetail }[];
+  /** Recent days the signal really fired for this commodity and region. */
+  substitution_examples?: { date: string; commodity: string }[];
   history: PriceAt[];
 }
 

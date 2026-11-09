@@ -11,8 +11,8 @@ import type { StorageMethod } from '../../lib/profile';
 import { fetchAiSolution } from '../../lib/api';
 import type { AiSolutionResponse } from '../../lib/api';
 import { formatIDR, formatNumber } from '../../lib/format';
-import { NoData } from './shared';
-import { AnimatedValue, StockTube, StorageCards } from '../../components/simulator/SimulatorVisuals';
+import { Disclosure, NoData, Row } from './shared';
+import { AnimatedValue, DecayCurve, StockTube, StorageCards } from '../../components/simulator/SimulatorVisuals';
 import type { MsmeTabProps } from './shared';
 
 type Severity = 'light' | 'moderate' | 'heavy' | 'critical';
@@ -63,6 +63,16 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
     });
     return { m, remaining, decayKg: weight - remaining, loss, monthly: loss * (30 / Math.max(1, days)), pastShelfLife: days > m.shelfLife, byMethod };
   }, [weight, days, method, price]);
+
+  const curves = useMemo(
+    () =>
+      (Object.keys(STORAGE_METHODS) as StorageMethod[]).map((k) => ({
+        key: k,
+        label: STORAGE_METHODS[k].short,
+        values: Array.from({ length: days + 1 }, (_, i) => weight * Math.pow(1 - STORAGE_METHODS[k].decay, i)),
+      })),
+    [weight, days],
+  );
 
   if (!data) return <NoData loading={loading} />;
 
@@ -187,6 +197,33 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
         )}
 
         <Card>
+          <CardHeader title="Kurva bobot layak pakai" subtitle={`${sim.m.label} (hijau) dibanding metode lain (abu-abu)`} />
+          <CardBody>
+            <DecayCurve series={curves} activeKey={method} weight={weight} shelfLife={sim.m.shelfLife} />
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader title="Metode simpan lain" subtitle="Bobot dan lama simpan sama." />
+          <CardBody>
+            <ul className="divide-y divide-line">
+              {sim.byMethod.map((m) => (
+                <li key={m.key} className="flex flex-wrap items-center justify-between gap-2 py-2.5">
+                  <span className="flex items-center gap-2 text-sm font-semibold text-ink">
+                    {STORAGE_METHODS[m.key].icon} {STORAGE_METHODS[m.key].short}
+                    {m.key === method && <Tag>dipakai</Tag>}
+                    {m.key === best.key && <Tag tone="accent">terhemat</Tag>}
+                  </span>
+                  <span className="text-sm tabular-nums">
+                    <span className="font-semibold">{formatIDR(m.loss)}</span> <span className="text-ink-3">· sisa {formatNumber(m.remaining, 2)} kg</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </CardBody>
+        </Card>
+
+        <Card>
           <CardHeader
             title="Langkah menekan susut"
             subtitle={aiFresh ? ai.summary : undefined}
@@ -235,6 +272,16 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
             )}
           </CardBody>
         </Card>
+
+        <Disclosure label="Bagaimana susut dihitung">
+          <dl className="divide-y divide-line">
+            <Row label="Bobot yang menyusut" value={`${formatNumber(sim.m.decay * 100, 1)}% per hari`} note={`Dengan cara ${sim.m.short}, sisa bahan berkurang sebesar ini setiap hari selama ${days} hari.`} />
+            <Row label="Rugi" value="bobot yang hilang dikali harga" note={`Memakai harga hari ini, ${formatIDR(price)}/kg.`} />
+            <Row label="Bila berulang sebulan" value="kerugian disetarakan 30 hari" note="Dengan anggapan pola belanja dan simpan yang sama terus diulang." />
+            <Row label="Tingkat kerugian" value="dari besar rugi dan porsi belanja" note="Ringan: di bawah Rp 25.000 dan di bawah 8% belanja. Sedang: di bawah Rp 100.000 dan di bawah 16% belanja. Berat: di bawah Rp 300.000. Kritis: Rp 300.000 ke atas." />
+            <Row label="Batas simpan" value={`${sim.m.shelfLife} hari`} note="Lewat dari batas ini, bahan dianggap tidak layak dipakai walau bobotnya masih tersisa." />
+          </dl>
+        </Disclosure>
       </div>
     </div>
   );

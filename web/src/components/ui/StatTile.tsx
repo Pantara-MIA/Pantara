@@ -17,10 +17,10 @@ export interface Delta {
 }
 
 /** The next step a reader should take because of a figure. */
-export function ActionLine({ children }: { children: ReactNode }) {
+export function ActionLine({ children, alert = false }: { children: ReactNode; /** Red ink, for a yellow alert surface. */ alert?: boolean }) {
   return (
-    <span className="flex items-start gap-1.5 text-sm font-semibold text-ink">
-      <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+    <span className={`flex items-start gap-1.5 text-sm font-semibold ${alert ? 'text-critical-ink' : 'text-ink'}`}>
+      <ArrowRight className={`mt-0.5 h-4 w-4 shrink-0 ${alert ? 'text-critical-ink' : 'text-accent'}`} aria-hidden="true" />
       {children}
     </span>
   );

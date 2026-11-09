@@ -5,7 +5,6 @@ import { Button } from '../../components/ui/Button';
 import { NativeSelect } from '../../components/ui/NativeSelect';
 import { TextField } from '../../components/ui/Field';
 import { Notice } from '../../components/ui/Feedback';
-import { StatTile } from '../../components/ui/StatTile';
 import { TitleWithInfo } from '../../components/ui/InfoTip';
 import { auth } from '../../lib/auth';
 import { fetchMetadata } from '../../lib/api';
@@ -29,7 +28,6 @@ export default function ProfileTab({ profile, onChange }: { profile: MsmeProfile
   }, []);
 
   const storage = storageOf(profile.storage_method);
-  const canBulk = storage.shelfLife >= 14;
 
   const save = async () => {
     setSaving(true);
@@ -98,14 +96,16 @@ export default function ProfileTab({ profile, onChange }: { profile: MsmeProfile
               </dl>
             </CardBody>
           </Card>
-          <StatTile
-            label="Cara simpan"
-            value={`${storage.icon} ${storage.short}`}
-            verdict={canBulk ? { label: 'Bisa borong', tone: 'good' } : { label: 'Belum bisa borong', tone: 'warning' }}
-            hint={`Susut ${formatNumber(profile.daily_decay_rate * 100, 1)}% per hari · tahan ${storage.shelfLife} hari`}
-            action={canBulk ? 'Rekomendasi boleh menyarankan borong 2 minggu.' : 'Pakai chiller agar bisa borong 2 minggu saat harga naik.'}
-            info="Susut adalah bobot bahan yang hilang tiap hari. Borong 2 minggu hanya dinilai bila bahan tahan disimpan minimal 14 hari."
-          />
+          <Card>
+            <CardHeader title="Cara simpan bahan" subtitle="Dipakai untuk menghitung seluruh rekomendasi." />
+            <CardBody>
+              <dl className="divide-y divide-line">
+                <Row label="Metode simpan" value={`${storage.icon} ${storage.short}`} />
+                <Row label="Bahan menyusut" value={`${formatNumber(profile.daily_decay_rate * 100, 1)}% per hari`} info="Bobot bahan yang hilang setiap hari dengan cara simpan ini." />
+                <Row label="Tahan disimpan" value={`${storage.shelfLife} hari`} info="Borong 2 minggu hanya disarankan bila bahan tahan disimpan minimal 14 hari." />
+              </dl>
+            </CardBody>
+          </Card>
         </div>
         <Card>
           <CardHeader title={<TitleWithInfo text={`${profile.commodities.length} bahan rutin`} info="Jumlah pakai per minggu menentukan berapa kg yang disarankan untuk dibeli." />} />

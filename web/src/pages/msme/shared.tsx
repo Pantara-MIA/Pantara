@@ -1,8 +1,8 @@
+import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { Loader2 } from 'lucide-react';
+import { ChevronDown, Loader2 } from 'lucide-react';
 import { InfoTip } from '../../components/ui/InfoTip';
 import { ActionLine } from '../../components/ui/StatTile';
-import type { VerdictTone } from '../../components/ui/Badge';
 import type { ProcurementResponse } from '../../lib/api';
 import type { MsmeProfile } from '../../lib/profile';
 
@@ -15,11 +15,12 @@ export interface MsmeTabProps {
   asOf: string;
 }
 
-const BANNER: Record<VerdictTone, { box: string; eyebrow: string }> = {
-  good: { box: 'bg-good-soft', eyebrow: 'text-good-ink' },
-  warning: { box: 'bg-warning-soft', eyebrow: 'text-warning-ink' },
-  critical: { box: 'bg-critical-soft', eyebrow: 'text-critical-ink' },
-  neutral: { box: 'border border-line bg-surface', eyebrow: 'text-ink-2' },
+type BannerTone = 'good' | 'neutral' | 'alert';
+
+const BANNER: Record<BannerTone, { box: string; eyebrow: string; title: string; body: string }> = {
+  good: { box: 'bg-good-soft', eyebrow: 'text-good-ink', title: 'text-ink', body: 'text-ink-2' },
+  neutral: { box: 'border border-line bg-surface', eyebrow: 'text-ink-2', title: 'text-ink', body: 'text-ink-2' },
+  alert: { box: 'border border-gold bg-gold/30', eyebrow: 'text-critical-ink', title: 'text-critical-ink', body: 'text-critical-ink' },
 };
 
 /** The answer of a tab: verdict, one sentence, and the step to take. */
@@ -31,7 +32,7 @@ export function DecisionBanner({
   action,
   children,
 }: {
-  tone: VerdictTone;
+  tone: BannerTone;
   verdict: string;
   title: string;
   info?: ReactNode;
@@ -41,16 +42,35 @@ export function DecisionBanner({
   return (
     <section className={`rounded-3xl p-6 sm:p-8 ${BANNER[tone].box}`}>
       <p className={`text-xs font-bold tracking-[0.16em] uppercase ${BANNER[tone].eyebrow}`}>{verdict}</p>
-      <p className="mt-2 font-display text-3xl leading-tight font-bold text-ink sm:text-4xl">
+      <p className={`mt-2 font-display text-3xl leading-tight font-bold sm:text-4xl ${BANNER[tone].title}`}>
         {title} {info && <InfoTip label={title}>{info}</InfoTip>}
       </p>
-      {children && <p className="mt-2 text-ink-2">{children}</p>}
+      {children && <p className={`mt-2 ${BANNER[tone].body}`}>{children}</p>}
       {action && (
         <div className="mt-4">
-          <ActionLine>{action}</ActionLine>
+          <ActionLine alert={tone === 'alert'}>{action}</ActionLine>
         </div>
       )}
     </section>
+  );
+}
+
+/** Progressive disclosure: the reasoning stays one click away, not on screen by default. */
+export function Disclosure({ label, children }: { label: string; children: ReactNode }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="rounded-2xl border border-line bg-surface">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-2 px-5 py-3.5 text-left text-sm font-semibold text-accent hover:bg-accent-soft/50"
+      >
+        {label}
+        <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
+      </button>
+      {open && <div className="border-t border-line px-5 py-4">{children}</div>}
+    </div>
   );
 }
 
@@ -68,8 +88,8 @@ export function NoData({ loading, children }: { loading: boolean; children?: Rea
   );
 }
 
-/** Label · value row for profile facts; `info` explains the label behind an ⓘ. */
-export function Row({ label, value, info }: { label: string; value: ReactNode; info?: ReactNode }) {
+/** Label · value row; `info` explains the label behind an ⓘ, `note` adds a plain line below. */
+export function Row({ label, value, info, note }: { label: string; value: ReactNode; info?: ReactNode; note?: string }) {
   return (
     <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 py-2">
       <dt className="inline-flex items-center gap-1 text-sm text-ink-2">
@@ -77,6 +97,7 @@ export function Row({ label, value, info }: { label: string; value: ReactNode; i
         {info && <InfoTip label={label}>{info}</InfoTip>}
       </dt>
       <dd className="text-sm font-semibold text-ink tabular-nums">{value}</dd>
+      {note && <dd className="w-full text-xs text-ink-3">{note}</dd>}
     </div>
   );
 }

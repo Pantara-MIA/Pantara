@@ -53,7 +53,9 @@ type RecommendResponse struct {
 	// Every substitution candidate checked, including inactive ones, so the UI
 	// can explain why the signal is quiet.
 	SubstitutionCandidates []SubstitutionCandidate `json:"substitution_candidates"`
-	History                []PriceAt               `json:"history"`
+	// Recent days the signal really fired here, so users can see it switch on.
+	SubstitutionExamples []SubstitutionExample `json:"substitution_examples"`
+	History              []PriceAt             `json:"history"`
 }
 
 // SubstitutionCandidate summarises the check of one variant pair.
@@ -61,6 +63,53 @@ type SubstitutionCandidate struct {
 	Commodity string                           `json:"commodity"`
 	Active    bool                             `json:"active"`
 	Detail    *substitution.SubstitutionResult `json:"detail,omitempty"`
+}
+
+// SubstitutionExample is a past day the variant switch signal was on.
+type SubstitutionExample struct {
+	Date      string `json:"date"`
+	Commodity string `json:"commodity"`
+}
+
+// altSeries is the daily price series of one functionally equivalent variant.
+type altSeries struct {
+	name   string
+	prices []float64
+}
+
+const (
+	maxSignalExamples = 2
+	// Active days closer than this belong to the same price episode.
+	signalEpisodeGapDays = 14
+)
+
+// recentSignalExamples returns one day from each of the latest episodes in
+// which the variant switch signal fired, newest first. It reruns the real check
+// on every day, so each example holds for this commodity and region.
+func recentSignalExamples(dates []string, prices []float64, alts []altSeries, limit int) []SubstitutionExample {
+	out := []SubstitutionExample{}
+	lastActive := -1
+	for t := len(dates) - 1; t >= 0; t-- {
+		best := ""
+		bestDiff := 0.0
+		for _, alt := range alts {
+			res := substitution.CheckSubstitution(alt.name, dates[:t+1], prices[:t+1], alt.prices[:t+1], 1)
+			if res != nil && res.Active && res.DiffPerKg > bestDiff {
+				best, bestDiff = alt.name, res.DiffPerKg
+			}
+		}
+		if best == "" {
+			continue
+		}
+		if lastActive < 0 || lastActive-t > signalEpisodeGapDays {
+			if len(out) == limit {
+				break
+			}
+			out = append(out, SubstitutionExample{Date: dates[t], Commodity: best})
+		}
+		lastActive = t
+	}
+	return out
 }
 
 // PriceAt is one day of market price for the history chart.
@@ -151,12 +200,14 @@ func handleProcurementCard(w http.ResponseWriter, r *http.Request) {
 	// Variant switch: check every functionally equivalent variant, not just one pair.
 	var sub *substitution.SubstitutionResult
 	candidates := []SubstitutionCandidate{}
+	alts := []altSeries{}
 	for _, altID := range equivalentVariants(com.ID) {
 		alt, _ := regional.FindCommodity(altID)
 		altPrices := scope.Prices(reg.ID, altID)
 		if altPrices == nil {
 			continue
 		}
+		alts = append(alts, altSeries{name: alt.Name, prices: altPrices})
 		result := substitution.CheckSubstitution(alt.Name, dates[:now+1], prices[:now+1], altPrices[:now+1], dec.KgToBuy)
 		if result == nil {
 			continue
@@ -199,6 +250,7 @@ func handleProcurementCard(w http.ResponseWriter, r *http.Request) {
 		Decision:               dec,
 		Substitution:           sub,
 		SubstitutionCandidates: candidates,
+		SubstitutionExamples:   recentSignalExamples(dates, prices, alts, maxSignalExamples),
 		History:                history,
 	})
 }

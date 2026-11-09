@@ -20,7 +20,7 @@ export function TitleWithInfo({ text, info }: { text: string; info: ReactNode })
  * keyboard focus, toggles on tap; Esc, an outside tap or scrolling closes it.
  * Rendered in a portal so cards and animated parents never clip it.
  */
-export function InfoTip({ children, label, inverse = false }: { children: ReactNode; label: string; /** For dark surfaces. */ inverse?: boolean }) {
+export function InfoTip({ children, label }: { children: ReactNode; label: string }) {
   const [pos, setPos] = useState<{ top: number; left: number; width: number; above: boolean } | null>(null);
   const pinned = useRef(false);
   const btn = useRef<HTMLButtonElement | null>(null);
@@ -74,7 +74,7 @@ export function InfoTip({ children, label, inverse = false }: { children: ReactN
             show();
           }
         }}
-        className={`inline-grid h-5 w-5 shrink-0 place-items-center rounded-full align-middle transition-colors ${inverse ? 'text-white/70 hover:bg-white/10 hover:text-white' : 'text-ink-3 hover:bg-surface-muted hover:text-accent'}`}
+        className="inline-grid h-5 w-5 shrink-0 place-items-center rounded-full align-middle text-ink-3 transition-colors hover:bg-surface-muted hover:text-accent"
       >
         <Info className="h-3.5 w-3.5" aria-hidden="true" />
       </button>
