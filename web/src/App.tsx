@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import ScrollToTop from './components/ScrollToTop';
 import { installSpotlight } from './components/motion/spotlight';
-import LogoMark from './assets/pantara-logo.svg';
+import LogoMark from './assets/pantara-logo.png';
 
 // Every page except the home page loads on demand, so visitors only download
 // the dashboards they actually open.

@@ -1,4 +1,4 @@
-import LogoMark from '../../assets/pantara-logo.svg';
+import LogoMark from '../../assets/pantara-logo.png';
 
 /**
  * Pantara logo with wordmark. `onDark` switches

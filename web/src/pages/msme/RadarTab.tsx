@@ -1,14 +1,15 @@
 import { useMemo } from 'react';
 import { Area, CartesianGrid, ComposedChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { StatTile } from '../../components/ui/StatTile';
+import { TitleWithInfo } from '../../components/ui/InfoTip';
+import type { VerdictTone } from '../../components/ui/Badge';
 import { ChartFrame } from '../../components/charts/ChartFrame';
 import { Legend } from '../../components/charts/Legend';
 import { DataTable } from '../../components/ui/DataTable';
 import { AXIS_TICK, CHART } from '../../components/charts/theme';
 import { storageOf, weeklyUsage } from '../../lib/profile';
 import { addDays, formatDate, formatDateShort, formatIDR, formatIDRShort, formatPct } from '../../lib/format';
-import { Disclosure, NoData, Row } from './shared';
+import { DecisionBanner, NoData } from './shared';
 import type { MsmeTabProps } from './shared';
 
 /** Seasonal pattern of fresh produce in Java; tone is the price pressure. */
@@ -29,6 +30,27 @@ const SEASON: { month: string; tone: 'high' | 'watch' | 'low'; note: string }[] 
 
 const SEASON_CLS = { high: 'bg-critical-soft text-critical-ink', watch: 'bg-warning-soft text-warning-ink', low: 'bg-good-soft text-good-ink' };
 const SEASON_LABEL = { high: 'Rawan lonjakan', watch: 'Waspada', low: 'Panen / stabil' };
+const SEASON_TONE: Record<'high' | 'watch' | 'low', VerdictTone> = { high: 'critical', watch: 'warning', low: 'good' };
+const SEASON_ACTION = { high: 'Siapkan kas lebih dan cek harga tiap minggu.', watch: 'Cek harga sebelum belanja besar.', low: 'Waktu yang baik untuk menyisihkan kas.' };
+
+/** Shown history: long enough for context, short enough to keep the forecast readable. */
+const HISTORY_DAYS = 30;
+
+/** Where next week's price is heading and how to act on it. */
+function readTrend(movePct: number, bulk: boolean): { tone: VerdictTone; verdict: string; phrase: string; action: string } {
+  const change = formatPct(Math.abs(movePct));
+  if (movePct >= 10) return { tone: 'critical', verdict: 'Naik tajam', phrase: `naik ${change}`, action: bulk ? 'Borong hari ini sesuai rekomendasi.' : 'Belanja hari ini, jangan ditunda.' };
+  if (movePct >= 3) return { tone: 'warning', verdict: 'Naik', phrase: `naik ${change}`, action: bulk ? 'Borong hari ini sesuai rekomendasi.' : 'Belanja hari ini, jangan ditunda.' };
+  if (movePct <= -3) return { tone: 'good', verdict: 'Turun', phrase: `turun ${change}`, action: bulk ? 'Ikuti rekomendasi belanja hari ini.' : 'Beli secukupnya, jangan menimbun stok.' };
+  return { tone: 'good', verdict: 'Stabil', phrase: 'stabil', action: 'Belanja seperti biasa.' };
+}
+
+/** How much the budget could still move before the month is over. */
+function readBudget(cushionPct: number): { label: string; tone: VerdictTone } {
+  if (cushionPct < 10) return { label: 'Stabil', tone: 'good' };
+  if (cushionPct < 25) return { label: 'Perlu cadangan', tone: 'warning' };
+  return { label: 'Tidak menentu', tone: 'critical' };
+}
 
 interface Row7 {
   date: string;
@@ -37,11 +59,11 @@ interface Row7 {
   band?: [number, number];
 }
 
-/** Price radar: 90-day history, 7/14-day forecast range, monthly cash budget, season. */
+/** Price outlook: where the price is heading, how much cash to set aside, and the season. */
 export default function RadarTab({ profile, data, loading, commodity, asOf }: MsmeTabProps) {
   const rows = useMemo<Row7[]>(() => {
     if (!data) return [];
-    const out: Row7[] = data.history.map((h) => ({ date: h.date, price: h.price }));
+    const out: Row7[] = data.history.slice(-HISTORY_DAYS).map((h) => ({ date: h.date, price: h.price }));
     const last = out[out.length - 1];
     if (last) {
       last.p50 = last.price;
@@ -56,51 +78,80 @@ export default function RadarTab({ profile, data, loading, commodity, asOf }: Ms
 
   const storage = storageOf(profile.storage_method);
   const monthlyKg = (weeklyUsage(profile, commodity) / Math.pow(1 - storage.decay, 3.5)) * 4;
-  const move7 = ((data.p7_50 - data.current_price) / data.current_price) * 100;
-  const width7 = ((data.p7_90 - data.p7_10) / data.p7_50) * 100;
-  const width14 = ((data.p14_90 - data.p14_10) / data.p14_50) * 100;
+  const budget = monthlyKg * data.p14_50;
+  const reserve = monthlyKg * (data.p14_90 - data.p14_50);
+  const trend = readTrend(((data.p7_50 - data.current_price) / data.current_price) * 100, data.decision.weeks_covered === 2);
+  const budgetReading = readBudget(((data.p14_90 - data.p14_50) / data.p14_50) * 100);
   const thisMonth = new Date(`${asOf}T00:00:00`).getMonth();
+  const season = SEASON[thisMonth];
+  const monthName = new Date(`${asOf}T00:00:00`).toLocaleDateString('id-ID', { month: 'long' });
+  const nextMonths = [SEASON[(thisMonth + 1) % 12], SEASON[(thisMonth + 2) % 12]];
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-3 sm:grid-cols-3">
+      <DecisionBanner
+        tone={trend.tone}
+        verdict={`${trend.verdict} · 7 hari ke depan`}
+        title={`Harga ${commodity.toLowerCase()} diperkirakan ${trend.phrase}`}
+        info={`Perkiraan harga 7 hari lagi. 8 dari 10 kemungkinan harga berada di ${formatIDR(data.p7_10)} – ${formatIDR(data.p7_90)} per kg.`}
+        action={trend.action}
+      >
+        {formatIDR(data.current_price)} → {formatIDR(data.p7_50)} per kg
+      </DecisionBanner>
+
+      <div className="grid gap-3 sm:grid-cols-2">
         <StatTile
-          emphasis
-          label="Arah harga 7 hari (P50)"
-          value={Math.abs(move7) < 0.5 ? 'Datar' : `${move7 > 0 ? '+' : ''}${formatPct(move7)}`}
-          hint={`${formatIDR(data.current_price)} → ${formatIDR(data.p7_50)}`}
+          label="Anggaran sebulan"
+          value={formatIDR(budget)}
+          verdict={budgetReading}
+          action={`Sisihkan angka ini, ditambah cadangan ${formatIDR(reserve)}.`}
+          info={`Perkiraan biaya ${monthlyKg.toLocaleString('id-ID', { maximumFractionDigits: 1 })} kg untuk 4 minggu, sudah termasuk bahan yang menyusut. Cadangan menutup kenaikan bila harga mencapai batas atas perkiraan.`}
         />
-        <StatTile label="Rentang 7 hari (P10–P90)" value={`±${formatPct(width7 / 2)}`} hint={`${formatIDRShort(data.p7_10)} – ${formatIDRShort(data.p7_90)}`} />
-        <StatTile label="Rentang 14 hari (P10–P90)" value={`±${formatPct(width14 / 2)}`} hint={`${formatIDRShort(data.p14_10)} – ${formatIDRShort(data.p14_90)}`} />
+        <StatTile
+          label="Musim bulan ini"
+          value={monthName}
+          verdict={{ label: SEASON_LABEL[season.tone], tone: SEASON_TONE[season.tone] }}
+          action={SEASON_ACTION[season.tone]}
+          info={`${season.note}. Ini pola umum harga pangan segar tiap tahun di Jawa, bukan perkiraan khusus bahan ini.`}
+          trend={
+            <span className="flex flex-wrap gap-1.5">
+              {nextMonths.map((m) => (
+                <span key={m.month} className={`rounded-full px-2 py-0.5 text-xs font-semibold ${SEASON_CLS[m.tone]}`}>
+                  {m.month}: {SEASON_LABEL[m.tone]}
+                </span>
+              ))}
+            </span>
+          }
+        />
       </div>
 
       <ChartFrame
-        title={`Harga ${commodity}: 90 hari terakhir & prakiraan`}
-        subtitle={`Harga ${data.region_name} · ${data.source_label}${data.source === 'synthetic' ? ' (data simulasi)' : ''} · per ${formatDate(asOf)}`}
+        title={<TitleWithInfo text={`Harga ${commodity}`} info={`Harga ${data.region_name}, sumber ${data.source_label}. Area hijau muda adalah rentang tempat 8 dari 10 kemungkinan harga berada.`} />}
+        subtitle={`${HISTORY_DAYS} hari terakhir dan perkiraan 14 hari`}
         legend={
           <Legend
             items={[
               { label: 'Harga pasar', color: CHART.series1 },
-              { label: 'Prakiraan P50', color: CHART.series1, kind: 'dashed' },
-              { label: 'Rentang P10–P90', color: CHART.series1, kind: 'band' },
+              { label: 'Perkiraan', color: CHART.series1, kind: 'dashed' },
+              { label: 'Kemungkinan harga', color: CHART.series1, kind: 'band' },
             ]}
           />
         }
         table={
           <DataTable<Row7>
-            caption="Riwayat dan prakiraan harga"
+            caption="Riwayat dan perkiraan harga"
             dense
             rows={[...rows].reverse()}
             rowKey={(r) => r.date}
             columns={[
               { key: 'd', header: 'Tanggal', render: (r) => formatDate(r.date) },
-              { key: 'p', header: 'Harga', align: 'right', render: (r) => (r.price !== undefined ? formatIDR(r.price) : `P50 ${formatIDR(r.p50 ?? 0)}`) },
-              { key: 'b', header: 'P10–P90', align: 'right', render: (r) => (r.band && r.price === undefined ? `${formatIDRShort(r.band[0])} – ${formatIDRShort(r.band[1])}` : '—') },
+              { key: 'p', header: 'Harga', align: 'right', render: (r) => (r.price !== undefined ? formatIDR(r.price) : `Perkiraan ${formatIDR(r.p50 ?? 0)}`) },
+              { key: 'b', header: 'Kemungkinan harga', align: 'right', render: (r) => (r.band && r.price === undefined ? `${formatIDRShort(r.band[0])} – ${formatIDRShort(r.band[1])}` : '—') },
             ]}
           />
         }
       >
-        <div className="h-72">
+        <div className="h-60">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={rows} margin={{ top: 8, right: 12, bottom: 0, left: 0 }}>
               <CartesianGrid vertical={false} stroke={CHART.grid} />
@@ -119,7 +170,7 @@ export default function RadarTab({ profile, data, loading, commodity, asOf }: Ms
                         <p className="font-semibold">{formatIDR(r.price)}</p>
                       ) : (
                         <>
-                          <p className="font-semibold">P50 {formatIDR(r.p50 ?? 0)}</p>
+                          <p className="font-semibold">Perkiraan {formatIDR(r.p50 ?? 0)}</p>
                           <p className="text-ink-3">{r.band && `${formatIDRShort(r.band[0])} – ${formatIDRShort(r.band[1])}`}</p>
                         </>
                       )}
@@ -134,47 +185,6 @@ export default function RadarTab({ profile, data, loading, commodity, asOf }: Ms
           </ResponsiveContainer>
         </div>
       </ChartFrame>
-
-      <Card>
-        <CardHeader title={`Kas untuk ${commodity.toLowerCase()} sebulan`} subtitle={`± ${monthlyKg.toLocaleString('id-ID', { maximumFractionDigits: 1 })} kg (4 minggu, termasuk cadangan susut)`} />
-        <CardBody className="grid gap-3 sm:grid-cols-3">
-          {[
-            { label: 'Skenario murah (P10)', value: monthlyKg * data.p14_10, cls: 'bg-surface-muted' },
-            { label: 'Anggaran disarankan (P50)', value: monthlyKg * data.p14_50, cls: 'bg-accent text-white' },
-            { label: 'Cadangan aman (P90)', value: monthlyKg * data.p14_90, cls: 'bg-gold-soft text-gold-ink' },
-          ].map((b) => (
-            <div key={b.label} className={`rounded-2xl px-4 py-3 ${b.cls}`}>
-              <p className="text-xs opacity-80">{b.label}</p>
-              <p className="mt-1 text-xl font-semibold">{formatIDR(b.value)}</p>
-            </div>
-          ))}
-        </CardBody>
-      </Card>
-
-      <Card>
-        <CardHeader title="Kalender musiman" subtitle="Pola tahunan harga pangan segar — untuk merencanakan kas beberapa bulan ke depan." />
-        <CardBody>
-          <ol className="grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-12">
-            {SEASON.map((m, i) => (
-              <li key={m.month} title={m.note} className={`rounded-xl px-2 py-2 text-center ${SEASON_CLS[m.tone]} ${i === thisMonth ? 'ring-2 ring-ink ring-offset-2' : ''}`}>
-                <span className="block text-sm font-bold">{m.month}</span>
-                <span className="block text-[10px] font-medium">{SEASON_LABEL[m.tone]}</span>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-3 text-sm text-ink-2">
-            Bulan ini ({SEASON[thisMonth].month}): {SEASON[thisMonth].note.toLowerCase()}.
-          </p>
-        </CardBody>
-      </Card>
-
-      <Disclosure label="Cara membaca radar">
-        <dl className="divide-y divide-line">
-          <Row label="P50" value="harga tengah" formula="Separuh skenario di atasnya, separuh di bawahnya." />
-          <Row label="P10–P90" value="rentang 80%" formula="Delapan dari sepuluh kemungkinan harga jatuh di rentang ini." />
-          <Row label="Anggaran" value="kg bulanan × harga 14 hari" formula="Siapkan P50; pegang selisih ke P90 sebagai cadangan." />
-        </dl>
-      </Disclosure>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight, Minus } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Minus } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { SURFACE_IN_VIEW, useInView } from '../motion/hooks';
 import { AnimatedFigure } from '../motion/AnimatedFigure';
@@ -16,8 +16,18 @@ export interface Delta {
   versus: string;
 }
 
+/** The next step a reader should take because of a figure. */
+export function ActionLine({ children }: { children: ReactNode }) {
+  return (
+    <span className="flex items-start gap-1.5 text-sm font-semibold text-ink">
+      <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+      {children}
+    </span>
+  );
+}
+
 /**
- * Stat tile: label (+ ⓘ) · value + verdict · optional delta · optional hint/trend.
+ * Stat tile: label (+ ⓘ) · value + verdict · optional delta · optional hint/trend/action.
  * Values use proportional figures (no tabular-nums) per the figure contract.
  */
 export function StatTile({
@@ -29,6 +39,7 @@ export function StatTile({
   trend,
   info,
   verdict,
+  action,
   emphasis = false,
 }: {
   label: string;
@@ -41,6 +52,8 @@ export function StatTile({
   info?: ReactNode;
   /** One-word judgement shown after the value: is this good or bad? */
   verdict?: { label: string; tone: VerdictTone };
+  /** What to do about this figure. */
+  action?: ReactNode;
   emphasis?: boolean;
 }) {
   const { ref, inView } = useInView<HTMLDivElement>(SURFACE_IN_VIEW);
@@ -67,6 +80,11 @@ export function StatTile({
       {delta && <DeltaLine delta={delta} />}
       {hint && <span className="text-xs text-ink-3">{hint}</span>}
       {trend && <div className="mt-1">{trend}</div>}
+      {action && (
+        <span className="mt-1.5">
+          <ActionLine>{action}</ActionLine>
+        </span>
+      )}
     </div>
   );
 }

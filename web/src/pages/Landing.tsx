@@ -33,6 +33,7 @@ import { GRADE_META, formatMonth } from '../lib/scorecard';
 import { formatDate, formatIDR, formatNumber, formatPct } from '../lib/format';
 import { useApi } from '../lib/useApi';
 import { CountUp, Reveal } from '../components/motion/Reveal';
+import { pauseOffscreen } from '../components/motion/hooks';
 
 // The detail sheet pulls in the chart library; load it only when a commodity is opened.
 const CommodityDetail = lazy(() => import('../components/CommodityDetail'));
@@ -223,7 +224,7 @@ function PriceTicker({ onOpen }: { onOpen: (c: Commodity) => void }) {
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
       <div className="group flex overflow-hidden">
-        <div className="marquee flex shrink-0 gap-2 pr-2 group-hover:[animation-play-state:paused]">
+        <div ref={pauseOffscreen} className="marquee flex shrink-0 gap-2 pr-2 group-hover:[animation-play-state:paused]">
           {items.map((c, i) => {
             const up = c.yoy >= 0;
             return (

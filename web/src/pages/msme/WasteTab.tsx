@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { CircleCheck, Loader2, ShoppingCart, Snowflake, Sparkles, TriangleAlert } from 'lucide-react';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Tag } from '../../components/ui/Badge';
+import { InfoTip } from '../../components/ui/InfoTip';
 import { Button } from '../../components/ui/Button';
 import { Notice } from '../../components/ui/Feedback';
 import { getCommodity } from '../../data/commodities';
@@ -11,7 +12,7 @@ import { fetchAiSolution } from '../../lib/api';
 import type { AiSolutionResponse } from '../../lib/api';
 import { formatIDR, formatNumber } from '../../lib/format';
 import { NoData } from './shared';
-import { AnimatedValue, DecayCurve, StockTube, StorageCards } from '../../components/simulator/SimulatorVisuals';
+import { AnimatedValue, StockTube, StorageCards } from '../../components/simulator/SimulatorVisuals';
 import type { MsmeTabProps } from './shared';
 
 type Severity = 'light' | 'moderate' | 'heavy' | 'critical';
@@ -63,38 +64,25 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
     return { m, remaining, decayKg: weight - remaining, loss, monthly: loss * (30 / Math.max(1, days)), pastShelfLife: days > m.shelfLife, byMethod };
   }, [weight, days, method, price]);
 
-  const curves = useMemo(
-    () =>
-      (Object.keys(STORAGE_METHODS) as StorageMethod[]).map((k) => ({
-        key: k,
-        label: STORAGE_METHODS[k].short,
-        values: Array.from({ length: days + 1 }, (_, i) => weight * Math.pow(1 - STORAGE_METHODS[k].decay, i)),
-      })),
-    [weight, days],
-  );
-
   if (!data) return <NoData loading={loading} />;
 
   const spend = weight * price;
   const severity = severityOf(sim.loss, spend);
   const best = [...sim.byMethod].sort((a, b) => a.loss - b.loss)[0];
   const switchSaving = sim.loss - best.loss;
-  const monthlySaving = switchSaving * (30 / Math.max(1, days));
   const knowledge = getCommodity(encyclopediaId(commodity) ?? '');
   const key = `${commodity}|${weight}|${days}|${method}|${price}`;
   const aiFresh = ai && aiKey === key;
 
-  // Rule-based steps; replaced by the AI answer once requested.
+  // Rule-based steps, most urgent first; replaced by the AI answer once requested.
   const ruleSteps: Step[] = [
-    ...(knowledge?.storage.steps.slice(0, 2).map((s) => ({ title: s.title, body: s.detail, tone: 'green' as const, icon: 'check' as const })) ?? []),
-    ...(severity !== 'light' && switchSaving > 0
-      ? [{ title: `Pindahkan stok ke ${STORAGE_METHODS[best.key].short}`, body: `Kerugian turun dari ${formatIDR(sim.loss)} menjadi ${formatIDR(best.loss)} — sekitar ${formatIDR(monthlySaving)} sebulan.`, tone: 'gold' as const, icon: 'snowflake' as const }]
-      : []),
+    ...(severity === 'critical' ? [{ title: 'Hentikan pola penimbunan ini', body: `Bila diteruskan, kerugiannya mencapai ${formatIDR(sim.monthly)} sebulan.`, tone: 'red' as const, icon: 'alert' as const }] : []),
+    ...(sim.pastShelfLife ? [{ title: `Simpan maksimal ${sim.m.shelfLife} hari`, body: `Lewat dari itu, bahan yang disimpan dengan cara ${sim.m.short} tidak layak dipakai.`, tone: 'red' as const, icon: 'alert' as const }] : []),
     ...(severity === 'heavy' || severity === 'critical'
       ? [{ title: `Pecah belanja menjadi tiap ${Math.max(2, Math.round(sim.m.shelfLife / 2))} hari`, body: `Menyimpan ${formatNumber(weight, 1)} kg selama ${days} hari membuat stok menunggu terlalu lama.`, tone: 'gold' as const, icon: 'cart' as const }]
       : []),
-    ...(severity === 'critical' ? [{ title: 'Hentikan pola penimbunan ini', body: `Bila diteruskan, kerugiannya mencapai ${formatIDR(sim.monthly)} sebulan.`, tone: 'red' as const, icon: 'alert' as const }] : []),
-  ];
+    ...(knowledge?.storage.steps.slice(0, 2).map((s) => ({ title: s.title, body: s.detail, tone: 'green' as const, icon: 'check' as const })) ?? []),
+  ].slice(0, 3);
   const steps: Step[] = aiFresh ? ai.steps.map((s) => ({ title: s.title, body: s.body, tone: s.tone, icon: s.icon })) : ruleSteps;
 
   const askAi = () => {
@@ -143,7 +131,10 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
             <input type="range" min={1} max={30} value={days} onChange={(e) => setDays(Number(e.target.value))} className="mt-2 w-full accent-[var(--color-accent)]" />
           </label>
           <div className="space-y-1.5">
-            <span className="text-sm font-semibold text-ink-2">Metode simpan</span>
+            <span className="flex items-center gap-1 text-sm font-semibold text-ink-2">
+              Metode simpan
+              <InfoTip label="Metode simpan">{sim.m.desc} Angka di kartu: bobot yang hilang per hari dan batas lama simpan.</InfoTip>
+            </span>
             <StorageCards
               value={method}
               onChange={(k) => setMethod(k as StorageMethod)}
@@ -156,7 +147,6 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
                 best: k === best.key,
               }))}
             />
-            <p className="text-xs text-ink-3">{sim.m.desc}</p>
           </div>
         </CardBody>
       </Card>
@@ -164,57 +154,42 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
       <div className="space-y-6">
         <section className="grid gap-6 rounded-3xl border border-line bg-surface p-6 sm:grid-cols-[minmax(0,1fr)_auto]">
           <div>
-          <div className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-full px-3 py-1 text-xs font-bold ${SEVERITY[severity].cls}`}>{SEVERITY[severity].label}</span>
-            {sim.pastShelfLife && <Tag tone="warning">Melewati batas simpan</Tag>}
-          </div>
-          <p className="mt-3 font-display text-3xl font-bold text-ink">
-            Rugi <AnimatedValue value={sim.loss} format={formatIDR} />
-          </p>
-          <p className="mt-1 text-ink-2">{SEVERITY[severity].summary}</p>
-          <dl className="mt-5 grid gap-3">
-            <div className="rounded-xl bg-surface-muted px-4 py-3">
-              <dt className="text-xs text-ink-2">Bila berulang sebulan</dt>
-              <dd className="text-lg font-semibold">
-                <AnimatedValue value={sim.monthly} format={formatIDR} />
-              </dd>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className={`rounded-full px-3 py-1 text-xs font-bold ${SEVERITY[severity].cls}`}>{SEVERITY[severity].label}</span>
+              {sim.pastShelfLife && <Tag tone="warning">Melewati batas simpan</Tag>}
             </div>
-          </dl>
+            <p className="mt-3 font-display text-3xl font-bold text-ink">
+              Rugi <AnimatedValue value={sim.loss} format={formatIDR} />{' '}
+              <InfoTip label="Kerugian susut">Nilai bahan yang hilang karena menyusut selama {days} hari, dihitung dengan harga hari ini.</InfoTip>
+            </p>
+            <p className="mt-1 text-ink-2">{SEVERITY[severity].summary}</p>
+            <div className="mt-5 rounded-xl bg-surface-muted px-4 py-3">
+              <p className="flex items-center gap-1 text-xs text-ink-2">
+                Bila berulang sebulan
+                <InfoTip label="Kerugian sebulan">Kerugian di atas bila pola belanja dan simpan yang sama diulang selama 30 hari.</InfoTip>
+              </p>
+              <p className="text-lg font-semibold">
+                <AnimatedValue value={sim.monthly} format={formatIDR} />
+              </p>
+            </div>
           </div>
           <StockTube initial={weight} usable={sim.remaining} pastShelfLife={sim.pastShelfLife} />
         </section>
 
-        <Card>
-          <CardHeader title="Kurva bobot layak pakai" subtitle={`${sim.m.label} (hijau) dibanding metode lain (abu-abu)`} />
-          <CardBody>
-            <DecayCurve series={curves} activeKey={method} weight={weight} shelfLife={sim.m.shelfLife} />
-          </CardBody>
-        </Card>
-
-        <Card>
-          <CardHeader title="Metode simpan lain" subtitle="Bobot dan lama simpan sama." />
-          <CardBody>
-            <ul className="divide-y divide-line">
-              {sim.byMethod.map((m) => (
-                <li key={m.key} className="flex flex-wrap items-center justify-between gap-2 py-2.5">
-                  <span className="flex items-center gap-2 text-sm font-semibold text-ink">
-                    {STORAGE_METHODS[m.key].icon} {STORAGE_METHODS[m.key].short}
-                    {m.key === method && <Tag>dipakai</Tag>}
-                    {m.key === best.key && <Tag tone="accent">terhemat</Tag>}
-                  </span>
-                  <span className="text-sm tabular-nums">
-                    <span className="font-semibold">{formatIDR(m.loss)}</span> <span className="text-ink-3">· sisa {formatNumber(m.remaining, 2)} kg</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </CardBody>
-        </Card>
+        {method !== best.key && switchSaving > 0 && (
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-accent-soft px-5 py-4">
+            <p className="flex items-center gap-2 text-sm font-semibold text-ink">
+              <Snowflake className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+              Pindah ke {STORAGE_METHODS[best.key].short}: rugi turun menjadi {formatIDR(best.loss)}, hemat {formatIDR(switchSaving)}.
+            </p>
+            <Button onClick={() => setMethod(best.key)}>Coba cara ini</Button>
+          </div>
+        )}
 
         <Card>
           <CardHeader
             title="Langkah menekan susut"
-            subtitle={aiFresh ? ai.summary : 'Saran berbasis aturan. Minta AI untuk langkah yang dipersonalisasi.'}
+            subtitle={aiFresh ? ai.summary : undefined}
             actions={
               <Button variant={aiFresh ? 'secondary' : 'primary'} onClick={askAi} disabled={aiLoading}>
                 {aiLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
@@ -232,9 +207,12 @@ export default function WasteTab({ profile, data, loading, commodity }: MsmeTabP
                     <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full ${TONE_CLS[s.tone] ?? TONE_CLS.green}`}>
                       <Icon className="h-4 w-4" aria-hidden="true" />
                     </span>
-                    <span>
-                      <span className="block text-sm font-semibold text-ink">{s.title}</span>
-                      <span className="block text-sm text-ink-2">{s.body}</span>
+                    <span className="self-center">
+                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-ink">
+                        {s.title}
+                        {!aiFresh && <InfoTip label={s.title}>{s.body}</InfoTip>}
+                      </span>
+                      {aiFresh && <span className="block text-sm text-ink-2">{s.body}</span>}
                     </span>
                   </li>
                 );

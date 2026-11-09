@@ -2,6 +2,7 @@ import { CircleAlert, CircleCheck, CircleDashed, TriangleAlert } from 'lucide-re
 import type { ReactNode } from 'react';
 import type { AlertStatus, Grade } from '../../lib/regional';
 import { GRADE_META, STATUS_META } from '../../lib/scorecard';
+import { pauseOffscreen } from '../motion/hooks';
 
 const STATUS_ICON: Record<AlertStatus, typeof CircleCheck> = {
   above_reference: CircleAlert,
@@ -47,7 +48,7 @@ export function StatusBadge({ status, children }: { status: AlertStatus; childre
       title={meta.description}
     >
       <span className="relative inline-flex">
-        {status === 'above_reference' && <span className="anim-ping absolute inset-0 rounded-full" style={{ background: meta.color }} aria-hidden="true" />}
+        {status === 'above_reference' && <span ref={pauseOffscreen} className="anim-ping absolute inset-0 rounded-full" style={{ background: meta.color }} aria-hidden="true" />}
         <Icon className="relative h-3.5 w-3.5" style={{ color: meta.color }} aria-hidden="true" />
       </span>
       {children ?? meta.label}

@@ -1,6 +1,8 @@
-import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { ChevronDown, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
+import { InfoTip } from '../../components/ui/InfoTip';
+import { ActionLine } from '../../components/ui/StatTile';
+import type { VerdictTone } from '../../components/ui/Badge';
 import type { ProcurementResponse } from '../../lib/api';
 import type { MsmeProfile } from '../../lib/profile';
 
@@ -13,22 +15,42 @@ export interface MsmeTabProps {
   asOf: string;
 }
 
-/** Progressive disclosure: the reasoning stays one click away, not on screen by default. */
-export function Disclosure({ label = 'Lihat alasan', children, defaultOpen = false }: { label?: string; children: ReactNode; defaultOpen?: boolean }) {
-  const [open, setOpen] = useState(defaultOpen);
+const BANNER: Record<VerdictTone, { box: string; eyebrow: string }> = {
+  good: { box: 'bg-good-soft', eyebrow: 'text-good-ink' },
+  warning: { box: 'bg-warning-soft', eyebrow: 'text-warning-ink' },
+  critical: { box: 'bg-critical-soft', eyebrow: 'text-critical-ink' },
+  neutral: { box: 'border border-line bg-surface', eyebrow: 'text-ink-2' },
+};
+
+/** The answer of a tab: verdict, one sentence, and the step to take. */
+export function DecisionBanner({
+  tone,
+  verdict,
+  title,
+  info,
+  action,
+  children,
+}: {
+  tone: VerdictTone;
+  verdict: string;
+  title: string;
+  info?: ReactNode;
+  action?: ReactNode;
+  children?: ReactNode;
+}) {
   return (
-    <div className="rounded-2xl border border-line bg-surface">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        className="flex w-full items-center justify-between gap-2 px-5 py-3.5 text-left text-sm font-semibold text-accent hover:bg-accent-soft/50"
-      >
-        {label}
-        <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
-      </button>
-      {open && <div className="border-t border-line px-5 py-4">{children}</div>}
-    </div>
+    <section className={`rounded-3xl p-6 sm:p-8 ${BANNER[tone].box}`}>
+      <p className={`text-xs font-bold tracking-[0.16em] uppercase ${BANNER[tone].eyebrow}`}>{verdict}</p>
+      <p className="mt-2 font-display text-3xl leading-tight font-bold text-ink sm:text-4xl">
+        {title} {info && <InfoTip label={title}>{info}</InfoTip>}
+      </p>
+      {children && <p className="mt-2 text-ink-2">{children}</p>}
+      {action && (
+        <div className="mt-4">
+          <ActionLine>{action}</ActionLine>
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -46,13 +68,15 @@ export function NoData({ loading, children }: { loading: boolean; children?: Rea
   );
 }
 
-/** Label · value row for reasoning lists; `formula` shows the arithmetic behind it. */
-export function Row({ label, value, formula }: { label: string; value: ReactNode; formula?: string }) {
+/** Label · value row for profile facts; `info` explains the label behind an ⓘ. */
+export function Row({ label, value, info }: { label: string; value: ReactNode; info?: ReactNode }) {
   return (
     <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 py-2">
-      <dt className="text-sm text-ink-2">{label}</dt>
+      <dt className="inline-flex items-center gap-1 text-sm text-ink-2">
+        {label}
+        {info && <InfoTip label={label}>{info}</InfoTip>}
+      </dt>
       <dd className="text-sm font-semibold text-ink tabular-nums">{value}</dd>
-      {formula && <dd className="w-full text-xs text-ink-3 tabular-nums">{formula}</dd>}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { pauseOffscreen } from './motion/hooks';
 
 /**
  * Commodity vector illustration.
@@ -364,9 +365,11 @@ export function CommodityArt({
         <rect width="220" height="200" fill={`url(#bg-${art})`} />
         <circle cx="182" cy="34" r="46" fill="#A5D6A7" opacity="0.35" />
         <circle cx="30" cy="176" r="38" fill="#66BB6A" opacity="0.18" />
-        <g className="anim-float" style={{ transformOrigin: '110px 100px' }}>
-          <ArtBody art={art} />
-        </g>
+      </svg>
+
+      {/* Its own <svg> so the float runs on the compositor; an inner <g> repaints every frame. */}
+      <svg ref={pauseOffscreen} viewBox="0 0 220 200" className={`absolute inset-0 h-full w-full ${photoOk ? '' : 'anim-float'}`} aria-hidden="true">
+        <ArtBody art={art} />
       </svg>
 
       {showPhoto && photo && (

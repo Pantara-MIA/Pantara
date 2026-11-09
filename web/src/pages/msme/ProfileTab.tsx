@@ -5,12 +5,14 @@ import { Button } from '../../components/ui/Button';
 import { NativeSelect } from '../../components/ui/NativeSelect';
 import { TextField } from '../../components/ui/Field';
 import { Notice } from '../../components/ui/Feedback';
+import { StatTile } from '../../components/ui/StatTile';
+import { TitleWithInfo } from '../../components/ui/InfoTip';
 import { auth } from '../../lib/auth';
 import { fetchMetadata } from '../../lib/api';
 import type { MetadataResponse } from '../../lib/api';
 import { STORAGE_METHODS, storageOf } from '../../lib/profile';
 import type { MsmeProfile, StorageMethod } from '../../lib/profile';
-import { formatPct } from '../../lib/format';
+import { formatNumber } from '../../lib/format';
 import { Row } from './shared';
 import { RegionPicker } from '../../components/regional/RegionPicker';
 
@@ -27,6 +29,7 @@ export default function ProfileTab({ profile, onChange }: { profile: MsmeProfile
   }, []);
 
   const storage = storageOf(profile.storage_method);
+  const canBulk = storage.shelfLife >= 14;
 
   const save = async () => {
     setSaving(true);
@@ -91,23 +94,21 @@ export default function ProfileTab({ profile, onChange }: { profile: MsmeProfile
                 <Row label="Nama usaha" value={profile.business_name} />
                 <Row label="Kategori F&B" value={profile.fnb_category} />
                 <Row label="Pasar acuan" value={profile.reference_market} />
-                <Row label="Lokasi harga" value={profile.region_name ?? profile.region_id} />
+                <Row label="Lokasi harga" value={profile.region_name ?? profile.region_id} info="Harga dan perkiraan di seluruh menu memakai data kabupaten/kota ini." />
               </dl>
             </CardBody>
           </Card>
-          <Card>
-            <CardHeader title="Kalibrasi dapur" subtitle="Angka yang menggerakkan seluruh perhitungan." />
-            <CardBody>
-              <dl className="divide-y divide-line">
-                <Row label="Metode simpan" value={`${storage.icon} ${storage.short}`} />
-                <Row label="Laju susut (s)" value={`${formatPct(profile.daily_decay_rate * 100, 1)}/hari`} />
-                <Row label="Batas umur simpan (L)" value={`${storage.shelfLife} hari`} />
-              </dl>
-            </CardBody>
-          </Card>
+          <StatTile
+            label="Cara simpan"
+            value={`${storage.icon} ${storage.short}`}
+            verdict={canBulk ? { label: 'Bisa borong', tone: 'good' } : { label: 'Belum bisa borong', tone: 'warning' }}
+            hint={`Susut ${formatNumber(profile.daily_decay_rate * 100, 1)}% per hari · tahan ${storage.shelfLife} hari`}
+            action={canBulk ? 'Rekomendasi boleh menyarankan borong 2 minggu.' : 'Pakai chiller agar bisa borong 2 minggu saat harga naik.'}
+            info="Susut adalah bobot bahan yang hilang tiap hari. Borong 2 minggu hanya dinilai bila bahan tahan disimpan minimal 14 hari."
+          />
         </div>
         <Card>
-          <CardHeader title={`${profile.commodities.length} komoditas rutin`} />
+          <CardHeader title={<TitleWithInfo text={`${profile.commodities.length} bahan rutin`} info="Jumlah pakai per minggu menentukan berapa kg yang disarankan untuk dibeli." />} />
           <CardBody>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
               {profile.commodities.map((c) => (

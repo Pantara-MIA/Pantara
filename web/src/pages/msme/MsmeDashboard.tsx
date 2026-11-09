@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { BookOpen, FlaskConical, Radar, RefreshCw, ShoppingBasket, Shuffle, Store } from 'lucide-react';
+import { BookOpen, FlaskConical, Radar, ShoppingBasket, Shuffle, Store } from 'lucide-react';
 import { SiteShell, PageHeader } from '../../components/layout/SiteShell';
 import { Tabs } from '../../components/ui/Tabs';
 import { NativeSelect } from '../../components/ui/NativeSelect';
 import { TextField } from '../../components/ui/Field';
-import { Button } from '../../components/ui/Button';
+import { Tag } from '../../components/ui/Badge';
 import { ErrorState, Placeholder } from '../../components/ui/Feedback';
 import { auth } from '../../lib/auth';
 import { fetchProcurementCard } from '../../lib/api';
@@ -23,8 +23,8 @@ type Tab = 'rekomendasi' | 'radar' | 'substitusi' | 'susut' | 'profil';
 
 const TABS = [
   { value: 'rekomendasi' as Tab, label: 'Rekomendasi belanja', icon: ShoppingBasket },
-  { value: 'radar' as Tab, label: 'Radar harga & anggaran', icon: Radar },
-  { value: 'substitusi' as Tab, label: 'Sinyal substitusi', icon: Shuffle },
+  { value: 'radar' as Tab, label: 'Harga & anggaran', icon: Radar },
+  { value: 'substitusi' as Tab, label: 'Bahan pengganti', icon: Shuffle },
   { value: 'susut' as Tab, label: 'Simulasi susut', icon: FlaskConical },
   { value: 'profil' as Tab, label: 'Profil usaha', icon: Store },
 ];
@@ -133,16 +133,8 @@ export default function MsmeDashboard() {
         actions={
           tab !== 'profil' && (
             <>
-              <NativeSelect
-                label="Komoditas"
-                value={activeCommodity}
-                onChange={setCommodity}
-                options={profile.commodities.map((c) => ({ value: c.name, label: `${c.name} · ${c.weekly_consumption_kg.toLocaleString('id-ID')} kg/mg` }))}
-              />
-              <TextField label="Tanggal data" type="date" min={data?.date_range.start} max={data?.date_range.end} value={effectiveAsOf} onChange={(e) => e.target.value && setAsOf(e.target.value)} />
-              <Button variant="secondary" onClick={() => load()} disabled={loading} aria-label="Muat ulang">
-                <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
-              </Button>
+              <NativeSelect label="Bahan" value={activeCommodity} onChange={setCommodity} options={profile.commodities.map((c) => ({ value: c.name, label: c.name }))} />
+              <TextField label="Data per" type="date" min={data?.date_range.start} max={data?.date_range.end} value={effectiveAsOf} onChange={(e) => e.target.value && setAsOf(e.target.value)} />
             </>
           )
         }
@@ -157,18 +149,23 @@ export default function MsmeDashboard() {
           <>
             {tab === 'rekomendasi' && <RecommendationTab {...tabProps} />}
             {tab === 'radar' && <RadarTab {...tabProps} />}
-            {tab === 'substitusi' && <SubstitutionTab {...tabProps} onPickDate={setAsOf} />}
+            {tab === 'substitusi' && <SubstitutionTab {...tabProps} />}
             {tab === 'susut' && <WasteTab key={`${activeCommodity}|${data?.current_price}`} {...tabProps} />}
             {tab === 'profil' && <ProfileTab profile={profile} onChange={setProfile} />}
           </>
         )}
       </div>
 
-      <p className="mt-10 flex items-center gap-2 text-sm text-ink-2">
+      <p className="mt-10 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-2">
         <BookOpen className="h-4 w-4 text-ink-3" aria-hidden="true" />
-        Ingin tahu cara angka-angka ini dihitung?{' '}
+        {data && tab !== 'profil' && (
+          <span className="inline-flex items-center gap-2">
+            Harga {data.region_name} · {data.source_label}
+            {data.source === 'synthetic' && <Tag tone="warning">Data simulasi</Tag>}
+          </span>
+        )}
         <Link to="/metodologi#umkm" className="font-semibold text-accent hover:underline">
-          Baca metodologi
+          Cara angka dihitung
         </Link>
       </p>
     </SiteShell>

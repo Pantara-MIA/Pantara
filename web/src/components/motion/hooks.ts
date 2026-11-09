@@ -31,6 +31,26 @@ export function useInView<T extends Element>(options: IntersectionObserverInit =
   return { ref, inView };
 }
 
+let offscreenObserver: IntersectionObserver | undefined;
+
+/**
+ * Ref callback for endless animations: pauses them while off screen (see
+ * [data-offscreen] in index.css). Writes an attribute rather than React state,
+ * so scrolling never re-renders, and className updates cannot erase it.
+ */
+export function pauseOffscreen(el: Element | null) {
+  if (!el || typeof IntersectionObserver === 'undefined') return;
+  offscreenObserver ??= new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) e.target.toggleAttribute('data-offscreen', !e.isIntersecting);
+    },
+    { rootMargin: '100px' },
+  );
+  const observer = offscreenObserver;
+  observer.observe(el);
+  return () => observer.unobserve(el);
+}
+
 /** For surfaces of any height: reveal as soon as their top edge is on screen. */
 export const SURFACE_IN_VIEW: IntersectionObserverInit = { threshold: 0, rootMargin: '0px 0px -40px 0px' };
 

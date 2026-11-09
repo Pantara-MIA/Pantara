@@ -403,6 +403,9 @@ dialog[open]::backdrop { animation: nw-fade-in 0.3s ease; }
 }
 .anim-ping { animation: nw-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite; }
 
+/* Endless animations rest while off screen (see pauseOffscreen). */
+[data-offscreen] { animation-play-state: paused; }
+
 /* Map regions fade in one after another, then respond to the pointer. */
 @keyframes nw-region-in {
   from { opacity: 0; }
