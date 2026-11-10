@@ -5,7 +5,6 @@ import { SiteShell, PageHeader } from '../../components/layout/SiteShell';
 import { Tabs } from '../../components/ui/Tabs';
 import { NativeSelect } from '../../components/ui/NativeSelect';
 import { TextField } from '../../components/ui/Field';
-import { Tag } from '../../components/ui/Badge';
 import { ErrorState, Placeholder } from '../../components/ui/Feedback';
 import { auth } from '../../lib/auth';
 import { fetchProcurementCard } from '../../lib/api';
@@ -160,8 +159,8 @@ export default function MsmeDashboard() {
         <BookOpen className="h-4 w-4 text-ink-3" aria-hidden="true" />
         {data && tab !== 'profil' && (
           <span className="inline-flex items-center gap-2">
-            Harga {data.region_name} · {data.source_label}
-            {data.source === 'synthetic' && <Tag tone="warning">Data simulasi</Tag>}
+            Harga {data.region_name}
+            {data.source !== 'synthetic' && ` · ${data.source_label}`}
           </span>
         )}
         <Link to="/metodologi#umkm" className="font-semibold text-accent hover:underline">

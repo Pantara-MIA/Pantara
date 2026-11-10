@@ -18,7 +18,7 @@ import { RegionMap } from '../../components/regional/RegionMap';
 import type { MapMode } from '../../components/regional/RegionMap';
 import { NATIONAL_SCOPE, fetchAlerts, fetchRegions, fetchScorecard, memberNoun, scopeCommodities, scopeHref } from '../../lib/regional';
 import type { Region, RegionAlert, RegionsResponse, Scope, ScorecardRow } from '../../lib/regional';
-import { ScopeBreadcrumb, SourceNote } from '../../components/regional/ScopeNav';
+import { ScopeBreadcrumb } from '../../components/regional/ScopeNav';
 import { ClimateLevelBadge, EnsoStrip } from '../../components/climate/Climate';
 import { fetchClimate } from '../../lib/climate';
 import type { ProvinceClimate } from '../../lib/climate';
@@ -116,7 +116,6 @@ function Overview({ meta }: { meta: RegionsResponse }) {
           </span>
         }
       />
-      <SourceNote scope={scope} className="-mt-4 mb-6" />
 
       <div className="mb-6 flex flex-wrap items-end gap-3">
         <NativeSelect

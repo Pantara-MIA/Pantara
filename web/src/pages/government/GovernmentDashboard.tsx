@@ -25,7 +25,6 @@ import { exportUrl, gov } from '../../lib/interventions';
 import type { GovernmentProfile, Intervention } from '../../lib/interventions';
 import { MODEL_LABEL, NATIONAL_SCOPE, fetchPrices, fetchRegions, referenceFor, scopeCommodities } from '../../lib/regional';
 import type { AlertStatus, RegionsResponse } from '../../lib/regional';
-import { SourceNote } from '../../components/regional/ScopeNav';
 import { REFERENCE_TYPE_LABEL, commodityGroups } from '../../lib/scorecard';
 import { formatDate, formatIDR, formatPct } from '../../lib/format';
 import { useApi } from '../../lib/useApi';
@@ -127,8 +126,6 @@ function Workspace({ profile, meta, onLogout }: { profile: GovernmentProfile; me
           </>
         }
       />
-      <SourceNote scope={meta.scope} className="-mt-4 mb-6" />
-
       <Tabs<Tab>
         label="Bagian dashboard"
         idPrefix="gov"
@@ -369,7 +366,7 @@ function ForecastTab({
           table={<PriceTable series={prices.data.series} forecast={prices.data.forecast} regionLabel={reg.name} referenceLabel={refLabel} showNeighbors />}
           actions={<StatusBadge status={prices.data.alert.status} />}
           dimmed={prices.loading}
-          footnote={`Sumber harga: ${prices.data.source_label}${prices.data.source === 'synthetic' ? ' (data simulasi)' : ''} · Acuan: ${reference.basis}`}
+          footnote={`${prices.data.source === 'synthetic' ? '' : `Sumber harga: ${prices.data.source_label} · `}Acuan: ${reference.basis}`}
         >
           <PriceChart series={prices.data.series} forecast={prices.data.forecast} regionLabel={reg.name} referenceLabel={refLabel} showNeighbors scopeLabel={scopeLabel} height={340} />
         </ChartFrame>

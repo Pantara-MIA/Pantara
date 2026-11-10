@@ -128,7 +128,7 @@ export default function RecommendationTab({ profile, data, loading, commodity, a
               <Row label="Metode simpan" value={storage.short} note={`Susut ${formatPct(storage.decay * 100, 1)} per hari, tahan ${storage.shelfLife} hari.`} />
               <Row label="Jumlah beli minggu pertama" value={`${formatNumber(d.kg_week1, 2)} kg`} note={`Pemakaian rutin ditambah cadangan ${formatNumber(d.margin_kg, 2)} kg untuk bahan yang menyusut.`} />
               <Row label="Jumlah beli minggu kedua" value={`${formatNumber(d.kg_week2, 2)} kg`} note="Cadangannya lebih besar karena stok menunggu lebih lama." />
-              <Row label="Pasar acuan" value={profile.reference_market} note={`Harga ${data.region_name}, sumber ${data.source_label}${data.source === 'synthetic' ? ' (simulasi)' : ''}.`} />
+              <Row label="Pasar acuan" value={profile.reference_market} note={`Harga ${data.region_name}${data.source === 'synthetic' ? '' : `, sumber ${data.source_label}`}.`} />
             </dl>
           </div>
         </div>

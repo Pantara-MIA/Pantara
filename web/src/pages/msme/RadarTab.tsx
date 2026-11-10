@@ -120,7 +120,7 @@ export default function RadarTab({ profile, data, loading, commodity, asOf }: Ms
       </div>
 
       <ChartFrame
-        title={<TitleWithInfo text={`Harga ${commodity}`} info={`Harga ${data.region_name}, sumber ${data.source_label}. Area hijau muda adalah rentang tempat 8 dari 10 kemungkinan harga berada.`} />}
+        title={<TitleWithInfo text={`Harga ${commodity}`} info={`Harga ${data.region_name}${data.source === 'synthetic' ? '' : `, sumber ${data.source_label}`}. Area hijau muda adalah rentang tempat 8 dari 10 kemungkinan harga berada.`} />}
         subtitle={`${HISTORY_DAYS} hari terakhir dan perkiraan 14 hari`}
         legend={
           <Legend

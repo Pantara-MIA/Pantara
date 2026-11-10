@@ -10,7 +10,7 @@ import { NativeSelect } from '../../components/ui/NativeSelect';
 import { DataTable } from '../../components/ui/DataTable';
 import { EmptyState, ErrorState, Notice, Placeholder } from '../../components/ui/Feedback';
 import { ButtonLink } from '../../components/ui/Button';
-import { ScopeBreadcrumb, SourceNote } from '../../components/regional/ScopeNav';
+import { ScopeBreadcrumb } from '../../components/regional/ScopeNav';
 import { ChartFrame } from '../../components/charts/ChartFrame';
 import { RankBars } from '../../components/charts/RankBars';
 import { PriceChart, PriceChartLegend, PriceTable } from '../../components/charts/PriceChart';
@@ -124,18 +124,6 @@ function Report({ meta, regionId }: { meta: RegionsResponse; regionId: string })
           />
         </div>
       </div>
-      <div className="mb-6 flex flex-wrap items-center gap-2">
-        <SourceNote scope={meta.scope} />
-        {region.type !== 'province' && (
-          <span className="inline-flex items-center gap-1 text-xs text-ink-2">
-            Data asli untuk {region.real_commodities} dari {meta.commodities.length} bahan
-            {region.real_commodities < meta.commodities.length && (
-              <InfoTip label="Data simulasi">Bahan lain belum dipantau di daerah ini, jadi harganya disimulasikan dan diberi tanda “Simulasi” di tabel.</InfoTip>
-            )}
-          </span>
-        )}
-      </div>
-
       {report.error ? (
         <Card>
           <ErrorState message={report.error} onRetry={report.reload} />
@@ -353,7 +341,6 @@ function CommodityTable({
               <span className="flex flex-col">
                 <span className="inline-flex flex-wrap items-center gap-1.5 font-semibold text-ink">
                   {c?.name}
-                  {m.source === 'synthetic' && <Tag tone="warning">Simulasi</Tag>}
                 </span>
                 <span className="text-xs text-ink-3">
                   {m.regulated ? `Batas ${REFERENCE_TYPE_LABEL[m.reference_type]} ${formatIDR(m.mean_ceiling ?? 0)}` : 'Tanpa batas harga'}
@@ -504,8 +491,7 @@ function FocusCommodity({
           dimmed={prices.loading}
           footnote={
             <span className="inline-flex flex-wrap items-center gap-1">
-              Sumber: {prices.data.source_label}
-              {prices.data.source === 'synthetic' && ' (data simulasi)'}
+              {prices.data.source === 'synthetic' ? 'Batas harga' : `Sumber: ${prices.data.source_label}`}
               <InfoTip label="Batas harga">
                 {reference.basis}
                 {reference.status === 'indicative' && ' Nilai indikatif, belum diverifikasi ke regulasi terbaru.'}
